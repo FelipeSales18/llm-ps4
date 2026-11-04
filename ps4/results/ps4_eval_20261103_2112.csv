@@ -1,0 +1,2340 @@
+modelo,bloco,idx,gold,pred_strict,pred_flex,correct_strict,correct_flex,finish_reason,completion_tokens,prompt_tokens,prompt_n,prompt_ms,predicted_n,predicted_ms,predicted_per_second,e2e_s,inicio,output
+base,1,0,109,,109,False,True,stop,128,85,85,3593.265,128,13931.019,9.116346765444796,17.797,2026-11-03T21:17:31-03:00,"Let the ages of Darrell and Allen be $7x$ and $11x$ respectively.
+
+We are given:
+$$
+7x + 11x = 162 \implies 18x = 162 \implies x = 9
+$$
+
+Allen's current age is:
+$$
+11x = 11 \times 9 = 99
+$$
+
+Allen's age 10 years from now is:
+$$
+99 + 10 = 109
+$$
+
+Final answer:
+$$
+\boxed{109}
+$$"
+base,1,1,89,,67,False,False,stop,192,151,114,4704.262,192,21548.489,8.863730538136572,26.726,2026-11-03T21:17:49-03:00,"1. Lorraine starts with 30 small stickers and 40 large stickers.
+2. She trades 90% of her small stickers for large buttons:
+   - 90% of 30 = 27 small stickers traded for large buttons.
+3. She trades 50% of her large stickers for large buttons:
+   - 50% of 40 = 20 large stickers traded for large buttons.
+4. She trades the rest of her large stickers (40 - 20 = 20) for small buttons.
+5. She has:
+   - 27 small stickers left.
+   - 20 large stickers left.
+   - 20 small buttons from the trade.
+6. Total buttons:
+   - 27 small buttons + 20 small buttons + 20 large buttons = 67 buttons.
+
+Final answer: #### <number>67"
+base,1,2,13,,13,False,True,stop,96,89,52,2446.881,96,10361.376,9.168666401064877,12.91,2026-11-03T21:18:16-03:00,"Let's break it down step by step:
+
+1. Indras has 6 letters.
+2. Her sister's name has 4 more letters than half of Indras' name:  
+   $ \frac{6}{2} + 4 = 3 + 4 = 7 $ letters.
+3. Total letters in both names:  
+   $ 6 + 7 = 13 $.
+
+Final answer:  
+#### <number> 13"
+base,1,3,5,,5,False,True,stop,126,110,73,3454.292,126,13603.527,9.188793465106514,17.187,2026-11-03T21:18:29-03:00,"1. Bethany runs 10 laps per hour.
+2. Trey runs 4 more laps than Bethany: $10 + 4 = 14$ laps.
+3. Shaelyn runs half as many laps as Trey: $14 / 2 = 7$ laps.
+4. Quinn runs 2 fewer laps than Shaelyn: $7 - 2 = 5$ laps.
+5. Bethany runs 10 laps, Quinn runs 5 laps.
+6. Difference in laps: $10 - 5 = 5$ laps.
+
+Final answer: #### <5>"
+base,1,4,25,,25,False,True,stop,122,142,105,4565.58,122,13355.335,9.060049785347953,18.12,2026-11-03T21:18:46-03:00,"Let's break it down step by step:
+
+1. **Start with 5 children.**
+2. **Second street:** Each child is joined by another child → total becomes $5 \times 2 = 10$.
+3. **Third street:** Each child in the existing group is joined by another 2 children → total becomes $10 \times 3 = 30$.
+4. **Original 5 children leave the group.** So, the remaining children are $30 - 5 = 25$.
+
+Final answer: $\boxed{25}$"
+base,1,5,452,,475,False,False,stop,85,158,121,4780.182,85,9384.976,8.95047573909619,14.333,2026-11-03T21:19:04-03:00,"Kim slept from 2:15 to 2:38 am, which is 23 minutes. She woke up 5 minutes earlier than usual, so she slept 5 minutes less than usual. 
+
+Usual sleep time is 8 hours = 480 minutes. She slept 480 - 5 = 475 minutes.
+
+Final answer: #### <475>"
+base,1,6,43,,43,False,True,stop,116,153,116,4824.573,116,12756.034,9.015341288679538,17.82,2026-11-03T21:19:18-03:00,"1. Start with 48 bananas.
+2. Arnold steals half: $ \frac{48}{2} = 24 $ bananas.
+3. Gunther adds 25 bananas: $ 48 - 24 + 25 = 49 $.
+4. Arnold steals 12 bananas: $ 49 - 12 = 37 $.
+5. Gunther adds 6 bananas: $ 37 + 6 = 43 $.
+
+Final answer: $ \boxed{43} $"
+base,1,7,34,,44,False,False,stop,160,90,53,2397.305,160,17539.133,9.06544240242662,20.479,2026-11-03T21:19:36-03:00,"Let's break it down step by step:
+
+1. Jonathan has $ \frac{2}{3} $ as many measuring spoons as measuring cups.
+2. He has **two dozen cups**, which is $ 2 \times 12 = 24 $ cups.
+3. The number of measuring spoons is $ \frac{2}{3} \times 24 = 16 $ spoons.
+4. He gifts Pedro **6 measuring spoons**, so the remaining spoons are $ 16 - 6 = 20 $.
+5. The total number of utensils is the sum of cups and spoons: $ 24 + 20 = 44 $.
+
+Final answer:  
+#### <number> 44"
+base,1,8,120,,120,False,True,stop,90,84,47,1934.132,90,9512.151,9.356453655960676,11.777,2026-11-03T21:19:57-03:00,"1. The cat's speed is 15 feet/second.
+2. The cat is 5 times faster than the turtle, so the turtle's speed is $ \frac{15}{5} = 3 $ feet/second.
+3. In 40 seconds, the turtle can crawl $ 3 \times 40 = 120 $ feet.
+
+Final answer: #### <number> 120"
+base,1,9,11,,22,False,False,stop,228,136,99,4589.296,228,25545.725,8.886026918398283,30.715,2026-11-03T21:20:08-03:00,"Let’s define variables and solve step by step.
+
+Let $ x $ be the number of flights the first plane makes in a day.
+
+From the problem:
+
+- The first plane flies to Greece for $ \frac{3}{4}x $ flights.
+- The remaining flights are split equally between France and Germany, so they are $ \frac{1}{4}x $ each.
+- The second plane flies exclusively to Poland and makes 44 trips in a day.
+- The problem states that 44 is half of the number of trips the first plane makes in a day, so:
+  $$
+  44 = \frac{1}{2}x \Rightarrow x = 88
+  $$
+
+Now, the first plane makes 88 flights in a day.
+
+- It flies to Greece for $ \frac{3}{4} \times 88 = 66 $ flights.
+- It flies to France for $ \frac{1}{4} \times 88 = 22 $ flights.
+
+Final answer:  
+$$
+\boxed{22}
+$$"
+base,1,10,34,,30,False,False,stop,226,170,133,5933.567,226,25470.783,8.833650696957372,31.651,2026-11-03T21:20:39-03:00,"1. Red balloons: 25  
+   40% of red balloons burst: $ 0.4 \times 25 = 10 $  
+   Remaining red balloons: $ 25 - 10 = 15 $
+
+2. Yellow balloons: 12  
+   Half of them burst: $ \frac{1}{2} \times 12 = 6 $  
+   Remaining yellow balloons: $ 12 - 6 = 6 $
+
+3. Blue balloons: 8  
+   Sally added 75% of them: $ 0.75 \times 8 = 6 $  
+   Remaining blue balloons: $ 8 - 6 = 2 $
+
+4. Total balloons carried into school:  
+   Red: 15  
+   Green: 7 (no change)  
+   Yellow: 6  
+   Blue: 2  
+   Total: $ 15 + 7 + 6 + 2 = 30 $
+
+Final answer:  
+#### <number>  
+#### <number> 30"
+base,1,11,12,,12,False,True,stop,53,80,43,2006.184,53,5442.994,9.553565556015679,9.367,2026-11-03T21:21:11-03:00,"Kira bought: 3 apples + 5 bananas + 6 oranges = 14 pieces  
+Lola ate 2 pieces  
+Left: 14 - 2 = 12 pieces  
+
+Final answer: #### <number> 12"
+base,1,12,15,,15,False,True,stop,183,109,72,3350.773,183,20225.029,8.998751003026992,23.673,2026-11-03T21:21:20-03:00,"1. Start with 10 liters of orange drink, 2/3 water:  
+   Water = $10 \times \frac{2}{3} = \frac{20}{3} \approx 6.67$ liters
+
+2. Spill 1 liter of orange drink:  
+   Remaining orange drink = $10 - 1 = 9$ liters  
+   Water in this remaining orange drink = $9 \times \frac{2}{3} = 6$ liters
+
+3. Add 15 liters of pineapple drink, 3/5 water:  
+   Water = $15 \times \frac{3}{5} = 9$ liters
+
+4. Total water = water from orange + water from pineapple = $6 + 9 = 15$ liters
+
+Final answer:  
+#### <number> 15"
+base,1,13,24,,24,False,True,stop,91,87,50,2468.291,91,9707.176,9.27149152338435,12.284,2026-11-03T21:21:44-03:00,"1. On Saturday, they watch 4 movies.
+2. On Sunday, they watch half as many as on Saturday: $ \frac{4}{2} = 2 $ movies.
+3. Total per weekend: $ 4 + 2 = 6 $ movies.
+4. In 4 weeks, they watch $ 4 \times 6 = 24 $ movies.
+
+Final answer: #### <number> 24"
+base,1,14,105,,105,False,True,stop,137,119,82,3579.358,137,14938.509,9.10398755324243,19.3,2026-11-03T21:21:56-03:00,"Mark completed the first test in 8 hours at 5 questions per hour:  
+$ 8 \times 5 = 40 $ questions.
+
+He completed the second test in 6 hours at 5 questions per hour:  
+$ 6 \times 5 = 30 $ questions.
+
+Total questions left incomplete:  
+$ 75 - 40 = 35 $ (first test)  
+$ 100 - 30 = 70 $ (second test)
+
+Total questions left incomplete:  
+$ 35 + 70 = 105 $
+
+Final answer:  
+#### <number> 105"
+base,1,15,120,,120,False,True,stop,74,81,44,1915.579,74,8065.234,9.051194298888289,10.533,2026-11-03T21:22:15-03:00,"Lily made 50 friends.  
+Amy made 20 more than Lily, so she made $ 50 + 20 = 70 $ friends.  
+
+Total friends = Lily's friends + Amy's friends  
+$ 50 + 70 = 120 $
+
+Final answer: #### <number> 120"
+base,1,16,17,,17,False,True,stop,85,84,47,1937.559,85,9001.187,9.332102532699299,12.189,2026-11-03T21:22:26-03:00,"1. Total oranges: 25  
+2. Bad oranges: 1  
+3. Unripe oranges: 20% of 25 = 5  
+4. Sour oranges: 2  
+5. Good oranges = Total - Bad - Unripe - Sour = 25 - 1 - 5 - 2 = 17  
+
+Final answer: #### <number> 17"
+base,1,17,36,,36,False,True,stop,65,72,35,1931.583,65,6791.149,9.424031191187234,9.123,2026-11-03T21:22:38-03:00,"1. Cost of 6 erasers: $2 × 6 = $12  
+2. Cost of 8 pencils: $3 × 8 = $24  
+3. Total cost: $12 + $24 = $36  
+
+Final answer: #### <number> 36"
+base,1,18,12,,12,False,True,stop,79,82,45,1931.093,79,8407.644,9.277271968223202,10.629,2026-11-03T21:22:47-03:00,"Tyrion goes out 3 times a day.  
+He uses 2 face masks each time he goes out.  
+So, per day, he uses $ 3 \times 2 = 6 $ face masks.
+
+For 2 days, he uses $ 6 \times 2 = 12 $ face masks.
+
+Final answer: #### <number> 12"
+base,1,19,45,,45,False,True,stop,119,117,80,3346.345,119,12805.658,9.21467682488475,16.688,2026-11-03T21:22:58-03:00,"Let's break it down step by step:
+
+1. Max bought 16 snowflake stamps.
+2. He bought 3 more truck stamps than snowflake stamps:  
+   $ 16 + 3 = 19 $ truck stamps.
+3. He bought 9 fewer rose stamps than truck stamps:  
+   $ 19 - 9 = 10 $ rose stamps.
+4. Total stamps bought:  
+   $ 16 + 19 + 10 = 45 $.
+
+Final answer:  
+#### <number> 45"
+base,1,20,45,,45,False,True,stop,126,123,86,3651.669,126,13705.671,9.120312314515648,17.631,2026-11-03T21:23:15-03:00,"1. Katelyn saw 50 fairies initially.
+2. Her friend saw half as many as Katelyn saw: $ \frac{50}{2} = 25 $ fairies.
+3. 25 fairies joined the ones already there.
+4. Total fairies after 20 minutes: $ 50 + 25 = 75 $.
+5. Ten minutes later, 30 fairies flew away.
+6. Remaining fairies: $ 75 - 30 = 45 $.
+
+Final answer: #### <number>45"
+base,1,21,8,,8,False,True,stop,63,83,46,1934.761,63,6791.922,9.128491169362665,8.816,2026-11-03T21:23:32-03:00,"1 foot = 12 inches, so 4 feet = 48 inches.  
+She cut 48 inches of wire into pieces of 6 inches.  
+Number of pieces = $ \frac{48}{6} = 8 $.
+
+Final answer: #### <number> 8"
+base,1,22,36,,36,False,True,stop,112,110,73,3367.214,112,12226.128,9.07891689012253,15.668,2026-11-03T21:23:41-03:00,"1. Total seats = 4 rows × 18 seats/row = 72 seats  
+2. Seats occupied by administrators = 1/4 of 72 = 18 seats  
+3. Remaining seats = 72 - 18 = 54 seats  
+4. Seats occupied by parents = 1/3 of 54 = 18 seats  
+5. Seats occupied by students = 54 - 18 = 36 seats  
+
+Final answer: #### <number> 36"
+base,1,23,1,,2,False,False,stop,94,104,67,3467.698,94,10051.055,9.252760033648208,13.685,2026-11-03T21:23:57-03:00,"Let's break it down step by step:
+
+1. Salad costs $6.
+2. Yogurt is half the price of the salad, so it costs $3.
+3. Total cost for salad and yogurt is $6 + $3 = $9.
+4. Total cost for all goods is $11.
+5. Therefore, the cost for one carrot is $11 - $9 = $2.
+
+Final answer: #### <number> 2"
+base,1,24,18,,10,False,False,stop,87,76,39,1897.097,87,9394.765,9.154034188188849,11.676,2026-11-03T21:24:10-03:00,"Let's break it down:
+
+- Sara scored 8 points.
+- Erin has three times more points than Sara, so Erin has $ 3 \times 8 = 24 $ points.
+- Erin scored 14 points in total, so before scoring the extra 14 points, she had $ 24 - 14 = 10 $ points.
+
+Final answer: $\boxed{10}$"
+base,1,25,33,,33,False,True,stop,135,132,95,3727.344,135,14813.651,9.04571060841112,18.659,2026-11-03T21:24:22-03:00,"1. Aquarium: $10.00  
+2. Rocks: 2 bags × $2.50 = $5.00  
+3. Coral: 3 pieces × $2.00 = $6.00  
+4. Fish: 20 × $0.50 = $10.00  
+5. Fish food: $2.00  
+
+Total = $10.00 + $5.00 + $6.00 + $10.00 + $2.00 = $33.00  
+
+Final answer: #### <number> 33"
+base,1,26,1248,,1248,False,True,stop,253,119,82,3578.352,253,28287.031,8.908676205714201,31.96,2026-11-03T21:24:41-03:00,"1. First two complexes have 200 apartments each:  
+   $ 200 + 200 = 400 $ apartments.
+
+2. Last complex is 60% bigger than the combined total of the first two:  
+   $ 60\% \text{ of } 400 = 240 $  
+   $ 400 + 240 = 640 $ apartments.
+
+3. He collects garbage 3 times a week from each place:  
+   $ 3 \times 400 = 1200 $ collections from first two complexes.  
+   $ 3 \times 640 = 1920 $ collections from last complex.
+
+4. He gets paid $0.40 per collection:  
+   $ 1200 \times 0.40 = 480 $  
+   $ 1920 \times 0.40 = 768 $
+
+5. Total money made in a week:  
+   $ 480 + 768 = 1248 $
+
+Final answer:  
+#### <number> 1248"
+base,1,27,25,25,25,True,True,stop,199,87,50,2395.177,199,21673.751,9.135474519385223,24.46,2026-11-03T21:25:13-03:00,"1. There are 6 sides on a die: 1, 2, 3, 4, 5, 6.
+2. Probability of rolling a number greater than 3: There are 3 such numbers (4, 5, 6), so the probability is $ \frac{3}{6} = 0.5 $.
+3. Probability of rolling two even numbers in a row: There are 3 even numbers (2, 4, 6), so the probability is $ \frac{3}{6} \times \frac{3}{6} = \frac{9}{36} = 0.25 $.
+4. Difference in probability: $ 0.5 - 0.25 = 0.25 $.
+5. Convert to percentage: $ 0.25 \times 100 = 25\% $.
+
+Final answer: #### 25"
+base,1,28,1,,10,False,False,stop,152,115,78,3450.004,152,16445.858,9.181643183347441,20.05,2026-11-03T21:25:37-03:00,"1. Total cost without discount: $4 \text{ packs} \times 10.00 = 40.00$
+2. Discount: 10% of $40.00 = 4.00$
+3. Total cost after discount: $40.00 - 4.00 = 36.00$
+4. Total number of bagels: $4 \text{ packs} \times 9 \text{ bagels} = 36 \text{ bagels}$
+5. Cost per bagel: $\frac{36.00}{36} = 1.00$
+
+Final answer: #### <number> 10"
+base,1,29,32,,32,False,True,stop,119,91,54,2445.121,119,12852.087,9.181388205666519,15.975,2026-11-03T21:25:57-03:00,"Let the shorter piece be $ x $ feet. Then the longer piece is $ 4x $ feet.
+
+The total length of the board is:
+$$
+x + 4x = 5x
+$$
+
+We are told the board is 40 feet long:
+$$
+5x = 40
+$$
+
+Solving for $ x $:
+$$
+x = 8
+$$
+
+The longer piece is:
+$$
+4x = 4 \times 8 = 32
+$$
+
+Final answer:
+$$
+\boxed{32}
+$$"
+base,1,30,2,,2,False,True,stop,134,83,46,1946.244,134,14441.897,9.209316476914356,16.582,2026-11-03T21:26:13-03:00,"Imma has 3 cats.  
+She feeds them 2 times a day with 60 grams of cat food.  
+Total food per day: $ 3 \text{ cats} \times 2 \text{ times/day} \times 60 \text{ grams} = 360 \text{ grams/day} $.
+
+Total food available: 720 grams.
+
+Number of days the food will last:  
+$ \frac{720 \text{ grams}}{360 \text{ grams/day}} = 2 \text{ days} $.
+
+Final answer:  
+#### <number> 2"
+base,1,31,30,,30,False,True,stop,86,100,63,2529.616,86,9103.397,9.337173804460027,11.878,2026-11-03T21:26:30-03:00,"1. Total elves: 60  
+2. A third quit: $ \frac{1}{3} \times 60 = 20 $  
+3. Remaining elves: $ 60 - 20 = 40 $  
+4. 10 more quit: $ 40 - 10 = 30 $  
+
+Final answer: #### <number> 30"
+base,1,32,4,,4,False,True,stop,108,113,76,3323.941,108,11639.178,9.193089065224365,15.053,2026-11-03T21:26:42-03:00,"1. Cost of type A candies: $0.5 × 7 = $3.50  
+2. Cost of type B candies: $0.75 × 10 = $7.50  
+3. Total cost: $3.50 + $7.50 = $11.00  
+4. Adam paid $15, so the change is: $15 - $11.00 = $4.00  
+
+Final answer: #### <4>"
+base,1,33,54,,234,False,False,stop,130,102,65,3098.22,130,14111.35,9.141577524474979,17.436,2026-11-03T21:26:57-03:00,"Let's break it down:
+
+1. Elvis drives west for 5 hours at 18 mph:  
+   Distance = speed × time = $18 \times 5 = 90$ miles.
+
+2. He turns around and drives east for 8 hours at 18 mph:  
+   Distance = speed × time = $18 \times 8 = 144$ miles.
+
+3. Since he turned around, the total distance from his house is:  
+   $90 + 144 = 234$ miles.
+
+Final answer:  
+#### <number> 234"
+base,1,34,250,,110,False,False,stop,204,163,126,4725.617,204,23122.469,8.779339265196981,28.027,2026-11-03T21:27:14-03:00,"Cameron wants to stay from 5 pm to 10 am the next morning.
+
+- Total time: 7 hours (from 5 pm to 10 am).
+- 12 hours is the base rate.
+- After 12 hours, he adds 70 pesos per hour.
+
+He chooses the 12-hour base rate + 70 pesos per hour after 12 hours.
+
+- Base rate: 1000 pesos
+- Additional hours: 7 hours (from 12 to 10 am)
+- Cost: $1000 + 7 \times 70 = 1000 + 490 = 1490$ pesos
+
+If he had paid for 24 hours, the cost would have been 1600 pesos.
+
+- Savings: $1600 - 1490 = 110$ pesos
+
+Final answer: $\boxed{110}$"
+base,1,35,324,,266,False,False,stop,130,134,96,3716.393,130,14192.568,9.089264183902449,18.131,2026-11-03T21:27:42-03:00,"1. Angela needs 6 mirrors: $129.00 for installation + 4 mirrors = $133.00
+2. She needs 2 chandeliers: $129.00 + 1 chandelier = $133.00
+3. She needs 20 pictures: $129.00 + 10 pictures = $133.00
+4. Total cost = $133.00 + $133.00 = $266.00
+
+Final answer: #### <266>"
+base,1,36,129200,,129200,False,True,stop,155,100,63,2464.942,155,16849.47,9.13975335722726,19.668,2026-11-03T21:28:00-03:00,"Let the value of Herb's house be $ H $.
+
+Juan's house is 30% less expensive than Herb's, so Juan's house is worth $ 70\% $ of $ H $.
+
+$$
+\text{Juan's house value} = 0.7H
+$$
+
+Total value of both houses:
+
+$$
+H + 0.7H = 1.7H
+$$
+
+We are told Herb's house is worth $ 76,000, so:
+
+$$
+1.7H = 1.7 \times 76,000 = 129,200
+$$
+
+Final answer:
+
+$$
+\boxed{129200}
+$$"
+base,1,37,4400,,2000,False,False,stop,206,137,100,4494.221,206,22870.835,8.96338065488208,27.537,2026-11-03T21:28:20-03:00,"1. Mike has 600 movies.
+2. A third of the movies are in series:  
+   $ \frac{600}{3} = 200 $ movies.
+3. These 200 movies cost $6 each:  
+   $ 200 \times 6 = 1200 $.
+4. Remaining movies:  
+   $ 600 - 200 = 400 $.
+5. 40% of the remaining 400 movies are older movies:  
+   $ 0.4 \times 400 = 160 $.
+6. These 160 movies cost $5 each:  
+   $ 160 \times 5 = 800 $.
+7. Total cost:  
+   $ 1200 + 800 = 2000 $.
+
+Final answer:  
+#### <number> 2000"
+base,1,38,70,,70,False,True,stop,98,103,66,3320.621,98,10501.949,9.236380789889573,14.74,2026-11-03T21:28:47-03:00,"To find the total length of crepe paper needed, we calculate the perimeter of the rectangular fence.
+
+- Length = 20 feet  
+- Width = 15 feet  
+
+Perimeter = 2 × (Length + Width)  
+= 2 × (20 + 15)  
+= 2 × 35  
+= 70 feet  
+
+James needs to buy **70 feet** of crepe paper.  
+
+#### <number> 70"
+base,1,39,276000,,36000,False,False,stop,125,107,70,3432.847,125,13488.701,9.192879284669443,17.651,2026-11-03T21:29:02-03:00,"1. **Cost per car**: $20,000  
+2. **Tax per car**: 10% of $20,000 = $2,000  
+3. **Registration per car**: $1,000  
+4. **Total per car**: $2,000 + $1,000 = $3,000  
+5. **Total for 12 cars**: $3,000 × 12 = $36,000  
+
+Final answer: #### <36000>"
+base,1,40,108,,108,False,True,stop,175,123,86,3603.836,175,19447.918,8.946973141289469,23.317,2026-11-03T21:29:20-03:00,"Let's solve the problem step by step.
+
+1. **Total people**: 90  
+2. **Groups formed**: 90 ÷ 9 = 10 groups  
+3. **Seashells per group**: 3/5 of the group members brought 2 seashells each.  
+   - Each group had 9 members.  
+   - 3/5 of 9 = (3/5) × 9 = 5.4 members brought 2 seashells each.  
+   - So, 5.4 × 2 = 10.8 seashells per group.  
+4. **Total seashells**: 10 groups × 10.8 seashells per group = 108 seashells.
+
+Final answer: #### <number> 108"
+base,1,41,160,,120,False,False,stop,59,83,46,1960.893,59,6203.862,9.34901517796495,8.311,2026-11-03T21:29:43-03:00,"Let's break it down:
+
+- Cost of a foot-long fish sub = $40
+- Cost of a six-inch cold-cut combo sub = $40 × 3 = $120
+
+Final answer: $120
+
+#### <number> 120"
+base,1,42,90,,90,False,True,stop,54,91,54,2409.027,54,5782.242,9.165994781954819,8.818,2026-11-03T21:29:51-03:00,"Johnny started with $20 and added $10, so he had $30.  
+This $30 tripled in a year, so he had $30 × 3 = $90.
+
+Final answer: #### <number>90"
+base,1,43,20,20,20,True,True,stop,86,95,58,2431.911,86,9184.601,9.254620859414578,11.766,2026-11-03T21:30:00-03:00,"The winner got $ \frac{3}{4} $ of the votes.  
+Total votes = 80.  
+Votes for winner = $ \frac{3}{4} \times 80 = 60 $.  
+Votes for loser = Total votes - Votes for winner = $ 80 - 60 = 20 $.  
+
+Final answer: #### <number>  
+#### 20"
+base,1,44,296,,296,False,True,stop,123,121,84,3610.182,123,13561.41,8.996114710785973,17.31,2026-11-03T21:30:12-03:00,"Let's break it down step by step:
+
+1. **Hotel cost**:  
+   - 1 night: $80  
+   - 3 nights: $80 × 3 = $240
+
+2. **Bus cost**:  
+   - 7 trips: 10% of $80 = $8  
+   - Total bus cost: $8 × 7 = $56
+
+3. **Total cost**:  
+   - Hotel + Bus = $240 + $56 = $296
+
+Final answer:  
+#### <296>"
+base,1,45,4800,,4800,False,True,stop,128,116,79,3384.839,128,13881.769,9.148689911206562,17.383,2026-11-03T21:30:29-03:00,"Given:
+- Price of a diamond Jewell = $2000
+- Price of a gold Jewell = $2000 × (4/5) = $1600
+- Price of a silver Jewell = $400 less than gold = $1600 - $400 = $1200
+
+Total price = Price of diamond + Price of gold + Price of silver  
+= $2000 + $1600 + $1200 = $4800
+
+Final answer: #### <number> 4800"
+base,1,46,30,,30,False,True,stop,103,87,50,2468.051,103,10950.374,9.314750345513314,13.605,2026-11-03T21:30:47-03:00,"Nani is 8 years old.  
+His brother is twice his age: $ 8 \times 2 = 16 $ years old.  
+Nani's sister is 25% younger than him: $ 8 - (8 \times 0.25) = 8 - 2 = 6 $ years old.  
+
+Total age: $ 8 + 16 + 6 = 30 $.
+
+Final answer: #### <number> 30"
+base,1,47,8,,8,False,True,stop,91,86,49,2385.103,91,9712.658,9.266258525730033,13.418,2026-11-03T21:31:00-03:00,"The candle burns for 4 hours (from 1:00 PM to 5:00 PM).  
+It melts by 2 centimeters per hour.  
+
+So, the total decrease in height is:  
+$ 2 \, \text{cm/hour} \times 4 \, \text{hours} = 8 \, \text{cm} $.
+
+Final answer:  
+#### <number> 8"
+base,1,48,1920,,1920,False,True,stop,149,119,82,3614.976,149,16277.762,9.092158983526113,20.681,2026-11-03T21:31:14-03:00,"1. Calculate the volume of one raised bed:  
+   $ 2 \text{ ft} \times 8 \text{ ft} \times 2 \text{ ft} = 32 \text{ cubic feet} $
+
+2. Total volume for 10 beds:  
+   $ 10 \times 32 = 320 \text{ cubic feet} $
+
+3. Number of bags needed:  
+   $ 320 \div 2 = 160 \text{ bags} $
+
+4. Total cost:  
+   $ 160 \times 12 = 1920 $
+
+Final answer:  
+#### <number> 1920"
+base,1,49,6,,6,False,True,stop,150,118,81,3674.14,150,16412.31,9.078551404403157,20.376,2026-11-03T21:31:34-03:00,"Let's break it down step by step:
+
+1. **Total bologna thrown:** 58 pieces  
+2. **Number of red balloons:** 20  
+3. **Bologna thrown per red balloon:** 2 pieces  
+4. **Bologna thrown per yellow balloon:** 3 pieces  
+5. **Let the number of yellow balloons be $ y $**
+
+We can set up the equation:
+
+$$
+2 \times 20 + 3 \times y = 58
+$$
+
+$$
+40 + 3y = 58
+$$
+
+$$
+3y = 18
+$$
+
+$$
+y = 6
+$$
+
+Final answer:  
+#### <number> 6"
+treinado,2,0,109,,109,False,True,stop,126,85,85,3761.368,126,13466.506,9.282288961962369,17.348,2026-11-03T21:32:38-03:00,"Let the ages of Darrell and Allen be $7x$ and $11x$ respectively.
+
+We are given:
+$$
+7x + 11x = 162 \Rightarrow 18x = 162 \Rightarrow x = 9
+$$
+
+Allen's current age is:
+$$
+11x = 11 \times 9 = 99
+$$
+
+Allen's age 10 years from now is:
+$$
+99 + 10 = 109
+$$
+
+Final answer:
+$$
+\boxed{109}
+$$"
+treinado,2,1,89,67,67,False,False,stop,214,151,114,4713.094,214,24081.03,8.845136607528831,28.979,2026-11-03T21:32:56-03:00,"1. **Lorraine starts with:**
+   - 30 small stickers
+   - 40 large stickers
+
+2. **She trades 90% of her small stickers for large buttons:**
+   - 90% of 30 = 27 small stickers
+   - She gets 27 large buttons
+
+3. **She trades 50% of her large stickers for large buttons:**
+   - 50% of 40 = 20 large stickers
+   - She gets 20 large buttons
+
+4. **She trades the rest (50% of 40 = 20) of her large stickers for small buttons:**
+   - She gets 20 small buttons
+
+5. **Total buttons she has:**
+   - Large buttons: 27 + 20 = 47
+   - Small buttons: 20
+   - Total = 47 + 20 = **67**
+
+Final answer:  
+#### 67"
+treinado,2,2,13,13,13,True,True,stop,93,89,52,2455.875,93,9874.497,9.31693026996717,12.476,2026-11-03T21:33:25-03:00,"Let's break it down step by step:
+
+1. Indras has 6 letters.
+2. Her sister's name has 4 more letters than half of Indras' name:  
+   $ \frac{6}{2} + 4 = 3 + 4 = 7 $ letters.
+3. Total letters in both names:  
+   $ 6 + 7 = 13 $.
+
+Final answer:  
+#### 13"
+treinado,2,3,5,5,5,True,True,stop,146,110,73,3425.473,146,15925.639,9.104815197682179,19.474,2026-11-03T21:33:37-03:00,"1. Bethany runs 10 laps in 1 hour.  
+2. Trey runs 4 more laps than Bethany:  
+   $ 10 + 4 = 14 $ laps.  
+3. Shaelyn runs half as many laps as Trey:  
+   $ \frac{14}{2} = 7 $ laps.  
+4. Quinn runs 2 fewer laps than Shaelyn:  
+   $ 7 - 2 = 5 $ laps.  
+5. Bethany runs 10 laps, Quinn runs 5 laps.  
+6. Difference:  
+   $ 10 - 5 = 5 $ laps.  
+
+Final answer:  
+#### 5"
+treinado,2,4,25,25,25,True,True,stop,177,142,105,4499.62,177,19889.068,8.84908231999609,24.507,2026-11-03T21:33:57-03:00,"Let's break it down step by step:
+
+1. **Start with 5 children.**
+2. **On the second street, each child is joined by another child.**
+   - So, 5 children × 1 new child = 5 new children.
+   - Total children = 5 + 5 = 10.
+3. **On the third street, each child in the existing group is joined by another 2 children.**
+   - So, 10 children × 2 new children = 20 new children.
+   - Total children = 10 + 20 = 30.
+4. **The original 5 children give up and leave the group.**
+   - So, 30 children - 5 children = **25 children** are now following the truck.
+
+Final answer: #### 25"
+treinado,2,5,452,475,475,False,False,stop,78,158,121,4845.235,78,8397.79,9.169079007691309,13.489,2026-11-03T21:34:21-03:00,"Kim slept from 2:15 to 2:38 am, which is 23 minutes. She woke up 5 minutes earlier than usual, so she slept 5 minutes less than usual. 
+
+Usual sleep time is 8 hours = 480 minutes. She slept 475 minutes that day.
+
+Final answer: #### 475"
+treinado,2,6,43,43,43,True,True,stop,112,153,116,4700.452,112,12340.496,8.994776222933018,17.38,2026-11-03T21:34:35-03:00,"1. Start with 48 bananas.
+2. Arnold steals half: $ \frac{48}{2} = 24 $ bananas.
+3. Gunther adds 25 bananas: $ 48 - 24 + 25 = 49 $.
+4. Arnold steals 12 bananas: $ 49 - 12 = 37 $.
+5. Gunther adds 6 bananas: $ 37 + 6 = 43 $.
+
+Final answer: #### 43"
+treinado,2,7,34,34,34,True,True,stop,136,90,53,2511.428,136,14541.269,9.283921506437986,17.309,2026-11-03T21:34:52-03:00,"Jonathan has 2/3 as many measuring spoons as measuring cups.  
+He has 2 dozen cups, so he has $ 2 \times 12 = 24 $ cups.  
+The number of spoons is $ \frac{2}{3} \times 24 = 16 $ spoons.  
+
+He gifts Pedro 6 spoons, so the remaining spoons are $ 16 - 6 = 10 $.  
+
+The total number of utensils is the sum of cups and spoons:  
+$ 24 + 10 = 34 $.  
+
+Final answer:  
+#### 34"
+treinado,2,8,120,120,120,True,True,stop,87,84,47,1932.331,87,9269.715,9.277523634761154,12.388,2026-11-03T21:35:09-03:00,"1. The cat's speed is 15 feet/second.
+2. The cat is 5 times faster than the turtle, so the turtle's speed is $ \frac{15}{5} = 3 $ feet/second.
+3. In 40 seconds, the turtle can crawl $ 3 \times 40 = 120 $ feet.
+
+Final answer: #### 120"
+treinado,2,9,11,,11,False,True,stop,252,136,99,4535.074,252,28363.151,8.849510408769463,34.168,2026-11-03T21:35:22-03:00,"Let’s define variables and solve step by step.
+
+Let $ x $ be the total number of flights the first plane makes in a day.
+
+- The first plane flies to Greece for $ \frac{3}{4}x $ flights.
+- The remaining flights are split equally between France and Germany, so they are $ \frac{1}{4}x $ flights each.
+- The second plane flies exclusively to Poland and makes 44 trips in a day.
+- It is given that 44 is half of the number of trips the first plane makes in a day, so:
+  $$
+  44 = \frac{1}{2}x \Rightarrow x = 88
+  $$
+
+Now, the first plane flies to Greece for $ \frac{3}{4} \times 88 = 66 $ flights.
+
+The remaining flights are $ \frac{1}{4} \times 88 = 22 $, and these are split equally between France and Germany.
+
+So, the number of flights to France is:
+$$
+\frac{1}{2} \times 22 = 11
+$$
+
+Final answer:
+$$
+\boxed{11}
+$$"
+treinado,2,10,34,27,27,False,False,stop,222,170,133,5811.458,222,25250.852,8.752179926443672,31.292,2026-11-03T21:35:56-03:00,"1. **Red balloons**:  
+   - Initial: 25  
+   - 40% burst: $ 25 \times 0.4 = 10 $ burst  
+   - Remaining: $ 25 - 10 = 15 $
+
+2. **Yellow balloons**:  
+   - Initial: 12  
+   - She released half: $ 12 \div 2 = 6 $  
+   - Remaining: $ 12 - 6 = 6 $
+
+3. **Blue balloons**:  
+   - Caught: 8  
+   - Added 75%: $ 8 \times 0.75 = 6 $  
+   - Total added: 6
+
+4. **Total balloons carried into school**:  
+   - Red: 15  
+   - Green: Not mentioned, assumed not affected  
+   - Yellow: 6  
+   - Blue: 6  
+   - Total: $ 15 + 6 + 6 = 27 $
+
+Final answer:  
+#### 27"
+treinado,2,11,12,12,12,True,True,stop,51,80,43,1920.43,51,5189.464,9.634906418080941,7.342,2026-11-03T21:36:27-03:00,"Kira bought:  
+3 apples + 5 bananas + 6 oranges = 14 pieces  
+
+Lola ate 2 pieces.  
+
+Total left: 14 - 2 = 12  
+
+Final answer: #### 12"
+treinado,2,12,15,15,15,True,True,stop,219,109,72,3413.024,219,24270.573,8.982070592235296,28.171,2026-11-03T21:36:35-03:00,"1. Start with 10 liters of orange drink, 2/3 water:  
+   Water = $10 \times \frac{2}{3} = \frac{20}{3} \approx 6.67$ liters.
+
+2. Spill 1 liter of orange drink:  
+   Remaining orange drink = $10 - 1 = 9$ liters.
+
+3. The spilled 1 liter contains $ \frac{2}{3} \times 1 = \frac{2}{3} $ liters of water.
+
+4. Now, the remaining 24 liters consist of:  
+   - 9 liters of orange drink (which has $ \frac{2}{3} \times 9 = 6 $ liters of water)
+   - 15 liters of pineapple drink (which has $ \frac{3}{5} \times 15 = 9 $ liters of water)
+
+5. Total water = $6 + 9 = 15$ liters.
+
+Final answer:  
+#### 15"
+treinado,2,13,24,24,24,True,True,stop,88,87,50,2396.826,88,9317.428,9.337340733945032,12.04,2026-11-03T21:37:03-03:00,"1. On Saturday, they watch 4 movies.
+2. On Sunday, they watch half as many as on Saturday: $ \frac{4}{2} = 2 $ movies.
+3. Total per weekend: $ 4 + 2 = 6 $ movies.
+4. In 4 weeks, they watch $ 6 \times 4 = 24 $ movies.
+
+Final answer: #### 24"
+treinado,2,14,105,105,105,True,True,stop,134,119,82,3678.238,134,14470.378,9.191190444368488,18.289,2026-11-03T21:37:15-03:00,"Mark completed the first test in 8 hours at 5 questions per hour:  
+$ 8 \times 5 = 40 $ questions.
+
+He completed the second test in 6 hours at 5 questions per hour:  
+$ 6 \times 5 = 30 $ questions.
+
+Total questions left incomplete:  
+$ 75 - 40 = 35 $ (first test)  
+$ 100 - 30 = 70 $ (second test)
+
+Total questions left incomplete:  
+$ 35 + 70 = 105 $
+
+Final answer:  
+#### 105"
+treinado,2,15,120,120,120,True,True,stop,78,81,44,1927.166,78,8322.912,9.251569642932665,10.436,2026-11-03T21:37:33-03:00,"1. Lily made 50 friends.  
+2. Amy made 20 more friends than Lily, so Amy made $ 50 + 20 = 70 $ friends.  
+3. Total friends = Lily's friends + Amy's friends = $ 50 + 70 = 120 $.  
+
+Final answer: #### 120"
+treinado,2,16,17,17,17,True,True,stop,82,84,47,1937.249,82,8704.089,9.30597102120624,10.838,2026-11-03T21:37:43-03:00,"1. Total oranges: 25  
+2. Bad oranges: 1  
+3. Unripe oranges: 20% of 25 = 5  
+4. Sour oranges: 2  
+5. Good oranges: Total - Bad - Unripe - Sour = 25 - 1 - 5 - 2 = 17  
+
+Final answer: #### 17"
+treinado,2,17,36,36,36,True,True,stop,62,72,35,1936.356,62,6483.309,9.408775673039802,9.018,2026-11-03T21:37:54-03:00,"1. Cost of 6 erasers: $2 × 6 = $12  
+2. Cost of 8 pencils: $3 × 8 = $24  
+3. Total cost: $12 + $24 = $36  
+
+Final answer: #### 36"
+treinado,2,18,12,12,12,True,True,stop,78,82,45,1928.577,78,8368.845,9.200791746053369,10.44,2026-11-03T21:38:03-03:00,"Tyrion goes out 3 times a day.  
+He uses 2 face masks each time he goes out.  
+So, per day, he uses $ 3 \times 2 = 6 $ face masks.  
+
+For 2 days, he uses $ 6 \times 2 = 12 $ face masks.  
+
+Final answer: #### 12"
+treinado,2,19,45,45,45,True,True,stop,107,117,80,3343.486,107,11840.525,8.95230574657796,15.265,2026-11-03T21:38:14-03:00,"1. Max bought 16 snowflake stamps.
+2. He bought 3 more truck stamps than snowflake stamps:  
+   $ 16 + 3 = 19 $ truck stamps.
+3. He bought 9 fewer rose stamps than truck stamps:  
+   $ 19 - 9 = 10 $ rose stamps.
+4. Total stamps bought:  
+   $ 16 + 19 + 10 = 45 $.
+
+Final answer:  
+#### 45"
+treinado,2,20,45,45,45,True,True,stop,101,123,86,3593.347,101,10955.898,9.12750374273291,14.743,2026-11-03T21:38:29-03:00,"1. Katelyn saw 50 fairies initially.  
+2. Her friend saw half as many as Katelyn saw, so:  
+   $ \frac{50}{2} = 25 $ fairies joined.  
+3. Ten minutes later, 30 fairies flew away.  
+4. Total fairies remaining:  
+   $ 50 + 25 - 30 = 45 $.  
+
+Final answer: #### 45"
+treinado,2,21,8,8,8,True,True,stop,63,83,46,1936.414,63,6691.227,9.26586409338676,8.796,2026-11-03T21:38:44-03:00,"1 foot = 12 inches  
+Tracy used 4 feet of wire = 4 × 12 = 48 inches  
+
+She cut the wire into pieces of 6 inches.  
+Number of pieces = 48 ÷ 6 = 8  
+
+Final answer: #### 8"
+treinado,2,22,36,36,36,True,True,stop,109,110,73,3422.267,109,11719.621,9.215315068635753,15.352,2026-11-03T21:38:53-03:00,"1. Total seats = 4 rows × 18 seats/row = 72 seats.
+2. Seats occupied by administrators = 1/4 of 72 = 18 seats.
+3. Remaining seats = 72 - 18 = 54 seats.
+4. Seats occupied by parents = 1/3 of 54 = 18 seats.
+5. Seats occupied by students = 54 - 18 = 36 seats.
+
+Final answer: #### 36"
+treinado,2,23,1,2,2,False,False,stop,91,104,67,3518.492,91,9777.974,9.20436073976061,13.483,2026-11-03T21:39:08-03:00,"Let's break it down step by step:
+
+1. Salad costs $6.
+2. Yogurt is half the price of the salad, so it costs $3.
+3. Total cost for salad and yogurt: $6 + $3 = $9.
+4. Total cost for all goods is $11.
+5. Therefore, the cost of one carrot is $11 - $9 = $2.
+
+Final answer: #### 2"
+treinado,2,24,18,10,10,False,False,stop,90,76,39,1901.267,90,9509.658,9.358906492746637,11.489,2026-11-03T21:39:21-03:00,"Let's break it down:
+
+- Sara scored 8 points.
+- Erin has three times more points than Sara, so Erin has $ 3 \times 8 = 24 $ points.
+- Erin scored 14 points in total, so before scoring the extra 14 points, she had $ 24 - 14 = 10 $ points.
+
+Final answer: #### <number>  
+#### 10"
+treinado,2,25,33,33,33,True,True,stop,132,132,95,3724.239,132,14518.442,9.023006738601842,18.332,2026-11-03T21:39:33-03:00,"1. Aquarium: $10.00  
+2. Rocks: 2 bags × $2.50 = $5.00  
+3. Coral: 3 pieces × $2.00 = $6.00  
+4. Fish: 20 × $0.50 = $10.00  
+5. Fish food: $2.00  
+
+Total = $10.00 + $5.00 + $6.00 + $10.00 + $2.00 = $33.00  
+
+Final answer: #### 33"
+treinado,2,26,1248,1248,1248,True,True,stop,248,119,82,3584.683,248,27854.998,8.867349407097427,31.55,2026-11-03T21:39:51-03:00,"1. First two complexes have 200 apartments each:  
+   $ 200 + 200 = 400 $ apartments.
+
+2. Last complex is 60% bigger than the combined total of the first two:  
+   $ 60\% \text{ of } 400 = 240 $  
+   $ 400 + 240 = 640 $ apartments.
+
+3. He collects garbage 3 times a week from each place:  
+   $ 3 \times 400 = 1200 $ collections from first two  
+   $ 3 \times 640 = 1920 $ collections from last complex.
+
+4. He gets paid $0.40 per collection:  
+   $ 1200 \times 0.40 = 480 $  
+   $ 1920 \times 0.40 = 768 $
+
+5. Total money made in a week:  
+   $ 480 + 768 = 1248 $
+
+Final answer:  
+#### 1248"
+treinado,2,27,25,25,25,True,True,stop,197,87,50,2459.008,197,21394.863,9.161077591382567,23.981,2026-11-03T21:40:23-03:00,"1. There are 6 sides on a die: 1, 2, 3, 4, 5, 6.
+2. Probability of rolling a number greater than 3: There are 3 such numbers (4, 5, 6), so the probability is $ \frac{3}{6} = 0.5 $.
+3. Probability of rolling two even numbers in a row: The even numbers are 2, 4, 6. So the probability is $ \frac{3}{6} \times \frac{3}{6} = \frac{9}{36} = 0.25 $.
+4. Difference in probability: $ 0.5 - 0.25 = 0.25 $.
+5. Convert to percentage: $ 0.25 \times 100 = 25\% $.
+
+Final answer: #### 25"
+treinado,2,28,1,1.00,1.00,True,True,stop,153,115,78,3358.89,153,16825.132,9.03410445754601,20.358,2026-11-03T21:40:47-03:00,"1. Total cost without discount: $ 4 \text{ packs} \times 10.00 = 40.00 $
+2. Discount: 10% of $40.00 = $4.00
+3. Total cost with discount: $40.00 - $4.00 = $36.00
+4. Number of bagels: $ 4 \text{ packs} \times 9 \text{ bagels} = 36 \text{ bagels} $
+5. Cost per bagel: $ \frac{36.00}{36} = 1.00 $
+
+Final answer: #### 1.00"
+treinado,2,29,32,32,32,True,True,stop,101,91,54,2421.558,101,10833.19,9.230891362562643,13.341,2026-11-03T21:41:07-03:00,"Let the shorter piece be $ x $ feet.  
+Then the longer piece is $ 4x $ feet.
+
+The total length of the board is 40 feet:  
+$$
+x + 4x = 40
+$$  
+$$
+5x = 40
+$$  
+$$
+x = 8
+$$
+
+The longer piece is $ 4x = 4 \times 8 = 32 $ feet.
+
+Final answer:  
+#### 32"
+treinado,2,30,2,2,2,True,True,stop,141,83,46,1990.891,141,15242.592,9.184789568598307,17.378,2026-11-03T21:41:20-03:00,"1. Imma has 3 cats.  
+2. She feeds them twice a day with 60 grams of cat food.  
+3. Total food per day for the cats: $ 3 \text{ cats} \times 2 \text{ times/day} \times 60 \text{ grams} = 360 \text{ grams/day} $.  
+4. Total food available: 720 grams.  
+5. Number of days the food will last: $ \frac{720 \text{ grams}}{360 \text{ grams/day}} = 2 \text{ days} $.  
+
+Final answer: #### 2"
+treinado,2,31,30,30,30,True,True,stop,79,100,63,2513.554,79,8474.58,9.203995950241781,11.167,2026-11-03T21:41:38-03:00,"1. Total elves: 60  
+2. A third quit: $ \frac{60}{3} = 20 $  
+3. Remaining elves: $ 60 - 20 = 40 $  
+4. 10 more quit: $ 40 - 10 = 30 $  
+
+Final answer: #### 30"
+treinado,2,32,4,4,4,True,True,stop,106,113,76,3357.785,106,11517.089,9.11688708839534,15.261,2026-11-03T21:41:49-03:00,"1. Cost of type A candies: $0.5 × 7 = $3.50  
+2. Cost of type B candies: $0.75 × 10 = $7.50  
+3. Total cost: $3.50 + $7.50 = $11.00  
+4. Adam paid $15, so the change is $15 - $11.00 = $4.00  
+
+Final answer: #### 4"
+treinado,2,33,54,54,54,True,True,stop,147,102,65,3116.643,147,16051.004,9.096004212571374,19.35,2026-11-03T21:42:04-03:00,"1. Elvis drives west for 5 hours at an average speed of 18 mph.  
+   - Distance west = $ 18 \times 5 = 90 $ miles.
+
+2. He turns around and drives east for 8 hours at the same speed.  
+   - Distance east = $ 18 \times 8 = 144 $ miles.
+
+3. Since he drove west and then east, the total distance from his house is:  
+   - $ 90 - 144 = -54 $ miles.
+
+4. The negative sign indicates he is 54 miles west of his house.
+
+Final answer:  
+#### <number>  
+#### 54"
+treinado,2,34,250,250,250,True,True,stop,166,163,126,4804.764,166,18532.6,8.903229983920227,23.628,2026-11-03T21:42:24-03:00,"1. Calculate the total time Cameron stays:
+   - From 5 pm to 10 am next morning is 17 hours.
+
+2. He chooses the 12-hour option, which costs 1000 pesos.
+   - He will add 70 pesos per hour for the additional 5 hours.
+   - Total cost for 12 hours: 1000 + (5 × 70) = 1000 + 350 = 1350 pesos.
+
+3. Compare with the 24-hour option:
+   - 24-hour option costs 1600 pesos.
+
+4. Cameron saves: 1600 - 1350 = 250 pesos.
+
+Final answer: #### 250"
+treinado,2,35,324,549,549,False,False,stop,164,134,96,3701.095,164,18184.713,8.96357286474634,22.035,2026-11-03T21:42:47-03:00,"Angela needs to install:
+
+- 6 mirrors: 6 × $15.00 = $90.00  
+- 2 chandeliers: 2 × $15.00 = $30.00  
+- 20 pictures: 20 × $15.00 = $300.00  
+
+Total additional cost: $90 + $30 + $300 = $420.00  
+
+The original installation cost is $129.00, and she will add $420.00.  
+
+Total cost: $129.00 + $420.00 = $549.00  
+
+Final answer: #### 549"
+treinado,2,36,129200,129200,129200,True,True,stop,127,100,63,2487.453,127,13662.482,9.222336029427156,16.243,2026-11-03T21:43:09-03:00,"Let the value of Herb's house be $ H $.  
+Juan's house is 30% less expensive, so its value is $ 0.7H $.  
+
+Total value = $ H + 0.7H = 1.7H $.  
+
+We are told that Herb's house is worth $ 76,000, so:  
+$ H = 76,000 $.  
+
+Total value = $ 1.7 \times 76,000 = 129,200 $.  
+
+Final answer: #### 129200"
+treinado,2,37,4400,2000,2000,False,False,stop,204,137,100,4455.546,204,22808.058,8.900363196200221,27.386,2026-11-03T21:43:26-03:00,"1. Mike has 600 movies.
+2. A third of the movies are in series:  
+   $ \frac{600}{3} = 200 $ movies.
+3. These 200 movies cost $6 each:  
+   $ 200 \times 6 = 1200 $.
+4. Remaining movies:  
+   $ 600 - 200 = 400 $.
+5. 40% of the remaining 400 movies are older movies:  
+   $ 0.4 \times 400 = 160 $ movies.
+6. These 160 movies cost $5 each:  
+   $ 160 \times 5 = 800 $.
+7. Total cost:  
+   $ 1200 + 800 = 2000 $.
+
+Final answer:  
+#### 2000"
+treinado,2,38,70,70,70,True,True,stop,95,103,66,3357.402,95,10085.035,9.320741078241177,13.538,2026-11-03T21:43:53-03:00,"To find the total length of crepe paper needed, we calculate the perimeter of the rectangular fence.
+
+- Length = 20 feet  
+- Width = 15 feet  
+
+Perimeter = 2 × (Length + Width)  
+= 2 × (20 + 15)  
+= 2 × 35  
+= 70 feet  
+
+James needs to buy **70 feet** of crepe paper.  
+
+#### 70"
+treinado,2,39,276000,276000,276000,True,True,stop,141,107,70,3429.746,141,15429.372,9.07360325488296,19.016,2026-11-03T21:44:06-03:00,"1. Total cost for 12 cars: $12 \times 20,000 = 240,000$
+2. Tax on 12 cars: $240,000 \times 0.10 = 24,000$
+3. Registration cost: $12 \times 1,000 = 12,000$
+4. Total cost: $240,000 + 24,000 + 12,000 = 276,000$
+
+Final answer: #### 276000"
+treinado,2,40,108,20,20,False,False,stop,77,123,86,3661.109,77,8224.437,9.240754108761488,12.697,2026-11-03T21:44:25-03:00,"Let's break it down step by step:
+
+1. Total people: 90  
+2. Groups formed: $ \frac{90}{9} = 10 $ groups  
+3. Each group brought back 2 seashells: $ 10 \times 2 = 20 $ seashells  
+
+Final answer:  
+#### 20"
+treinado,2,41,160,160,160,True,True,stop,73,83,46,1963.743,73,7565.09,9.517401643602389,9.633,2026-11-03T21:44:38-03:00,"1. The cost for the foot-long fish sub is $40.
+2. The cost for the six-inch cold-cut combo sub is thrice as much: $40 × 3 = $120.
+3. Total cost = $40 + $120 = $160.
+
+Final answer: #### 160"
+treinado,2,42,90,90,90,True,True,stop,53,91,54,2498.375,53,5529.511,9.404086545808479,8.191,2026-11-03T21:44:48-03:00,"Johnny started with $20 and added $10, so he had $30.  
+This $30 tripled in a year, so he had $30 × 3 = $90.  
+
+Final answer: #### 90"
+treinado,2,43,20,20,20,True,True,stop,89,95,58,2514.059,89,9320.714,9.441336790293104,12.288,2026-11-03T21:44:56-03:00,"1. Total votes = 80  
+2. Winner got $ \frac{3}{4} $ of the votes:  
+   $$
+   \frac{3}{4} \times 80 = 60
+   $$  
+3. Loser got the remaining votes:  
+   $$
+   80 - 60 = 20
+   $$
+
+Final answer:  
+#### 20"
+treinado,2,44,296,264,264,False,False,stop,67,121,84,3655.97,67,7154.286,9.22523924819332,10.952,2026-11-03T21:45:08-03:00,"1. Hotel cost: $80 per night × 3 nights = $240  
+2. Bus cost: 10% of $240 = $24  
+3. Total cost: $240 + $24 = $264  
+
+Final answer: #### 264"
+treinado,2,45,4800,4800,4800,True,True,stop,114,116,79,3412.64,114,12246.773,9.226920430386029,15.765,2026-11-03T21:45:19-03:00,"Given:
+- Price of a diamond Jewell = $2000
+- Price of a gold Jewell = $ \frac{4}{5} \times 2000 = 1600 $
+- Price of a silver Jewell = $ 1600 - 400 = 1200 $
+
+Total price for all three jewels = $ 2000 + 1600 + 1200 = 4800 $
+
+Final answer: #### 4800"
+treinado,2,46,30,30,30,True,True,stop,100,87,50,2447.018,100,10677.1,9.272180648303378,13.32,2026-11-03T21:45:35-03:00,"Nani is 8 years old.  
+His brother is twice his age: $ 8 \times 2 = 16 $ years old.  
+Nani's sister is 25% younger than him: $ 8 - (8 \times 0.25) = 8 - 2 = 6 $ years old.  
+
+Total age: $ 8 + 16 + 6 = 30 $.
+
+Final answer: #### 30"
+treinado,2,47,8,8,8,True,True,stop,88,86,49,2495.867,88,9331.028,9.323731533117252,12.004,2026-11-03T21:45:48-03:00,"The candle burns for 4 hours (from 1:00 PM to 5:00 PM).  
+It melts by 2 centimeters per hour.  
+
+So, the total decrease in height is:  
+$ 2 \, \text{cm/hour} \times 4 \, \text{hours} = 8 \, \text{cm} $.
+
+Final answer:  
+#### 8"
+treinado,2,48,1920,1920,1920,True,True,stop,146,119,82,3574.123,146,16081.867,9.016366072421816,20.558,2026-11-03T21:46:00-03:00,"1. Calculate the volume of one raised bed:  
+   $ 2 \text{ ft} \times 8 \text{ ft} \times 2 \text{ ft} = 32 \text{ cubic feet} $
+
+2. Total volume for 10 beds:  
+   $ 10 \times 32 = 320 \text{ cubic feet} $
+
+3. Number of bags needed:  
+   $ 320 \div 2 = 160 \text{ bags} $
+
+4. Total cost:  
+   $ 160 \times 12 = 1920 $
+
+Final answer:  
+#### 1920"
+treinado,2,49,6,,6,False,True,stop,135,118,81,3637.394,135,14575.046,9.193796026441358,18.944,2026-11-03T21:46:21-03:00,"Let's break it down:
+
+- Total bologna thrown: 58 pieces
+- Red balloons: 20
+- Bologna thrown at each red balloon: 2 pieces
+- Bologna thrown at each yellow balloon: 3 pieces
+- Let $ y $ be the number of yellow balloons
+
+Total bologna thrown:
+$$
+20 \times 2 + y \times 3 = 58
+$$
+
+$$
+40 + 3y = 58
+$$
+
+$$
+3y = 18
+$$
+
+$$
+y = 6
+$$
+
+Final answer:  
+#### <number> 6"
+base,3,50,13,,13,False,True,stop,133,69,69,3381.908,133,14139.723,9.335402115020216,17.556,2026-11-03T21:49:04-03:00,"Let $ x $ be Jerry's current age.
+
+We are told:  
+$$
+x = 2(x - 5)
+$$
+
+Solve the equation:  
+$$
+x = 2x - 10
+$$
+
+Subtract $ 2x $ from both sides:  
+$$
+-x = -10
+$$
+
+Multiply by -1:  
+$$
+x = 10
+$$
+
+Jerry is currently 10 years old.
+
+In 3 years, he will be:  
+$$
+10 + 3 = 13
+$$
+
+Final answer:  
+$$
+\boxed{13}
+$$"
+base,3,51,420,,420,False,True,stop,183,86,49,2400.12,183,19977.818,9.11010401636455,22.477,2026-11-03T21:49:21-03:00,"Let the share of the first person be $ x $.
+
+Then the second person took $ x + 80 $.
+
+The third person took twice what the second took, so they took $ 2(x + 80) $.
+
+The total amount is $ 1920 $, so:
+
+$$
+x + (x + 80) + 2(x + 80) = 1920
+$$
+
+Simplify:
+
+$$
+x + x + 80 + 2x + 160 = 1920
+$$
+
+$$
+4x + 240 = 1920
+$$
+
+$$
+4x = 1680
+$$
+
+$$
+x = 420
+$$
+
+The share of the first person is:
+
+$$
+\boxed{420}
+$$"
+base,3,52,10,,10,False,True,stop,121,81,44,2023.756,121,12889.422,9.309959748389028,15.06,2026-11-03T21:49:44-03:00,"1. Each girl got 1/6 of 24 liters:  
+   $ \frac{1}{6} \times 24 = 4 $ liters per girl  
+   So, two girls got $ 4 \times 2 = 8 $ liters.
+
+2. A boy got 6 liters.
+
+3. Total water taken:  
+   $ 8 + 6 = 14 $ liters.
+
+4. Water left:  
+   $ 24 - 14 = 10 $ liters.
+
+Final answer:  
+#### <number> 10"
+base,3,53,12,,12,False,True,stop,102,98,61,2453.175,102,10866.602,9.294533838636953,13.513,2026-11-03T21:49:59-03:00,"1. Total penguins: 36  
+2. One-third jump in: $ \frac{1}{3} \times 36 = 12 $  
+3. Another one-third go inside the cave: $ \frac{1}{3} \times 36 = 12 $  
+4. Penguins still sunbathing: $ 36 - 12 - 12 = 12 $  
+
+Final answer: #### <number> 12"
+base,3,54,50,,50,False,True,stop,91,103,66,3351.614,91,10026.814,8.975931936106525,14.037,2026-11-03T21:50:12-03:00,"On Monday, Robert collects 20 shells.  
+Kylie collects 5 more shells than Robert, so she collects $ 20 + 5 = 25 $ shells on Monday.  
+
+On Tuesday, Kylie collects 2 times more shells than she did on Monday.  
+So, she collects $ 2 \times 25 = 50 $ shells on Tuesday.  
+
+Final answer: #### <number> 50"
+base,3,55,92,,92,False,True,stop,62,119,82,3595.721,62,6592.529,9.252898242844287,11.359,2026-11-03T21:50:26-03:00,"Bill started with 2 cases × 24 bottles = 48 bottles.
+
+He needs 70 guests × 2 bottles = 140 bottles.
+
+He needs 140 - 48 = 92 additional bottles.
+
+Final answer: #### <number> 92"
+base,3,56,623,623,623,True,True,stop,88,76,39,1933.663,88,9251.314,9.404069519205596,12.201,2026-11-03T21:50:38-03:00,"1. Grace weighs 125 pounds.
+2. Alex weighs 2 pounds less than 4 times Grace's weight:  
+   $ 4 \times 125 - 2 = 500 - 2 = 498 $ pounds.
+3. Combined weight: $ 125 + 498 = 623 $ pounds.
+
+Final answer: #### 623"
+base,3,57,40,,240,False,False,stop,115,106,69,3379.698,115,12285.697,9.2790828228956,15.747,2026-11-03T21:50:50-03:00,"Let's denote the actual number of people as $ x $.
+
+Courtney said the audience was 48, but she overstated by 20%. So, 20% of $ x $ is 48.
+
+$$
+0.20x = 48
+$$
+
+Solving for $ x $:
+
+$$
+x = \frac{48}{0.20} = 240
+$$
+
+So, the actual number of people who attended the concert is:
+
+$$
+\boxed{240}
+$$"
+base,3,58,17,,17,False,True,stop,257,134,97,4318.618,257,28907.688,8.85577566770473,33.445,2026-11-03T21:51:05-03:00,"Let's break it down step by step:
+
+1. **Total distance**: 20 miles  
+2. **James swims 60% of the distance**:  
+   $$
+   0.6 \times 20 = 12 \text{ miles}
+   $$  
+   He swims at 2 mph, so time taken for this part:  
+   $$
+   \frac{12}{2} = 6 \text{ hours}
+   $$
+
+3. **He rests for half as long as the swimming time**:  
+   $$
+   \frac{6}{2} = 3 \text{ hours}
+   $$
+
+4. **Remaining distance**: $20 - 12 = 8$ miles  
+   He swims this at half the speed (1 mph):  
+   $$
+   \frac{8}{1} = 8 \text{ hours}
+   $$
+
+5. **Total time**:  
+   $$
+   6 \text{ hours (swimming)} + 3 \text{ hours (rest)} + 8 \text{ hours (swimming)} = 17 \text{ hours}
+   $$
+
+Final answer:  
+$$
+\boxed{17}
+$$"
+base,3,59,940,,940,False,True,stop,72,80,43,1976.526,72,7560.847,9.390482309720062,10.176,2026-11-03T21:51:39-03:00,"In May, Joseph's expenditure was $500.  
+In June, his expenditure was $60 less, so it was $500 - $60 = $440.  
+
+Total expenditure = $500 + $440 = $940.
+
+Final answer: #### <number> 940"
+base,3,60,10,,1,False,False,stop,109,84,47,1944.508,109,11560.424,9.342217897890249,13.635,2026-11-03T21:51:49-03:00,"1. Convert the shark's length to inches:  
+   $ 10 \text{ feet} = 120 \text{ inches} $
+
+2. Convert the remoras' lengths to inches:  
+   $ 2 \times 6 \text{ inches} = 12 \text{ inches} $
+
+3. Calculate the percentage:  
+   $ \frac{12}{120} \times 100 = 1\% $
+
+Final answer:  
+#### <number> 1"
+base,3,61,540,,540,False,True,stop,97,113,76,3350.765,97,10473.544,9.165951849727275,13.923,2026-11-03T21:52:03-03:00,"- ""Deck the Halls"" is sung twice: $ 2 \times 150 = 300 $ seconds  
+- ""Jingle Bells"" is sung once: $ 1 \times 240 = 240 $ seconds  
+- Total time: $ 300 + 240 = 540 $ seconds  
+
+Final answer: #### <number>  
+#### <number>  
+**540**"
+base,3,62,110,110,110,True,True,stop,68,84,47,1972.483,68,7299.856,9.178263242453003,9.404,2026-11-03T21:52:17-03:00,"Gerald earned $30 per day for 7 days:  
+$30 × 7 = $210.
+
+He spent $100.  
+So, he has $210 - $100 = $110 left.
+
+Final answer: #### <number>  
+#### 110"
+base,3,63,20,,20,False,True,stop,251,87,50,2411.615,251,27620.089,9.051382853979943,30.207,2026-11-03T21:52:26-03:00,"Let's define variables:
+
+- Let $ C $ be Colin's current age.
+- Let $ W $ be Wendy's current age.
+
+From the problem:
+
+1. Wendy is five times as old as Colin will be seven years from now:
+   $$
+   W = 5(C + 7)
+   $$
+
+2. In 25 years, Colin will be a third as old as Wendy is now:
+   $$
+   C + 25 = \frac{W}{3}
+   $$
+
+Now substitute $ W = 5(C + 7) $ into the second equation:
+
+$$
+C + 25 = \frac{5(C + 7)}{3}
+$$
+
+Multiply both sides by 3 to eliminate the denominator:
+
+$$
+3(C + 25) = 5(C + 7)
+$$
+
+Expand both sides:
+
+$$
+3C + 75 = 5C + 35
+$$
+
+Solve for $ C $:
+
+$$
+75 - 35 = 5C - 3C \\
+40 = 2C \\
+C = 20
+$$
+
+So, Colin is currently $\boxed{20}$ years old."
+base,3,64,560,,280,False,False,stop,110,92,55,2417.137,110,11926.099,9.139618914785128,14.558,2026-11-03T21:52:56-03:00,"John visits his parents twice a month.  
+Each trip takes 2 hours at a speed of 70 mph.  
+One way: $ 2 \text{ hours} \times 70 \text{ mph} = 140 \text{ miles} $.  
+Round trip: $ 140 \text{ miles} \times 2 = 280 \text{ miles} $.  
+He drives 280 miles a month.  
+
+Final answer: #### <number> 280"
+base,3,65,24,,24,False,True,stop,84,74,37,1891.942,84,8859.523,9.368450197600932,10.901,2026-11-03T21:53:11-03:00,"Let's break it down step by step:
+
+1. Chris is 4 years old.
+2. Ben is two times older than Chris, so Ben is $ 2 \times 4 = 8 $ years old.
+3. Caroline is three times older than Ben, so Caroline is $ 3 \times 8 = 24 $ years old.
+
+Final answer: #### <number> 24"
+base,3,66,22,,22,False,True,stop,159,134,97,4219.412,159,17645.882,8.953930441108016,22.061,2026-11-03T21:53:22-03:00,"Let's break it down step by step:
+
+1. **First time**: The alarm rang **4 times**.
+2. **Second time**: It rang for **3 times as long as the first time**.  
+   - First time: 4 times  
+   - Second time: $ 3 \times 4 = 12 $ times
+3. **Third time**: It rang for **half as long as the second time**.  
+   - Second time: 12 times  
+   - Third time: $ \frac{12}{2} = 6 $ times
+
+Now, add up all the rings:
+
+$$
+4 + 12 + 6 = 22
+$$
+
+Final answer:  
+#### <number> 22"
+base,3,67,4,,4,False,True,stop,96,101,64,2503.922,96,10323.486,9.202317899205752,13.609,2026-11-03T21:53:44-03:00,"Let's break it down:
+
+- Rose bought 12 onions and 4 potatoes.
+- Rose bought 4 times the number of onions and potatoes Sophia bought.
+
+So, Sophia bought:
+- $ \frac{12}{4} = 3 $ onions
+- $ \frac{4}{4} = 1 $ potato
+
+Total items Sophia bought = 3 onions + 1 potato = 4 items.
+
+Final answer: #### <number> 4"
+base,3,68,22,,22,False,True,stop,121,100,63,2452.099,121,13189.755,9.097970356538086,15.77,2026-11-03T21:53:57-03:00,"Let $ x $ be the number of votes in favor.  
+Let $ y $ be the number of votes against.
+
+We are told:
+- $ x = 2y $
+- Total people: $ x + y = 33 $
+
+Substitute $ x = 2y $ into the total:
+$$
+2y + y = 33 \Rightarrow 3y = 33 \Rightarrow y = 11
+$$
+$$
+x = 2y = 22
+$$
+
+The number of votes in favor is $ \boxed{22} $."
+base,3,69,64,,16,False,False,stop,109,97,60,2445.287,109,11805.297,9.148435655621372,14.548,2026-11-03T21:54:13-03:00,"Let's work backwards:
+
+1. Kris gave 7 stickers to Rob, so she kept 9, which means she received 9 + 7 = 16 stickers from Luis.
+2. Luis used half of the stickers and gave the rest to Kris. So Luis had 16 stickers, meaning he had 32 stickers in total (since he used half).
+3. Seth gave half of his stickers to Luis, so he had 32 stickers in total.
+
+Final answer:  
+#### <number> 16"
+base,3,70,525,,583,False,False,stop,247,125,88,3595.468,247,27726.763,8.87229425230778,31.537,2026-11-03T21:54:28-03:00,"To determine the calorie deficit Andy needs, we calculate the total number of calories he needs to burn to lose 30 lbs. Since 1 lb = 3500 calories, he needs to burn:
+
+$$
+30 \text{ lbs} \times 3500 \text{ calories/lb} = 105,000 \text{ calories}
+$$
+
+He wants to lose 30 lbs by July 19th, so he needs to create a calorie deficit of 105,000 calories over the period from December 31st to July 19th.
+
+Assuming he wants to lose the weight in 6 months (from Dec 31 to July 19 is approximately 6 months), we divide the total calories by the number of days in 6 months:
+
+$$
+\frac{105,000 \text{ calories}}{180 \text{ days}} = 583.33 \text{ calories/day}
+$$
+
+So, Andy needs to burn approximately 583 calories per day to reach his goal.
+
+$$
+\boxed{583}
+$$"
+base,3,71,10,,10,False,True,stop,110,97,60,2446.267,110,11872.945,9.180536084349754,14.497,2026-11-03T21:54:59-03:00,"1. Total loaves produced per day: 60  
+2. Loaves sold in the morning: $ \frac{2}{3} \times 60 = 40 $  
+3. Loaves left after morning: $ 60 - 40 = 20 $  
+4. Half of the remaining loaves are sold in the afternoon and evening: $ \frac{1}{2} \times 20 = 10 $  
+
+Final answer: $ \boxed{10} $"
+base,3,72,410,,410,False,True,stop,161,122,85,3637.537,161,17666.776,9.056547725515962,21.468,2026-11-03T21:55:14-03:00,"To find the average total distance spat:
+
+1. Calculate Zoey's total distance:  
+   $ 40 \text{ seeds} \times 10 \text{ feet} = 400 \text{ feet} $
+
+2. Calculate Sydney's total distance:  
+   $ 35 \text{ seeds} \times 12 \text{ feet} = 420 \text{ feet} $
+
+3. Add the total distances:  
+   $ 400 + 420 = 820 \text{ feet} $
+
+4. Find the average:  
+   $ \frac{820}{2} = 410 \text{ feet} $
+
+Final answer:  
+#### <number> 410"
+base,3,73,140,,140,False,True,stop,75,92,55,2445.547,75,7946.355,9.31244576916083,10.634,2026-11-03T21:55:35-03:00,"Jordan plays video games for 2 hours a day. Assuming a week has 7 days, he plays 2 hours/day × 7 days = 14 hours.
+
+He earns $10 per hour, so he would earn 14 hours × $10/hour = $140.
+
+Final answer: #### <number> 140"
+base,3,74,720,,720,False,True,stop,86,74,37,1892.204,86,9090.056,9.350877486343318,11.26,2026-11-03T21:55:46-03:00,"Tom gets 4 car washes a month.  
+Each car wash costs $15.  
+Total cost in a year: $ 4 \times 15 \times 12 $.
+
+Calculate:  
+$ 4 \times 15 = 60 $  
+$ 60 \times 12 = 720 $.
+
+Final answer: #### <number> 720"
+base,3,75,1050,,1050,False,True,stop,161,91,54,2419.337,161,17486.055,9.150148504050799,20.058,2026-11-03T21:55:57-03:00,"Let's break it down step by step:
+
+1. **Jewel processes 50 customers per day.**
+2. **Julie processes twice as fast as Jewel**, so she processes $ 50 \times 2 = 100 $ customers per day.
+3. **They work all days of the week (7 days).**
+4. **Total production for Julie: $ 100 \times 7 = 700 $ customers.**
+5. **Total production for Jewel: $ 50 \times 7 = 350 $ customers.**
+6. **Total weekly production: $ 700 + 350 = 1050 $ customers.**
+
+Final answer: #### <1050>"
+base,3,76,8,,8,False,True,stop,155,124,87,3778.229,155,16953.299,9.083777735531003,21.115,2026-11-03T21:56:17-03:00,"Let's break it down step by step:
+
+1. **Monday**: 1 hour yoga class  
+2. **Tuesday**: Cooking class that lasts 3 times as long as Monday’s yoga: $ 3 \times 1 = 3 $ hours  
+3. **Wednesday**: Cheese-tasting event: 0.5 hours  
+4. **Thursday**: Museum tour that takes half as long as the cooking class: $ \frac{3}{2} = 1.5 $ hours  
+5. **Friday**: 2 hours of errands  
+
+Now add them up:  
+$ 1 + 3 + 0.5 + 1.5 + 2 = 8 $ hours
+
+Final answer:  
+#### <number> 8"
+base,3,77,20,,20,False,True,stop,133,116,79,3435.379,133,14510.639,9.096773753381916,18.104,2026-11-03T21:56:38-03:00,"1. Jim collected 27 seashells.
+2. Jim collected 5 more than Carlos, so Carlos collected $27 - 5 = 22$ seashells.
+3. Carlos collected twice as many as Carrey, so Carrey collected $22 / 2 = 11$ seashells.
+4. Total seashells = $27 + 22 + 11 = 60$.
+5. They divided the seashells equally, so each person got $60 / 3 = 20$ seashells.
+
+Final answer: #### <number> 20"
+base,3,78,138,,139,False,False,stop,141,111,74,3331.089,141,15166.42,9.230919360007174,18.637,2026-11-03T21:56:56-03:00,"To find the price of carrots after three years with a 5% annual increase:
+
+1. Start with the initial price: $120.
+2. Calculate the price after one year:  
+   $120 × 1.05 = 126
+3. Calculate the price after two years:  
+   126 × 1.05 = 132.3
+4. Calculate the price after three years:  
+   132.3 × 1.05 = 138.915
+
+Round to the nearest integer: **139**
+
+Final answer: #### <number>139"
+base,3,79,175,,175,False,True,stop,71,95,58,2551.002,71,7444.251,9.403229418245033,10.136,2026-11-03T21:57:15-03:00,"Goldy gave 3 sacks to her cousin and 4 sacks to her brother.  
+Total sacks given = 3 + 4 = 7 sacks.  
+Each sack weighs 25 kilograms.  
+Total weight given = 7 × 25 = 175 kilograms.  
+
+Final answer: #### <number>175"
+base,3,80,64,64,64,True,True,stop,83,106,69,3448.278,83,8872.987,9.241532755542186,12.506,2026-11-03T21:57:25-03:00,"Colby completes 50 - 10 = 40 packages per hour.
+
+He earns $0.20 per package, so for 40 packages:
+
+$0.20 × 40 = $8.00
+
+He works 8 hours, so:
+
+$8.00 × 8 = $64.00
+
+Final answer: #### 64"
+base,3,81,5600,5600,5600,True,True,stop,97,130,93,3732.895,97,10499.754,9.143071351957389,14.297,2026-11-03T21:57:38-03:00,"1. Total gallons purchased: 4000 gallons  
+2. Price per gallon: $3.5  
+3. Amount of milk expired: $ \frac{2}{5} \times 4000 = 1600 $ gallons  
+4. Refund amount: $ 1600 \times 3.5 = 5600 $ dollars  
+
+Final answer: #### <number>  
+#### 5600"
+base,3,82,720,,720,False,True,stop,156,111,73,3400.141,156,17047.643,9.092165996202525,20.705,2026-11-03T21:57:52-03:00,"1. Greta's paycheck is $2400.00.
+2. She puts 50% into her retirement account:  
+   $ 2400.00 × 0.50 = 1200.00 $
+3. She uses 20% for her car payment:  
+   $ 2400.00 × 0.20 = 480.00 $
+4. Subtract the retirement and car payments from her paycheck:  
+   $ 2400.00 - 1200.00 - 480.00 = 720.00 $
+
+Final answer: #### <number> 720"
+base,3,83,312,312,312,True,True,stop,112,90,53,2431.189,112,12036.535,9.221923086669046,14.66,2026-11-03T21:58:13-03:00,"1. Gary does laundry 2 times a week.  
+2. Each load uses 20 gallons of water.  
+3. Total water per week = 2 loads × 20 gallons = 40 gallons.  
+4. Cost per gallon = $0.15.  
+5. Total cost per week = 40 gallons × $0.15 = $6.  
+6. Total cost per year = $6 × 52 weeks = $312.  
+
+Final answer: #### 312"
+base,3,84,60,60,60,True,True,stop,65,98,61,2535.453,65,6713.709,9.532733694594151,9.641,2026-11-03T21:58:27-03:00,"Bailey receives $5 per week for 8 weeks:  
+$5 × 8 = 40.
+
+She ends with $100.  
+So, she started with:  
+$100 - $40 = $60.
+
+Final answer: #### <number>  
+#### 60"
+base,3,85,450,,450,False,True,stop,94,90,53,2521.981,94,10000.135,9.299874451694901,12.665,2026-11-03T21:58:37-03:00,"1. Sam had 70 loaves of bread last Friday.
+2. The bakery has 40 less than 7 times as many loaves as Sam had.
+3. Calculate 7 times Sam's loaves: $7 \times 70 = 490$.
+4. Subtract 40: $490 - 40 = 450$.
+
+Final answer: #### <number> 450"
+base,3,86,10000,10000,10000,True,True,stop,183,109,71,3373.819,183,20039.911,9.081876661029083,23.553,2026-11-03T21:58:50-03:00,"1. Total number of patients per day: 500  
+2. Average time per patient: 24 minutes = 24/60 = 0.4 hours  
+3. Total time per day: 500 patients × 0.4 hours = 200 hours  
+4. Cost per hour for doctors: $150  
+5. Revenue per hour from patients: $200  
+6. Total cost: 200 hours × $150 = $30,000  
+7. Total revenue: 200 hours × $200 = $40,000  
+8. Profit = Total revenue - Total cost = $40,000 - $30,000 = $10,000  
+
+Final answer: #### 10000"
+base,3,87,43500,,43500,False,True,stop,246,181,144,5960.991,246,27893.482,8.783413988974198,33.993,2026-11-03T21:59:13-03:00,"Let's break it down step by step:
+
+1. **Base price**: $30,000  
+2. **King cab upgrade**: $7,500  
+3. **Leather seats**: One-third of the king cab upgrade → $7,500 ÷ 3 = $2,500  
+4. **Running boards**: $500 less than leather seats → $2,500 - $500 = $2,000  
+5. **Upgraded exterior light package**: $1,500  
+
+Now add all the costs:
+
+- Base price: $30,000  
+- King cab: $7,500  
+- Leather seats: $2,500  
+- Running boards: $2,000  
+- Exterior light package: $1,500  
+
+Total cost = $30,000 + $7,500 + $2,500 + $2,000 + $1,500 = **$43,500**
+
+Final answer:  
+#### <number> 43500"
+base,3,88,150,,50,False,False,stop,170,119,82,3703.125,170,18708.114,9.033513479766052,22.531,2026-11-03T21:59:47-03:00,"Let’s denote the number of cards Kenny starts with as $ x $.
+
+- He sells $ \frac{1}{3}x $ cards and keeps them.
+- He sells the remaining $ \frac{2}{3}x $ cards for $1.5 each, earning $1.5 × $ \frac{2}{3}x $.
+- He gets $50 in cash from selling the cards.
+
+So, the equation is:
+
+$$
+1.5 \times \frac{2}{3}x = 50
+$$
+
+Simplify:
+
+$$
+1.5 \times \frac{2}{3}x = 50 \Rightarrow 1x = 50
+$$
+
+So, $ x = 50 $.
+
+Final answer: $ \boxed{50} $"
+base,3,89,9,,9,False,True,stop,172,139,101,4611.022,172,19095.786,8.954855275399504,24.072,2026-11-03T22:00:10-03:00,"Let's break it down step by step:
+
+1. **First tooth**: $5.00  
+2. **Next three teeth**: $1.00 per tooth  
+   - Total for 3 teeth: $3.00  
+3. **Last two teeth**: Half the amount of money per tooth as for the previous three teeth.  
+   - Previous three teeth: $1.00 per tooth  
+   - Last two teeth: $0.50 per tooth  
+   - Total for 2 teeth: $1.00  
+
+Now add all the amounts:  
+- $5.00 (first tooth) + $3.00 (next three teeth) + $1.00 (last two teeth) = **$9.00**
+
+Final answer:  
+#### <number> 9"
+base,3,90,60,,60,False,True,stop,118,98,61,2482.416,118,12660.858,9.241079869942464,15.31,2026-11-03T22:00:34-03:00,"1. Total students = 20  
+2. 20% of 20 = 4 students enrolled in contemporary dance.  
+3. Remaining students = 20 - 4 = 16  
+4. 25% of 16 = 4 students enrolled in jazz dance.  
+5. Remaining students = 16 - 4 = 12  
+6. Percentage of students in hip-hop = (12 / 20) × 100 = 60%  
+
+Final answer: #### <60>"
+base,3,91,24,24,24,True,True,stop,92,114,77,3530.46,92,9832.609,9.254919014882011,13.471,2026-11-03T22:00:49-03:00,"Maria invited 4 friends, so total people = 4 + 1 = 5.
+
+- Each friend gets 2 balloons: 4 friends × 2 = 8 balloons.
+- Maria gets 1 balloon.
+- Mom gives 3 balloons to each person: 5 people × 3 = 15 balloons.
+
+Total balloons = 8 + 1 + 15 = 24.
+
+Final answer: #### 24"
+base,3,92,539,,539,False,True,stop,138,114,77,3401.45,138,14955.27,9.160650392804676,18.615,2026-11-03T22:01:03-03:00,"1. The salesman bought 48 sneakers for $576.
+2. He sold 17 sneakers for $20 each: $17 × 20 = $340.
+3. The remaining 31 sneakers were sold for $25 each: $31 × 25 = $775.
+4. Total revenue: $340 + $775 = $1115.
+5. Total cost: $576.
+6. Profit = Total revenue - Total cost = $1115 - $576 = $539.
+
+Final answer: #### <539>"
+base,3,93,18,,22,False,False,stop,256,143,105,4581.387,256,28824.778,8.846555557166823,33.818,2026-11-03T22:01:21-03:00,"Let's break it down step by step:
+
+1. **Total toys needed**: 400  
+2. **Workers and their production rates**:
+   - 2 workers: 6 toys/hour  
+   - 2 workers: 4 toys/hour  
+   - 1 worker: unknown (let's call it $ x $)  
+3. **Total production rate**:
+   $$
+   (2 \times 6) + (2 \times 4) + x = 12 + 8 + x = 20 + x
+   $$
+4. **Time worked**: 10 hours  
+5. **Total production**:
+   $$
+   (20 + x) \times 10 = 200 + 10x
+   $$
+6. **They still need 20 more toys**:
+   $$
+   200 + 10x = 420
+   $$
+7. Solve for $ x $:
+   $$
+   10x = 420 - 200 = 220 \Rightarrow x = 22
+   $$
+
+Final answer:  
+#### <number> 22"
+base,3,94,14,,14,False,True,stop,180,87,50,2396.322,180,19520.607,9.169796820355023,22.072,2026-11-03T22:01:55-03:00,"1. Glee club ordered 20 pizzas and ate 70% of them:  
+   - 70% of 20 = 0.7 × 20 = 14 pizzas eaten.  
+   - Pizzas left = 20 - 14 = 6 pizzas.
+
+2. Football team ordered twice as many pizzas as the glee club:  
+   - 2 × 20 = 40 pizzas.  
+   - 80% of 40 = 0.8 × 40 = 32 pizzas eaten.  
+   - Pizzas left = 40 - 32 = 8 pizzas.
+
+3. Total pizzas left = 6 (from glee club) + 8 (from football team) = 14 pizzas.
+
+Final answer: #### <number> 14"
+base,3,95,60,,60,False,True,stop,101,88,51,2433.7,101,10853.676,9.21346832170041,14.057,2026-11-03T22:02:17-03:00,"- The bus travels at 60 mph for 5 hours:  
+  $ 60 \times 5 = 300 $ miles.
+
+- The car travels at 30 mph for 8 hours:  
+  $ 30 \times 8 = 240 $ miles.
+
+- The difference in distance:  
+  $ 300 - 240 = 60 $ miles.
+
+Final answer:  
+#### <number> 60"
+base,3,96,1080,,1080,False,True,stop,120,123,85,3709.583,120,12950.302,9.188974898037127,16.784,2026-11-03T22:02:31-03:00,"Let's work backwards:
+
+1. The Allosaurus ate the last 270 kg.
+2. Before the Allosaurus ate, there was 270 kg left.
+3. The velociraptors scavenged half of what was left, so before that, there was 270 × 2 = 540 kg.
+4. The T-Rex ate half of what was left, so before that, there was 540 × 2 = 1080 kg.
+
+Final answer: #### <number> 1080"
+base,3,97,291,,39,False,False,stop,216,121,84,3607.933,216,24083.973,8.927098531459073,27.88,2026-11-03T22:02:48-03:00,"Let's break it down step by step:
+
+1. **Price per sunflower**: $2  
+2. **Price per bouquet**: $8  
+3. **Earnings from sunflowers per day**: $26  
+4. **Earnings from bouquets per day**: $56  
+5. **Number of sunflowers sold per day from sunflowers**:  
+   $$
+   \frac{26}{2} = 13 \text{ sunflowers}
+   $$  
+6. **Number of bouquets sold per day from bouquets**:  
+   $$
+   \frac{56}{8} = 7 \text{ bouquets}
+   $$  
+7. **Number of sunflowers sold per day**:  
+   $$
+   13 \text{ sunflowers}
+   $$  
+8. **Total sunflowers sold after 3 days**:  
+   $$
+   13 \times 3 = 39 \text{ sunflowers}
+   $$
+
+Final answer:  
+#### <number> 39"
+base,3,98,70,,70,False,True,stop,89,95,58,2447.719,89,9505.878,9.257429981743927,12.16,2026-11-03T22:03:16-03:00,"Carmen solved 3 crossword puzzles, each taking 10 minutes:  
+$ 3 \times 10 = 30 $ minutes.
+
+She solved 8 sudoku puzzles, each taking 5 minutes:  
+$ 8 \times 5 = 40 $ minutes.
+
+Total time:  
+$ 30 + 40 = 70 $ minutes.
+
+Final answer:  
+#### <70>"
+base,3,99,63,,63,False,True,stop,87,79,42,1925.09,87,9148.15,9.400807813601658,11.233,2026-11-03T22:03:28-03:00,"Edgar eats 18 pretzels a day. His brother eats 1/2 as many, so:
+
+$$
+\frac{1}{2} \times 18 = 9
+$$
+
+His brother eats 9 pretzels a day. In a week, he eats:
+
+$$
+9 \times 7 = 63
+$$
+
+Final answer: #### <number> 63"
+treinado,4,50,13,13,13,True,True,stop,112,69,69,3468.711,112,11988.698,9.258720171281318,15.614,2026-11-03T22:09:03-03:00,"Let $ x $ be Jerry's current age.
+
+We are told:  
+$ x = 2(x - 5) $
+
+Solve the equation:  
+$ x = 2x - 10 $  
+$ x - 2x = -10 $  
+$ -x = -10 $  
+$ x = 10 $
+
+Jerry is currently 10 years old.
+
+In 3 years, he will be:  
+$ 10 + 3 = 13 $
+
+Final answer:  
+#### 13"
+treinado,4,51,420,,420,False,True,stop,162,86,49,2437.318,162,17589.089,9.153401861801939,20.568,2026-11-03T22:09:18-03:00,"Let the share of the first person be $ x $.
+
+- The second person took $ x + 80 $.
+- The third person took $ 2(x + 80) $.
+
+Total amount:  
+$$
+x + (x + 80) + 2(x + 80) = 1920
+$$
+
+Simplify:  
+$$
+x + x + 80 + 2x + 160 = 1920
+$$  
+$$
+4x + 240 = 1920
+$$  
+$$
+4x = 1680
+$$  
+$$
+x = 420
+$$
+
+Final answer:  
+$$
+\boxed{420}
+$$"
+treinado,4,52,10,10,10,True,True,stop,116,81,44,1979.788,116,12349.734,9.311941455581149,14.504,2026-11-03T22:09:39-03:00,"1. Each girl got 1/6 of 24 liters:  
+   $ \frac{1}{6} \times 24 = 4 $ liters per girl.  
+   Since there are two girls: $ 4 \times 2 = 8 $ liters.
+
+2. A boy got 6 liters.  
+   Total water taken: $ 8 + 6 = 14 $ liters.
+
+3. Water left: $ 24 - 14 = 10 $ liters.
+
+Final answer:  
+#### 10"
+treinado,4,53,12,12,12,True,True,stop,99,98,61,2586.119,99,10584.063,9.259204144948873,13.282,2026-11-03T22:09:53-03:00,"1. Total penguins: 36  
+2. One-third jump in: $ \frac{1}{3} \times 36 = 12 $  
+3. Another one-third go inside the cave: $ \frac{1}{3} \times 36 = 12 $  
+4. Penguins still sunbathing: $ 36 - 12 - 12 = 12 $  
+
+Final answer: #### 12"
+treinado,4,54,50,50,50,True,True,stop,88,103,66,3371.347,88,9361.689,9.293194849775505,13.131,2026-11-03T22:10:07-03:00,"On Monday, Robert collects 20 shells.  
+Kylie collects 5 more shells than Robert, so she collects $ 20 + 5 = 25 $ shells on Monday.  
+
+On Tuesday, Kylie collects 2 times more shells than she did on Monday.  
+So, she collects $ 2 \times 25 = 50 $ shells on Tuesday.  
+
+Final answer: #### 50"
+treinado,4,55,92,92,92,True,True,stop,62,119,82,3716.882,62,6698.751,9.106175166086931,10.552,2026-11-03T22:10:20-03:00,"Bill started with 2 cases × 24 bottles = 48 bottles.  
+He needs 70 guests × 2 bottles = 140 bottles.  
+He needs 140 - 48 = 92 additional bottles.  
+
+Final answer: #### 92"
+treinado,4,56,623,623,623,True,True,stop,88,76,39,1900.983,88,9325.738,9.329020394954266,11.379,2026-11-03T22:10:30-03:00,"1. Grace weighs 125 pounds.
+2. Alex weighs 2 pounds less than 4 times Grace's weight:  
+   $ 4 \times 125 - 2 = 500 - 2 = 498 $ pounds.
+3. Combined weight: $ 125 + 498 = 623 $ pounds.
+
+Final answer: #### 623"
+treinado,4,57,40,,40,False,True,stop,131,106,69,3358.243,131,14217.767,9.143489269447164,17.802,2026-11-03T22:10:42-03:00,"Let's denote the actual number of people who attended the concert as $ x $.
+
+Courtney said the audience was 48, but she overstated the number by 20%.  
+So, Kelly was right when she said Courtney overstated the number by 20%, meaning:
+
+$$
+48 = x + 0.2x = 1.2x
+$$
+
+Solving for $ x $:
+
+$$
+x = \frac{48}{1.2} = 40
+$$
+
+So, the actual number of people who attended the concert is:
+
+$$
+\boxed{40}
+$$"
+treinado,4,58,17,17,17,True,True,stop,198,134,97,4188.759,198,22143.278,8.896605100654023,26.474,2026-11-03T22:10:59-03:00,"1. **Total distance**: 20 miles  
+2. **Swimming speed**: 2 miles per hour  
+3. **Distance swum**: 60% of 20 miles = 12 miles  
+4. **Time to swim 12 miles**: $ \frac{12}{2} = 6 $ hours  
+5. **Rest time**: Half as long as the swimming time = $ \frac{6}{2} = 3 $ hours  
+6. **Remaining distance**: 20 - 12 = 8 miles  
+7. **Speed for remaining distance**: Half the speed = 1 mile per hour  
+8. **Time to swim remaining distance**: $ \frac{8}{1} = 8 $ hours  
+9. **Total time**: 6 (swimming) + 3 (rest) + 8 (remaining) = 17 hours  
+
+Final answer:  
+#### 17"
+treinado,4,59,940,940,940,True,True,stop,73,80,43,2050.955,73,7510.035,9.587172363377801,9.679,2026-11-03T22:11:26-03:00,"In May, Joseph's expenditure was $500.  
+In June, his expenditure was $60 less, so it was $500 - $60 = $440.  
+Total expenditure for both months = $500 + $440 = $940.  
+
+Final answer: #### 940"
+treinado,4,60,10,1,1,False,False,stop,105,84,47,2052.338,105,11250.364,9.24414534498617,13.408,2026-11-03T22:11:36-03:00,"1. Convert the shark's length to inches:  
+   $ 10 \text{ feet} = 120 \text{ inches} $
+
+2. Convert the remoras' lengths to inches:  
+   $ 2 \times 6 \text{ inches} = 12 \text{ inches} $
+
+3. Calculate the percentage:  
+   $ \frac{12}{120} \times 100 = 1\% $
+
+Final answer: #### 1"
+treinado,4,61,540,540,540,True,True,stop,87,113,76,3356.958,87,9346.16,9.201640031841954,12.8,2026-11-03T22:11:49-03:00,"- ""Deck the Halls"" is sung twice: $ 2 \times 150 = 300 $ seconds.
+- ""Jingle Bells"" is sung once: $ 1 \times 240 = 240 $ seconds.
+- Total time: $ 300 + 240 = 540 $ seconds.
+
+Final answer: #### 540"
+treinado,4,62,110,110,110,True,True,stop,70,84,47,1932.198,70,7528.231,9.165499836548587,9.622,2026-11-03T22:12:02-03:00,"Gerald earns $30 per day for a week.  
+A week has 7 days, so he earns $30 × 7 = $210.
+
+He spent $100, so he has $210 − $100 = $110 left.
+
+Final answer: #### 110"
+treinado,4,63,20,20,20,True,True,stop,284,87,50,2397.942,284,31837.144,8.888988283622425,34.327,2026-11-03T22:12:11-03:00,"Let's define the variables:
+
+- Let $ C $ be Colin's current age.
+- Wendy's current age is $ 5 \times (C + 7) $ (since she is five times as old as Colin will be in 7 years).
+
+In 25 years, Colin will be $ C + 25 $ years old, and Wendy will be $ 5 \times (C + 7) + 25 $ years old.
+
+According to the problem, in 25 years, Colin will be a third as old as Wendy is now:
+
+$$
+C + 25 = \frac{1}{3} \left( 5(C + 7) \right)
+$$
+
+Solve this equation:
+
+$$
+C + 25 = \frac{5}{3}(C + 7)
+$$
+
+Multiply both sides by 3 to eliminate the fraction:
+
+$$
+3(C + 25) = 5(C + 7)
+$$
+
+$$
+3C + 75 = 5C + 35
+$$
+
+$$
+75 - 35 = 5C - 3C
+$$
+
+$$
+40 = 2C
+$$
+
+$$
+C = 20
+$$
+
+So, Colin is currently **20** years old.
+
+Final answer:  
+#### 20"
+treinado,4,64,560,560,560,True,True,stop,81,92,55,2448.283,81,8595.108,9.307620102039438,11.254,2026-11-03T22:12:46-03:00,"1. One way trip: 2 hours at 70 mph = 2 × 70 = 140 miles  
+2. Round trip: 140 miles × 2 = 280 miles  
+3. He visits his parents twice a month: 280 × 2 = 560 miles  
+
+Final answer: #### 560"
+treinado,4,65,24,24,24,True,True,stop,81,74,37,1915.631,81,8494.329,9.418048206044292,10.477,2026-11-03T22:12:57-03:00,"Let's break it down step by step:
+
+1. Chris is 4 years old.
+2. Ben is two times older than Chris, so Ben is $ 2 \times 4 = 8 $ years old.
+3. Caroline is three times older than Ben, so Caroline is $ 3 \times 8 = 24 $ years old.
+
+Final answer: #### 24"
+treinado,4,66,22,22,22,True,True,stop,178,134,97,4304.577,178,19735.411,8.96865031085494,24.122,2026-11-03T22:13:08-03:00,"Let's break it down step by step:
+
+1. **First time**: The alarm rang **4 times**.
+2. **Second time**: It rang for **3 times as long as the first time**.  
+   - First time: 4 times  
+   - Second time: $ 3 \times 4 = 12 $ times  
+3. **Third time**: It rang for **half as long as the second time**.  
+   - Second time: 12 times  
+   - Third time: $ \frac{12}{2} = 6 $ times  
+
+Now, add up all the rings:
+
+- First time: 4  
+- Second time: 12  
+- Third time: 6  
+
+Total = $ 4 + 12 + 6 = 22 $
+
+Final answer:  
+#### 22"
+treinado,4,67,4,4,4,True,True,stop,87,101,64,2499.726,87,9287.857,9.259401818955654,11.894,2026-11-03T22:13:32-03:00,"Rose bought 12 onions and 4 potatoes.  
+Sophia bought 1/4 of what Rose bought, since she bought 1/4 the number of onions and potatoes that Rose bought.  
+
+Sophia bought:  
+- 12 onions / 4 = 3 onions  
+- 4 potatoes / 4 = 1 potato  
+
+Total = 3 + 1 = 4  
+
+#### 4"
+treinado,4,68,22,,17.5,False,False,stop,143,100,63,2456.406,143,15598.709,9.103317460438552,18.313,2026-11-03T22:13:44-03:00,"Let the number of votes in favor be $ x $.
+
+Then the number of votes against is $ x - 2 $ (since it's twice as many against as in favor).
+
+Total number of people is 33:
+
+$$
+x + (x - 2) = 33
+$$
+
+$$
+2x - 2 = 33
+$$
+
+$$
+2x = 35
+$$
+
+$$
+x = 17.5
+$$
+
+This is not possible since the number of votes must be an integer.
+
+So, the problem may have a mistake, or the answer is not an integer.
+
+Final answer: #### <number> #### <number>"
+treinado,4,69,64,64,64,True,True,stop,121,97,60,2438.904,121,13038.843,9.203270566261132,15.768,2026-11-03T22:14:02-03:00,"Let's work backwards:
+
+1. Kris gave 7 stickers to Rob, so she kept 9, which means she received 9 + 7 = 16 stickers from Luis.
+2. Luis used half of the stickers and gave the rest to Kris. So Luis had 16 stickers, meaning he had 32 stickers in total (since he used half and gave the other half to Kris).
+3. Seth gave half of his stickers to Luis, so he had 32 stickers in total, meaning he had 64 stickers initially.
+
+Final answer: #### 64"
+treinado,4,70,525,8.57,8.57,False,False,stop,140,125,88,3743.248,140,15412.612,9.018588153649752,19.374,2026-11-03T22:14:18-03:00,"To find the calorie deficit needed, we calculate:
+
+$$
+\frac{30 \text{ lbs}}{1 \text{ lb}} = 30 \text{ lbs}
+$$
+
+Andy needs to burn 30 lbs of fat, which equals 30,000 calories.
+
+$$
+\frac{30,000 \text{ calories}}{3500 \text{ calories/day}} = 8.57 \text{ days}
+$$
+
+Since he wants to reach his goal by July 19th, he needs to burn approximately 8.57 calories per day.
+
+Final answer: #### 8.57"
+treinado,4,71,10,,10,False,True,stop,113,97,60,2438.591,113,12223.956,9.162336644536351,15.0,2026-11-03T22:14:37-03:00,"1. Total loaves produced: 60  
+2. Loaves sold in the morning: $ \frac{2}{3} \times 60 = 40 $  
+3. Loaves left after morning: $ 60 - 40 = 20 $  
+4. Half of the remaining loaves are sold in the afternoon and evening: $ \frac{1}{2} \times 20 = 10 $  
+
+Final answer:  
+#### <number>  
+#### <number> 10"
+treinado,4,72,410,10.93,10.93,False,False,stop,152,122,85,3700.074,152,16565.217,9.115485779630898,20.435,2026-11-03T22:14:52-03:00,"Zoey's total distance: $ 40 \text{ seeds} \times 10 \text{ feet} = 400 \text{ feet} $
+
+Sydney's total distance: $ 35 \text{ seeds} \times 12 \text{ feet} = 420 \text{ feet} $
+
+Total distance: $ 400 + 420 = 820 \text{ feet} $
+
+Average total distance: $ \frac{820}{40 + 35} = \frac{820}{75} \approx 10.93 \text{ feet} $
+
+Final answer: #### 10.93"
+treinado,4,73,140,,140,False,True,stop,112,92,55,2508.757,112,11967.222,9.275335579134405,14.716,2026-11-03T22:15:12-03:00,"Jordan plays video games for 2 hours a day. Assuming a week has 7 days, he plays:
+
+$$
+2 \text{ hours/day} \times 7 \text{ days} = 14 \text{ hours}
+$$
+
+He earns $10 per hour from his part-time job, so:
+
+$$
+14 \text{ hours} \times 10 \text{ dollars/hour} = 140 \text{ dollars}
+$$
+
+Final answer:  
+#### <number> 140"
+treinado,4,74,720,720,720,True,True,stop,83,74,37,1889.477,83,8765.515,9.3548411017493,10.757,2026-11-03T22:15:27-03:00,"Tom gets 4 car washes a month.  
+Each car wash costs $15.  
+Total cost in a year: $ 4 \times 15 \times 12 $.
+
+Calculate:  
+$ 4 \times 15 = 60 $  
+$ 60 \times 12 = 720 $.
+
+Final answer: #### 720"
+treinado,4,75,1050,1050,1050,True,True,stop,152,91,54,2460.85,152,16470.709,9.16778992331174,19.264,2026-11-03T22:15:38-03:00,"Let's break it down step by step:
+
+1. **Jewel processes 50 customers per day**.
+2. **Julie processes twice as fast as Jewel**, so she processes $ 50 \times 2 = 100 $ customers per day.
+3. **They work all days of the week**, which is 7 days.
+4. **Total weekly production** = (Jewel's daily production) × 7 + (Julie's daily production) × 7  
+   = $ 50 \times 7 + 100 \times 7 = 350 + 700 = 1050 $.
+
+Final answer: #### 1050"
+treinado,4,76,8,7,7,False,False,stop,134,124,87,3628.535,134,14713.313,9.039432519378877,18.62,2026-11-03T22:15:57-03:00,"1. Yoga class on Monday: 1 hour  
+2. Cooking class on Tuesday: 3 times as long as Monday’s yoga → $ 3 \times 1 = 3 $ hours  
+3. Cheese-tasting event on Wednesday: 0.5 hours  
+4. Museum tour on Thursday: half as long as cooking class → $ \frac{3}{2} = 1.5 $ hours  
+5. Errands on Friday: 2 hours  
+
+Total hours:  
+$ 1 + 3 + 0.5 + 1.5 + 2 = 7 $ hours  
+
+Final answer:  
+#### 7"
+treinado,4,77,20,20,20,True,True,stop,158,116,79,3404.584,158,17510.486,8.966056110607095,21.169,2026-11-03T22:16:16-03:00,"1. Jim collected 27 seashells, which was 5 more than Carlos.  
+   - So, Carlos collected $ 27 - 5 = 22 $ seashells.  
+
+2. Carlos collected twice as many as Carrey.  
+   - Let Carrey's seashells be $ x $.  
+   - Then Carlos collected $ 2x = 22 $, so $ x = 11 $.  
+
+3. Total seashells = Jim + Carlos + Carrey = $ 27 + 22 + 11 = 60 $.  
+
+4. They divided the seashells equally: $ 60 \div 3 = 20 $.  
+
+Final answer:  
+#### 20"
+treinado,4,78,138,139,139,False,False,stop,123,111,74,3361.793,123,13211.049,9.234694383466445,16.692,2026-11-03T22:16:37-03:00,"1. Initial price = $120  
+2. Annual increase = 5% of original price  
+3. After 1 year: $120 × 1.05 = $126  
+4. After 2 years: $126 × 1.05 = $132.30  
+5. After 3 years: $132.30 × 1.05 = $139.235  
+6. Rounded to the nearest integer: $139  
+
+Final answer: #### 139"
+treinado,4,79,175,175,175,True,True,stop,84,95,58,2566.004,84,8787.317,9.445431409837612,11.825,2026-11-03T22:16:54-03:00,"1. Goldy gave 3 sacks to her cousin.  
+2. She gave 4 sacks to her brother.  
+3. Total given: $3 + 4 = 7$ sacks.  
+4. Each sack weighs 25 kilograms.  
+5. Total weight given: $7 \times 25 = 175$ kilograms.  
+
+Final answer: #### 175"
+treinado,4,80,64,64,64,True,True,stop,86,106,69,3375.825,86,9211.825,9.227270383447362,12.878,2026-11-03T22:17:05-03:00,"Colby completes 50 - 10 = 40 packages per hour.
+
+He earns $0.20 per package, so for 40 packages, he earns 40 × 0.20 = $8.00 per hour.
+
+For an 8-hour workday, he earns 8 × 8 = $64.00.
+
+Final answer: #### 64"
+treinado,4,81,5600,5600,5600,True,True,stop,93,130,93,3711.532,93,10040.49,9.162899420247419,13.934,2026-11-03T22:17:18-03:00,"1. Total gallons sold: 4000 gallons  
+2. Price per gallon: $3.5  
+3. Amount of milk that expired: $ \frac{2}{5} \times 4000 = 1600 $ gallons  
+4. Refund amount: $ 1600 \times 3.5 = 5600 $ dollars  
+
+Final answer: #### 5600"
+treinado,4,82,720,720,720,True,True,stop,157,111,74,3376.488,157,17222.367,9.057988370588086,20.778,2026-11-03T22:17:32-03:00,"1. Greta's paycheck is $2400.00.  
+2. She puts 50% into her retirement account:  
+   $ 2400.00 × 0.50 = 1200.00 $  
+3. She uses 20% for her car payment:  
+   $ 2400.00 × 0.20 = 480.00 $  
+4. Subtract the retirement and car payments from her paycheck:  
+   $ 2400.00 - 1200.00 - 480.00 = 720.00 $  
+
+Final answer: #### 720"
+treinado,4,83,312,312,312,True,True,stop,124,90,53,2482.56,124,13376.61,9.195154826222787,16.587,2026-11-03T22:17:53-03:00,"1. Gary does laundry 2 times a week.  
+2. Each load uses 20 gallons of water.  
+3. Total water per week = 2 loads × 20 gallons = 40 gallons.  
+4. Cost per gallon = $0.15.  
+5. Total cost per week = 40 gallons × $0.15 = $6.  
+6. There are 52 weeks in a year.  
+7. Total cost per year = $6 × 52 = $312.  
+
+Final answer: #### 312"
+treinado,4,84,60,60,60,True,True,stop,61,98,61,2495.477,61,6492.553,9.24135698237658,9.118,2026-11-03T22:18:10-03:00,"Bailey receives $5 per week for 8 weeks:  
+$5 × 8 = $40.
+
+She ends with $100.  
+So, she started with:  
+$100 - $40 = $60.
+
+Final answer:  
+#### 60"
+treinado,4,85,450,450,450,True,True,stop,91,90,53,2444.435,91,9791.434,9.191707772324259,12.385,2026-11-03T22:18:19-03:00,"1. Sam had 70 loaves of bread last Friday.
+2. The bakery has 40 less than 7 times as many loaves as Sam had.
+3. Calculate 7 times Sam's loaves: $7 \times 70 = 490$.
+4. Subtract 40: $490 - 40 = 450$.
+
+Final answer: #### 450"
+treinado,4,86,10000,10000,10000,True,True,stop,191,109,71,3356.086,191,21069.17,9.017915750834039,24.985,2026-11-03T22:18:31-03:00,"1. **Number of patients per day**: 500  
+2. **Average time per patient**: 24 minutes = 24/60 = 0.4 hours  
+3. **Total time per day**: 500 patients × 0.4 hours = 200 hours  
+4. **Cost per hour for doctors**: $150  
+5. **Total doctor cost per day**: 200 hours × $150 = $30,000  
+6. **Hospital charge per hour**: $200  
+7. **Total hospital revenue per day**: 200 hours × $200 = $40,000  
+8. **Profit per day**: $40,000 - $30,000 = $10,000  
+
+Final answer: #### 10000"
+treinado,4,87,43500,43500,43500,True,True,stop,244,181,144,6001.28,244,27777.016,8.748239911731341,35.093,2026-11-03T22:18:56-03:00,"Let's break it down step by step:
+
+1. **Base price**: $30,000  
+2. **King cab upgrade**: $7,500  
+3. **Leather seats**: One-third of the king cab upgrade → $7,500 ÷ 3 = $2,500  
+4. **Running boards**: $500 less than leather seats → $2,500 - $500 = $2,000  
+5. **Upgraded exterior light package**: $1,500  
+
+Now add all the costs:
+
+- Base price: $30,000  
+- King cab: $7,500  
+- Leather seats: $2,500  
+- Running boards: $2,000  
+- Upgraded exterior light package: $1,500  
+
+Total cost = $30,000 + $7,500 + $2,500 + $2,000 + $1,500 = **$43,500**
+
+Final answer: #### 43500"
+treinado,4,88,150,,75,False,False,stop,233,119,82,3592.515,233,26143.412,8.87412859499747,29.997,2026-11-03T22:19:31-03:00,"Let’s denote the number of cards Kenny starts with as $ x $.
+
+- He sells $ \frac{2}{3}x $ cards and keeps $ \frac{1}{3}x $ cards.
+- He gets $ 1.5 \times \frac{2}{3}x = 1.5 \times \frac{2}{3}x = 1.0x $ dollars from selling the cards.
+- He keeps $ \frac{1}{3}x $ cards, which is worth $ \frac{1}{3}x $ dollars.
+- The remaining money is $ 1.0x - \frac{1}{3}x = \frac{2}{3}x $ dollars, which he uses to buy the ticket.
+
+We are told that this remaining money is $50.
+
+So:
+
+$$
+\frac{2}{3}x = 50
+$$
+
+Solving for $ x $:
+
+$$
+x = 50 \times \frac{3}{2} = 75
+$$
+
+Final answer:
+
+$$
+\boxed{75}
+$$"
+treinado,4,89,9,9,9,True,True,stop,174,139,101,4461.795,174,19808.414,8.733662371959714,24.819,2026-11-03T22:20:01-03:00,"Let's break it down step by step:
+
+1. **First tooth lost:** $5.00  
+2. **Next 3 teeth:** $1.00 per tooth  
+   - Total for 3 teeth: $3.00  
+3. **Last 2 teeth:** Half the amount of money per tooth as the previous three teeth  
+   - Previous three teeth: $1.00 per tooth  
+   - So, last two teeth: $0.50 per tooth  
+   - Total for 2 teeth: $1.00  
+
+Now add all the amounts:  
+- $5.00 (first tooth) + $3.00 (next 3 teeth) + $1.00 (last 2 teeth) = **$9.00**
+
+Final answer:  
+#### 9"
+treinado,4,90,60,60,60,True,True,stop,117,98,61,2444.021,117,12714.724,9.123281008695116,15.971,2026-11-03T22:20:26-03:00,"1. Total students = 20  
+2. 20% of 20 = 4 students enrolled in contemporary dance.  
+3. Remaining students = 20 - 4 = 16  
+4. 25% of 16 = 4 students enrolled in jazz dance.  
+5. Remaining students = 16 - 4 = 12  
+6. Percentage of students in hip-hop = (12 / 20) × 100 = 60%  
+
+Final answer: #### 60"
+treinado,4,91,24,25,25,False,False,stop,94,114,77,3378.783,94,10095.987,9.211580799380982,13.825,2026-11-03T22:20:42-03:00,"1. Maria invited 4 friends, so total people = 4 + 1 = 5.
+2. Maria gave each person 2 balloons: 5 people × 2 balloons = 10 balloons.
+3. Her mom gave each person 3 more balloons: 5 people × 3 balloons = 15 balloons.
+4. Total balloons = 10 + 15 = 25.
+
+Final answer: #### 25"
+treinado,4,92,539,539,539,True,True,stop,120,114,77,3379.297,120,13060.186,9.111661962547853,16.544,2026-11-03T22:20:56-03:00,"1. Total cost: $576  
+2. Sold 17 sneakers for $20 each: $17 × 20 = $340  
+3. Sold the remaining 31 sneakers for $25 each: $31 × 25 = $775  
+4. Total revenue: $340 + $775 = $1115  
+5. Profit = Total revenue - Total cost = $1115 - $576 = $539  
+
+Final answer: #### 539"
+treinado,4,93,18,18,18,True,True,stop,250,143,105,4477.013,250,28185.122,8.83444818865783,32.811,2026-11-03T22:21:12-03:00,"Let's break it down step by step:
+
+1. **Total toys needed:** 400  
+2. **Workers and their production rates:**  
+   - 2 workers: 6 toys/hour  
+   - 2 workers: 4 toys/hour  
+   - 1 worker: unknown (let's call it $ x $)  
+3. **Total production rate:**  
+   $ 2 \times 6 + 2 \times 4 + 1 \times x = 12 + 8 + x = 20 + x $  
+4. **Time worked:** 10 hours  
+5. **Total toys produced in 10 hours:**  
+   $ (20 + x) \times 10 = 200 + 10x $  
+6. **They still need 20 toys:**  
+   $ 200 + 10x + 20 = 400 $  
+   $ 220 + 10x = 400 $  
+   $ 10x = 180 $  
+   $ x = 18 $  
+
+Final answer:  
+#### 18"
+treinado,4,94,14,14,14,True,True,stop,177,87,50,2403.102,177,19319.213,9.11010194876986,22.547,2026-11-03T22:21:45-03:00,"1. Glee club ordered 20 pizzas and ate 70% of them:  
+   - 70% of 20 = 0.7 × 20 = 14 pizzas eaten.  
+   - Pizzas left = 20 - 14 = 6 pizzas.
+
+2. Football team ordered twice as many pizzas as the glee club:  
+   - 2 × 20 = 40 pizzas.  
+   - 80% of 40 = 0.8 × 40 = 32 pizzas eaten.  
+   - Pizzas left = 40 - 32 = 8 pizzas.
+
+3. Total pizzas left = 6 (from glee club) + 8 (from football team) = 14 pizzas.
+
+Final answer: #### 14"
+treinado,4,95,60,60,60,True,True,stop,109,88,51,2460.641,109,11637.639,9.280232871976867,14.334,2026-11-03T22:22:08-03:00,"- Bus speed: 60 mph  
+- Bus time: 5 hours  
+- Car speed: 30 mph  
+- Car time: 8 hours  
+
+Calculate distance:  
+- Bus distance: $ 60 \times 5 = 300 $ miles  
+- Car distance: $ 30 \times 8 = 240 $ miles  
+
+Difference in distance:  
+$ 300 - 240 = 60 $ miles  
+
+Final answer:  
+#### 60"
+treinado,4,96,1080,2160,2160,False,False,stop,159,123,85,3801.031,159,17404.466,9.078129716820959,21.381,2026-11-03T22:22:22-03:00,"Let's work backwards:
+
+1. The Allosaurus ate the last 270 kg, so before that, there was **270 kg** left.
+2. Before the Allosaurus ate, the triceratops had **270 kg + 270 kg = 540 kg**.
+3. The velociraptors scavenged half of what was left, so before that, there was **540 kg × 2 = 1080 kg**.
+4. The T-Rex ate half of the triceratops it had hunted, so before that, there was **1080 kg × 2 = 2160 kg**.
+
+Final answer:  
+#### 2160"
+treinado,4,97,291,97,97,False,False,stop,229,121,84,3658.08,229,25451.089,8.95835930635424,29.286,2026-11-03T22:22:43-03:00,"Let's break it down step by step:
+
+1. **Find the number of sunflowers sold from the sunflower sales:**
+   - Each sunflower sells for $2.
+   - Faraday earned $26 from sunflowers.
+   - So, number of sunflowers sold = $ \frac{26}{2} = 13 $.
+
+2. **Find the number of sunflowers sold from the bouquet sales:**
+   - Each bouquet sells for $8.
+   - Faraday earned $56 from bouquets.
+   - So, number of bouquets sold = $ \frac{56}{8} = 7 $.
+   - Each bouquet has 12 sunflowers, so total sunflowers sold = $ 7 \times 12 = 84 $.
+
+3. **Total sunflowers sold in 3 days:**
+   - Sunflowers from sunflowers: 13.
+   - Sunflowers from bouquets: 84.
+   - Total = $ 13 + 84 = 97 $.
+
+Final answer:  
+#### 97"
+treinado,4,98,70,70,70,True,True,stop,88,95,58,2547.595,88,9367.056,9.287870169666968,12.085,2026-11-03T22:23:13-03:00,"Carmen solved 3 crossword puzzles, each taking 10 minutes:  
+$ 3 \times 10 = 30 $ minutes.
+
+She solved 8 sudoku puzzles, each taking 5 minutes:  
+$ 8 \times 5 = 40 $ minutes.
+
+Total time:  
+$ 30 + 40 = 70 $ minutes.
+
+Final answer:  
+#### 70"
+treinado,4,99,63,63,63,True,True,stop,84,79,42,1961.959,84,8833.372,9.396185284622906,10.952,2026-11-03T22:23:25-03:00,"Edgar eats 18 pretzels a day. His brother eats 1/2 as many, so:
+
+$$
+\frac{1}{2} \times 18 = 9
+$$
+
+His brother eats 9 pretzels a day. In a week, he eats:
+
+$$
+9 \times 7 = 63
+$$
+
+Final answer: #### 63"

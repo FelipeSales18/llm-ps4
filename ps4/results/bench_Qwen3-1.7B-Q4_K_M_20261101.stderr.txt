@@ -1,0 +1,6 @@
+
+	Maximum resident set size (kbytes): 1252260
+	Elapsed (wall clock) time (s): 360.3
+	User time (s): 1874.8
+	System time (s): 2.7
+	Exit status: 0

@@ -1,0 +1,38 @@
+# Model weights and quantized files
+*.gguf
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.ckpt
+models/
+hf/
+hf-tied/
+out/
+work/
+
+# llama.cpp checkout and builds
+llama.cpp/
+build/
+
+# Python environments and caches
+.venv/
+venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.cache/
+
+# Logs (large or machine-specific)
+*.log
+logs/
+
+# Secrets — never commit API keys or tokens
+api-key
+*.key
+.env
+.config/
+
+# OS / editor
+.DS_Store
+*.swp

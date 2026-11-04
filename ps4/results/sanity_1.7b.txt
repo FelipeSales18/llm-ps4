@@ -1,0 +1,52 @@
+
+
+Loading model... 
+
+▄▄ ▄▄
+██ ██
+██ ██  ▀▀█▄ ███▄███▄  ▀▀█▄    ▄████ ████▄ ████▄
+██ ██ ▄█▀██ ██ ██ ██ ▄█▀██    ██    ██ ██ ██ ██
+██ ██ ▀█▄██ ██ ██ ██ ▀█▄██ ██ ▀████ ████▀ ████▀
+                                    ██    ██
+                                    ▀▀    ▀▀
+
+build      : b12032-dde879bc4
+model      : /mnt/midia/llm-ps4/models/unsloth/Qwen3-1.7B-GGUF/Qwen3-1.7B-Q4_K_M.gguf
+ftype      : Q4_K - Medium
+modalities : text
+
+available commands:
+  /exit or Ctrl+C     stop or exit
+  /regen              regenerate the last response
+  /clear              clear the chat history
+  /read <file>        add a text file
+  /glob <pattern>     add text files using globbing pattern
+
+
+
+> Joana tem 3 caixas com 12 lápis cada e dá 7 lápis para a irmã. Quantos lápis sobram? /no_think
+Vamos resolver o problema passo a passo:
+
+1. **Joana tem 3 caixas com 12 lápis cada**  
+   - Total de lápis = $3 \times 12 = 36$ lápis.
+
+2. **Joana dá 7 lápis para a irmã**  
+   - Lápis dados = 7.
+
+3. **Lápis restantes**  
+   - Calculamos a diferença entre o total inicial e os dados:  
+     $36 - 7 = 29$.
+
+**Resposta:**  
+$\boxed{29}$ lápis sobram.
+
+[ Prompt: 17.9 t/s | Generation: 8.1 t/s ]
+
+
+Exiting...
+
+	Maximum resident set size (kbytes): 5702488
+	Elapsed (wall clock) time (s): 51.9
+	User time (s): 167.5
+	System time (s): 10.9
+	Exit status: 0
