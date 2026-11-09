@@ -1,0 +1,9 @@
+arquivo,sha256,bytes,mtime,evidencia
+run_eval_gpu.py,559bb5bd8d19993007a8e84b3d084349141801ba825c5e4b1327c9b9c42446ff,9515,2026-11-06T17:18:26-03:00,derivado de run_eval_0311_original.py por substituições exatas (ver diff em preparacao.txt); usado nesta rodada
+run_eval_0311_original.py,efb2ef876fed7395820c2109c4833e51598dc2a2e770e438acd9d16753f61d08,8819,2026-11-03T21:11:59-03:00,"cópia de ps4-eval/run_eval.py; mtime 2026-11-03 21:11:59, 9 s antes do início da rodada de 03/11 (log 21:12:08); difere de repo/eval-ps4/run_eval.py só em PS4_HOST e KEYFILE lidos do ambiente"
+grading.py,d658dc0937df9cb222185021722257a11cf1afe82ff1718f8ad3ec68b4f25938,881,2026-11-02T23:56:17-03:00,"cópia de ps4-eval/grading.py; mtime 2026-11-02 23:56, anterior a 03/11; idêntico (sha256) a repo/eval-ps4/grading.py"
+questions.jsonl,d1237ba470e88c852b012ba5a7277f4410058086ea29e1524f4f1143675d6fd8,28291,2026-11-02T23:56:00-03:00,"cópia de ps4-eval/questions.jsonl; mtime 2026-11-02 23:56, anterior a 03/11; 100 questões idx 0-99"
+chat_template_treinado.jinja (PS4: models/proprios/),8428c815ac94d82064e35ff1e841dcbe260e7e53a8d0bd3b94afa2eefa9bccab,4761,2026-11-03T00:34-03:00,"arquivo no PS4, não copiado; mtime 2026-11-03 00:34, anterior à rodada de 03/11 (21:12)"
+qwen3-1.7b-gsm8k-grpo-Q4_K_M.gguf (PS4: models/proprios/),d7771967dc6e5a69a8c676f8d0103763062d44b5b581aa9c707bc60a4684722b,1107410016,2026-11-03T00:26-03:00,sha256 igual ao registrado em experiments/q4km-repro-20261104 e quant-jaguar-20261104
+llama-server Vulkan (PS4: build-vulkan/bin/),cade4e7866d84436ee10544792ce3ddabb49c88b59bbf7a148e086e96b2cd3a1,15904,2026-11-06T17:23-03:00,"compilado em 2026-11-06, commit dde879bc, alvo llama-server (vulkan-build-server-20261106-172319)"
+llama-server CPU (PS4: build/bin/),fa65d0d4f06357c250a617223a404e8fc834203e44957bc893f588a3e66fbc10,15904,2026-11-02T23:55-03:00,"binário original do mesmo commit dde879bc, usado em 03/11 (sem Vulkan)"

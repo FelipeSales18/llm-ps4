@@ -1,0 +1,251 @@
+modelo,bloco,idx,gold,pred_strict,pred_flex,correct_strict,correct_flex,finish_reason,completion_tokens,prompt_tokens,prompt_n,prompt_ms,predicted_n,predicted_ms,predicted_per_second,e2e_s,inicio,tempo_valido,output
+f16,1,0,109,,109,False,True,stop,148,85,85,1309.37,148,32357.093,4.543053357729015,33.67,2026-11-09T09:28:22-03:00,True,"Let the ages of Darrell and Allen be $7x$ and $11x$ respectively, since their ages are in the ratio 7:11.
+
+The total age is given as 162:
+$$
+7x + 11x = 162
+$$
+$$
+18x = 162
+$$
+$$
+x = 9
+$$
+
+So, Allen's current age is:
+$$
+11x = 11 \times 9 = 99
+$$
+
+Allen's age 10 years from now is:
+$$
+99 + 10 = 109
+$$
+
+#### <number>  
+109"
+f16,1,1,89,,33,False,False,stop,292,151,114,1744.978,292,66192.741,4.3962524531202,67.965,2026-11-09T09:28:56-03:00,True,"1. **Initial amounts:**
+   - Small stickers: 30
+   - Large stickers: 40
+
+2. **Trade 90% of small stickers for large buttons:**
+   - Small stickers traded: $ 0.9 \times 30 = 27 $
+   - Large buttons received: $ 27 \text{ small stickers} \div 3 = 9 $ large buttons
+
+3. **Trade 50% of large stickers for large buttons:**
+   - Large stickers traded: $ 0.5 \times 40 = 20 $
+   - Large buttons received: $ 20 \text{ large stickers} \div 3 = 6 $ large buttons
+
+4. **Remaining large stickers:**
+   - $ 40 - 20 = 20 $ large stickers left
+
+5. **Trade remaining large stickers for small buttons:**
+   - Large buttons traded: $ 20 \div 3 = 6 $ large buttons
+   - Small buttons received: $ 6 \times 3 = 18 $ small buttons
+
+6. **Total buttons:**
+   - Large buttons: $ 9 + 6 = 15 $
+   - Small buttons: $ 18 $
+   - Total: $ 15 + 18 = 33 $
+
+#### <number> 33"
+f16,1,2,13,13,13,True,True,stop,98,89,52,836.856,98,22251.432,4.359270001139702,23.13,2026-11-09T09:30:04-03:00,True,"Let's break it down step by step:
+
+1. Indras has 6 letters.
+2. Her sister's name has 4 more letters than half of Indras' name.
+   - Half of Indras' name: $ \frac{6}{2} = 3 $
+   - Add 4: $ 3 + 4 = 7 $
+3. Total letters in both names: $ 6 + 7 = 13 $
+
+#### 13"
+f16,1,3,5,5,5,True,True,stop,142,110,73,1149.788,142,32178.895,4.381753941519745,33.351,2026-11-09T09:30:27-03:00,True,"1. Bethany runs 10 laps per hour.  
+2. Trey runs 4 more laps than Bethany:  
+   $ 10 + 4 = 14 $ laps.  
+3. Shaelyn runs half as many laps as Trey:  
+   $ \frac{14}{2} = 7 $ laps.  
+4. Quinn runs 2 fewer laps than Shaelyn:  
+   $ 7 - 2 = 5 $ laps.  
+5. Bethany runs 10 laps, Quinn runs 5 laps.  
+6. Difference in laps:  
+   $ 10 - 5 = 5 $ laps.  
+
+#### 5"
+f16,1,4,25,25,25,True,True,stop,118,142,105,1599.367,118,26698.231,4.3823128206509265,28.325,2026-11-09T09:31:00-03:00,True,"Let's break it down step by step:
+
+1. **Start with 5 children**.
+2. **First street**: 5 children.
+3. **Second street**: Each child is joined by another child → 5 × 2 = 10 children.
+4. **Third street**: Each child in the existing group is joined by another 2 children → 10 × 3 = 30 children.
+5. **Original 5 children leave the group** → 30 - 5 = 25 children.
+
+Final answer: #### 25"
+f16,1,5,452,500,500,False,False,stop,152,158,121,1858.959,152,34255.042,4.408110198784751,36.142,2026-11-09T09:31:29-03:00,True,"1. Kim usually sleeps from 10 p.m. to 6 a.m., which is 8 hours = 480 minutes.
+2. She woke up 5 minutes earlier than usual, so she woke up at 9:55 p.m.
+3. She was sleepwalking from 2:15 a.m. to 2:38 a.m.
+4. Calculate the time she slept: 2:38 a.m. - 2:15 a.m. = 23 minutes.
+5. Total sleep time = usual sleep time - 5 minutes + sleepwalking time = 480 - 5 + 23 = 500 minutes.
+
+#### 500"
+f16,1,6,43,43,43,True,True,stop,120,153,116,1775.239,120,26546.773,4.482654068726168,28.354,2026-11-09T09:32:05-03:00,True,"1. Gunther starts with 48 bananas.
+2. Arnold steals half of them: $ \frac{48}{2} = 24 $ bananas stolen.
+3. Gunther adds 25 bananas: $ 48 - 24 + 25 = 49 $ bananas.
+4. Arnold steals 12 bananas: $ 49 - 12 = 37 $ bananas.
+5. Gunther adds 6 bananas: $ 37 + 6 = 43 $ bananas.
+
+Final answer: #### 43"
+f16,1,7,34,34,34,True,True,stop,162,90,53,862.012,162,36779.261,4.377466964330796,37.67,2026-11-09T09:32:33-03:00,True,"Jonathan has 2/3 as many measuring spoons as measuring cups.  
+He has 2 dozen cups, which is 24 cups.  
+So, the number of measuring spoons he has is:  
+$$
+\frac{2}{3} \times 24 = 16 \text{ spoons}
+$$
+
+He gifts Pedro 6 measuring spoons, so the remaining spoons are:  
+$$
+16 - 6 = 10 \text{ spoons}
+$$
+
+He still has 24 cups.  
+So, the total number of utensils is:  
+$$
+10 \text{ spoons} + 24 \text{ cups} = 34 \text{ utensils}
+$$
+
+#### 34"
+f16,1,8,120,120,120,True,True,stop,84,84,47,766.699,84,18665.384,4.446734125587773,19.457,2026-11-09T09:33:11-03:00,True,"1. The cat's speed is 15 feet/second.
+2. The cat is 5 times faster than the turtle, so the turtle's speed is $ \frac{15}{5} = 3 $ feet/second.
+3. In 40 seconds, the turtle can crawl $ 3 \times 40 = 120 $ feet.
+
+#### 120"
+f16,1,9,11,,11,False,True,stop,206,136,99,1515.284,206,46206.772,4.436579123077458,47.741,2026-11-09T09:33:30-03:00,True,"Let’s denote the total number of flights the first plane makes in a day as $ x $.
+
+- The first plane flies to Greece for $ \frac{3}{4}x $ flights.
+- The remaining flights are split equally between France and Germany, so it flies to France and Germany for $ \frac{1}{2} \cdot \frac{1}{4}x = \frac{1}{8}x $ each.
+
+So, the total number of flights to France is $ \frac{1}{8}x $.
+
+Now, the second plane flies exclusively to Poland and makes 44 trips. This is half the number of trips the first plane makes in a day, so:
+
+$$
+44 = \frac{1}{2}x \Rightarrow x = 88
+$$
+
+Now, the number of flights to France is:
+
+$$
+\frac{1}{8} \cdot 88 = 11
+$$
+
+#### <number>  
+11"
+f16,1,10,34,42,42,False,False,stop,256,170,133,2049.365,256,57641.344,4.4239079505155186,59.724,2026-11-09T09:34:18-03:00,True,"1. **Red balloons**: 25 red balloons. 40% burst:  
+   $ 25 \times 0.4 = 10 $ burst.  
+   Remaining red balloons: $ 25 - 10 = 15 $.
+
+2. **Green balloons**: 7 green balloons. No change.  
+   Remaining green balloons: 7.
+
+3. **Yellow balloons**: 12 yellow balloons. Half burst:  
+   $ 12 \times 0.5 = 6 $ burst.  
+   Remaining yellow balloons: $ 12 - 6 = 6 $.
+
+4. **Blue balloons**: 8 blue balloons. Sally added 75% of them:  
+   $ 8 \times 0.75 = 6 $ added.  
+   Total blue balloons: $ 8 + 6 = 14 $.
+
+5. **Total balloons**:  
+   $ 15 $ (red) + $ 7 $ (green) + $ 6 $ (yellow) + $ 14 $ (blue) =  
+   $ 15 + 7 + 6 + 14 = 42 $.
+
+#### 42"
+f16,1,11,12,12,12,True,True,stop,72,80,43,698.831,72,12777.36,5.556703419172662,13.514,2026-11-09T09:35:18-03:00,True,"Kira bought:  
+- 3 apples  
+- 5 bananas  
+- 6 oranges  
+
+Total fruits bought:  
+$ 3 + 5 + 6 = 14 $ pieces  
+
+Lola ate 2 pieces.  
+
+Total pieces left:  
+$ 14 - 2 = 12 $  
+
+#### 12"
+f16,1,12,15,15.67,15.67,False,False,stop,228,109,72,823.612,228,33755.73,6.724784207007224,34.594,2026-11-09T09:35:31-03:00,True,"1. Start with 10 liters of orange drink, which is two-thirds water:  
+   $ 10 \times \frac{2}{3} = \frac{20}{3} \approx 6.67 $ liters of water.
+
+2. Spill 1 liter of orange drink, so remaining orange drink is:  
+   $ 10 - 1 = 9 $ liters.
+
+3. The remaining orange drink still has $ \frac{20}{3} $ liters of water.
+
+4. Now, add 15 liters of pineapple drink, which is three-fifths water:  
+   $ 15 \times \frac{3}{5} = 9 $ liters of water.
+
+5. Total water in the 24 liters:  
+   $ \frac{20}{3} + 9 = \frac{20}{3} + \frac{27}{3} = \frac{47}{3} \approx 15.67 $ liters.
+
+#### <number>  
+#### 15.67"
+f16,1,13,24,24,24,True,True,stop,87,87,50,621.519,87,13801.211,6.231337235551286,14.45,2026-11-09T09:36:06-03:00,True,"1. On Saturday, they watch 4 movies.
+2. On Sunday, they watch half the number of movies on Saturday, so $ \frac{4}{2} = 2 $ movies.
+3. Total movies per weekend: $ 4 + 2 = 6 $.
+4. In 4 weeks, they watch $ 6 \times 4 = 24 $ movies.
+
+#### 24"
+f16,1,14,105,,105,False,True,stop,206,119,82,961.031,206,29354.759,6.983535446501197,30.331,2026-11-09T09:36:20-03:00,True,"Mark completed the first test in 8 hours at a rate of 5 questions per hour.  
+So, the number of questions he completed in the first test is:  
+$$ 8 \text{ hours} \times 5 \text{ questions/hour} = 40 \text{ questions} $$
+
+He left $ 75 - 40 = 35 $ questions incomplete on the first test.
+
+Mark completed the second test in 6 hours at the same rate of 5 questions per hour.  
+So, the number of questions he completed in the second test is:  
+$$ 6 \text{ hours} \times 5 \text{ questions/hour} = 30 \text{ questions} $$
+
+He left $ 100 - 30 = 70 $ questions incomplete on the second test.
+
+Total questions left incomplete:  
+$$ 35 + 70 = 105 $$
+
+#### <number>  
+105"
+f16,1,15,120,120,120,True,True,stop,68,81,44,523.249,68,9646.715,6.945369485881981,10.193,2026-11-09T09:36:51-03:00,True,"Amy made 20 more friends than Lily, so Amy made $ 50 + 20 = 70 $ friends.
+
+Lily has 50 friends, and Amy has 70 friends.
+
+Total friends = $ 50 + 70 = 120 $.
+
+#### 120"
+f16,1,16,17,17,17,True,True,stop,108,84,47,579.869,108,15237.005,7.0223774291601275,15.83,2026-11-09T09:37:01-03:00,True,"1. Total oranges: 25  
+2. 1 is bad → Good oranges = 25 - 1 = 24  
+3. 20% are unripe: 20% of 25 = 5 → Unripe oranges = 5  
+4. 2 are sour → Sour oranges = 2  
+5. Good oranges = Total - Bad - Unripe - Sour = 25 - 1 - 5 - 2 = 17  
+
+#### 17"
+f16,1,17,36,36,36,True,True,stop,59,72,35,464.972,59,8182.896,7.087955168927969,8.662,2026-11-09T09:37:17-03:00,True,"1. Cost of 6 erasers: $2 × 6 = $12  
+2. Cost of 8 pencils: $3 × 8 = $24  
+3. Total cost: $12 + $24 = $36  
+
+#### 36"
+f16,1,18,12,12,12,True,True,stop,75,82,45,530.239,75,10418.814,7.102535854848738,10.96,2026-11-09T09:37:25-03:00,True,"Tyrion goes out 3 times a day.  
+He uses 2 face masks each time he goes out.  
+So, per day, he uses $ 3 \times 2 = 6 $ face masks.  
+
+For 2 days, he uses $ 6 \times 2 = 12 $ face masks.  
+
+#### 12"
+f16,1,19,45,45,45,True,True,stop,128,117,80,906.995,128,17992.923,7.058330655891765,18.913,2026-11-09T09:37:36-03:00,True,"Let's break it down step by step:
+
+1. Max bought 16 snowflake stamps.
+2. He bought 3 more truck stamps than snowflake stamps:  
+   $ 16 + 3 = 19 $ truck stamps.
+3. He bought 9 fewer rose stamps than truck stamps:  
+   $ 19 - 9 = 10 $ rose stamps.
+
+Now, add them all together:  
+$ 16 $ (snowflake) + $ 19 $ (truck) + $ 10 $ (rose) = $ 45 $.
+
+#### 45"

@@ -1,0 +1,10 @@
+arquivo,sha256,bytes,evidencia
+questions_full.jsonl,b086fbbd48ee2df9d1d4f52b6bfe2793ee2dd0676657cb9d013e6892daa69a44,373873,"gerado de ps4-eval/hf/eval/eval_grpo.csv (Kaggle; sha256 2ec6ec98f09a9b79ae5cf496762da17d4a439a23f006b89639ba236e8fdd182d), colunas idx/question/gold, json.dumps(ensure_ascii=False); 1319 linhas idx 0-1318; as 100 primeiras linhas são idênticas byte a byte a questions.jsonl (sha256 d1237ba4…6fd8)"
+grading.py,d658dc0937df9cb222185021722257a11cf1afe82ff1718f8ad3ec68b4f25938,881,cópia de ps4-eval/grading.py; igual ao manifest da tarefa 8
+run_eval_full.py,74c940d9640c6beb8f559adf866ccee68fe5f2f2cc019c5ce8abf215dfae69c0,16723,cliente no PS4 (stdlib); SYSTEM e corpo da requisição idênticos (AST) aos de run_eval_0311_original.py
+vigia_full.sh,bd26f1d9cce3c1e4b9d7c7ee3ee2904b7753266939b0fecd2349faa156299448,1964,"vigia 10 s, pausa >= 85 C, retoma < 75 C"
+chat_template_treinado.jinja (PS4),8428c815ac94d82064e35ff1e841dcbe260e7e53a8d0bd3b94afa2eefa9bccab,4761,igual ao manifest da tarefa 8
+qwen3-1.7b-gsm8k-grpo-Q4_K_M.gguf (PS4),d7771967dc6e5a69a8c676f8d0103763062d44b5b581aa9c707bc60a4684722b,1107410016,igual ao manifest da tarefa 8
+llama-server Vulkan (PS4),cade4e7866d84436ee10544792ce3ddabb49c88b59bbf7a148e086e96b2cd3a1,15904,igual ao manifest da tarefa 8
+run_eval_full.py (v3),9c05fb2a830c4996539ea45e4d02cb2ed9da161ee1a6290571bd317c39e9797d,20485,"v3 após a parada de 08/11: exceções no log, timeout 120 s/pergunta, registro de travamento, --chat-final; v2 (rodada até idx 196) guardada como run_eval_full_v2_rodada0808.py (91557163616491bb…)"
+run_eval_full.py (v4),d009c15ed38be32b8fddbf37842c85132ab7ce0b7284161e84cbcbee010f0a9b,21361,"v4: servidor GPU derrubado e reiniciado no começo de cada bloco de 50 (subida no log); resto igual à v3 (9c05fb2a…, guardada como run_eval_full_v3.py)"

@@ -1,0 +1,15 @@
+item,caminho,sha256,bytes,referencia,verificacao
+questions_full.jsonl,experiments/quant-acc-fedora-20261109/questions_full.jsonl,b086fbbd48ee2df9d1d4f52b6bfe2793ee2dd0676657cb9d013e6892daa69a44,373873,experiments/gsm8k-full-gpu-20261108/manifest.csv,sha256 confere
+grading.py,experiments/quant-acc-fedora-20261109/grading.py,d658dc0937df9cb222185021722257a11cf1afe82ff1718f8ad3ec68b4f25938,881,experiments/gsm8k-full-gpu-20261108/manifest.csv,sha256 confere
+chat_template_treinado.jinja,gguf/out/chat_template_treinado.jinja,8428c815ac94d82064e35ff1e841dcbe260e7e53a8d0bd3b94afa2eefa9bccab,4761,gguf/out/MANIFEST.csv,sha256 confere
+q4km,gguf/out/qwen3-1.7b-gsm8k-grpo-Q4_K_M.gguf,d7771967dc6e5a69a8c676f8d0103763062d44b5b581aa9c707bc60a4684722b,1107410016,gguf/out/MANIFEST.csv,sha256 confere
+q8,gguf/out/qwen3-1.7b-gsm8k-grpo-Q8_0.gguf,037c54e893afc4aa12280df84939aba2ae4acb213ef912a4bde133c7800eb36c,1834427488,gguf/out/MANIFEST.csv,sha256 confere
+f16,gguf/out/qwen3-1.7b-gsm8k-grpo-F16.gguf,c2ea227a124d02c5873175980b27e675d76782323fee86beba27a0583f1fd06f,3447350368,gguf/out/MANIFEST.csv,sha256 confere
+q5km,experiments/quant-jaguar-20261104/preparation-v4/models/qwen3-1.7b-gsm8k-grpo-Q5_K_M.gguf,366dbe4ccc8d701f3f92e1ea3a2148c8d6527039e0c78d770422b88686a15b95,1257880672,experiments/quant-jaguar-20261104/preparation-v4/manifest.csv,sha256 confere
+llama-server (build-server),gguf/llama.cpp/build-server/bin/llama-server,8f89fbbb7bded8f28fe6f26e8178501e2131c341f4680ecc56576c7d7a8ef529,12528,gguf/llama.cpp dde879bc; mesmas opções do build/ (Release; GGML_NATIVE=ON; LLAMA_CURL=OFF; libs compartilhadas); só o alvo llama-server,compilado em 2026-11-09
+run_quant.py,experiments/quant-acc-fedora-20261109/run_quant.py,f5811ab55d5894ccd65b24968e12832111d0265a2c53a0301cc0a6c30fec8266,12951,derivado de gsm8k-full-gpu-20261108/run_eval_full.py v4 (SYSTEM e requisição idênticos por AST),cliente desta tarefa
+regra_de_decisao,,,,"definida em 2026-11-09 antes da rodada completa do Q4_K_M","igual = |diferença de flex| <= 1,5 ponto E McNemar exato p > 0,05 (comparações pareadas)"
+regra_de_decisao_q5km,,,,"definida em 2026-11-09 antes da rodada completa do Q5_K_M","recupera = Q5_K_M × Kaggle com |diferença de flex| <= 1,5 ponto E McNemar exato p > 0,05"
+regra_de_decisao_q5km,,,,"definida em 2026-11-09 antes da rodada completa do Q5_K_M","melhora = Q5_K_M acima do Q4_K_M do Fedora (diferença de flex > 0) com McNemar exato p < 0,05 no flex"
+run_q5km.sh,experiments/quant-acc-fedora-20261109/run_q5km.sh,375337a9d72d7c857114e5882caa9a7fc990ec49d60c49187687d2401360d2ab,898,lançador do braço Q5_K_M (run_quant.py f5811ab5…; amostrador do packagekitd preso ao PID do cliente),2026-11-09
+run_quant.py (cópia do repo),experiments/quant-acc-fedora-20261109/run_quant.py,10a741db9caeda3f49596c6a98414e2c49ab06dd588625f0b9a87b9437327bb5,12946,"difere do original (f5811ab5…) só na linha ROOT: caminho absoluto trocado por os.path.expanduser('~/LLM-PS4')",2026-11-09
