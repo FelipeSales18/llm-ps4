@@ -1,199 +1,181 @@
 # LLM-PS4: a GRPO-tuned Qwen3-1.7B solving math on a PlayStation 4
 
-I fine-tuned Qwen3-1.7B with reinforcement learning (GRPO + LoRA) on GSM8K and ran it locally on a 2013 PlayStation 4 running Linux (8-core AMD Jaguar, no AVX2, 6.8 GiB of usable RAM) with llama.cpp. The goal was shorter, machine-readable answers, because every generated token is expensive on hardware this weak.
+I fine-tuned Qwen3-1.7B with GRPO (LoRA) on GSM8K to answer in a fixed, machine-readable format, and ran it on a 2013 PlayStation 4 running Linux with llama.cpp, first on the CPU and then on the console's GPU through Vulkan.
 
-**Results at a glance**
-- **Format compliance: 2.9% → 75.8%** on the full GSM8K test set (1,319 questions), with **no loss in accuracy** (76.6% → 76.3%, paired McNemar p = 0.81).
-- **14% fewer tokens** per answer and half as many truncated answers (Kaggle, full precision).
-- **Runs on the PS4** at 9.2 tokens/s, about 17 s per answer, 81/100 correct; after Q4_K_M quantization the results stay within ±2 questions of the full-precision run.
-- **What did not work:** accuracy did not improve, and the shorter answers did not translate into a measurable speedup on the PS4 (17.2 s vs 17.4 s per answer). Both results are reported below with the data.
+**Summary**
+- **GRPO taught the format without costing accuracy.** On the full GSM8K test set (n = 1,319, full precision), the tuned model ends in the requested `#### <number>` format 75.8% of the time, against 67.1% and 71.3% for the base model with the best prompts tested (instruction, 2-shot; McNemar p < 0.001 for both), while flexible accuracy stays the same (76.3% vs 76.6% for the base, p = 0.81).
+- **The 4-bit model runs 1.56× faster on the PS4 GPU than on the PS4 CPU:** 11.2 s vs 17.5 s per answer on the same 100 questions, with no significant accuracy difference (flexible 77 vs 81, p = 0.29). On all 1,319 questions the GPU scores exactly like the same Q4_K_M file on an x86 CPU (72.9% vs 72.9%, p = 1.0).
+- **4-bit quantization costs about 3.4 points** of flexible accuracy against the full-precision model (Q4_K_M: −3.3 on the PS4 GPU and −3.4 on a laptop CPU, both p = 0.003, n = 1,319), and it hurts the format more than the answers.
 
-<!-- Demo: add a GIF or screenshot of the PS4 answering a question here -->
-
-- Trained model (merged weights, LoRA adapter, GGUF Q4_K_M / Q8_0): [felipedutrain/qwen3-1.7b-gsm8k-grpo](https://huggingface.co/felipedutrain/qwen3-1.7b-gsm8k-grpo)
-- Kaggle notebooks: links will be added later (the executed notebooks are in [`notebooks/`](notebooks/)).
+Model card: [felipedutrain/qwen3-1.7b-gsm8k-grpo](https://huggingface.co/felipedutrain/qwen3-1.7b-gsm8k-grpo) (the link works once the model is public).
 
 ## Results
 
-### GSM8K test set (Kaggle, full 1319 questions)
-
-Greedy decoding, non-thinking mode, at most 320 new tokens, same system prompt for both models:
+Unless stated otherwise: greedy decoding, non-thinking mode, at most 320 new tokens, and this system prompt:
 
 > Solve the math problem. Reason briefly, step by step. On the last line, write only the final answer as: #### &lt;number&gt;
 
-| Model | Strict | Flexible | Mean tokens | Truncated |
+**Strict** = the last `#### <number>` matches the reference. **Flexible** = the strict answer if present, otherwise the last number in the output (commas and `$` ignored). All comparisons are paired on the same questions; p-values are exact McNemar tests, and intervals are 95% (Wilson for accuracies, Newcombe for paired differences).
+
+### 1. Base vs tuned, full GSM8K test (Kaggle, full precision, n = 1,319)
+
+| Model | Strict | Flexible (95% CI) | Mean tokens | Truncated |
 |---|---|---|---|---|
-| Qwen3-1.7B (base) | 2.9% | 76.6% | 150 | 3.0% |
-| GRPO-tuned | **75.8%** | 76.3% | **129** | **1.4%** |
+| Qwen3-1.7B (base) | 2.9% | 76.6% (74.2–78.8) | 149.6 | 40 (3.0%) |
+| GRPO-tuned | **75.8%** | 76.3% (73.9–78.5) | **129.2** | **19 (1.4%)** |
 
-- **Strict:** the last `#### <number>` matches the reference. **Flexible:** the strict answer if
-  present, otherwise the last number in the output. Commas and `$` are ignored.
-- Flexible accuracy did not change: paired McNemar test p = 0.81 (79 questions fixed, 83 broken).
-- What changed: the format (strict 2.9% → 75.8%), answer length (−14% tokens) and truncations (halved).
+- Flexible: 79 questions fixed and 83 broken, p = 0.81. Accuracy did not change.
+- Strict: 963 fixed and 1 broken, p < 10⁻²⁰⁰. The format was learned.
 
-### On the PS4 (llama.cpp, Q4_K_M, first 100 test questions)
+### 2. Prompt baselines (base model, Kaggle, full precision, n = 1,319)
 
-Server on the PS4, client on the LAN, `temperature 0`, `max_tokens 320`, blocks interleaved
-(base 0–49, tuned 0–49, base 50–99, tuned 50–99) with a cool-down before each block.
-Both models used the tuned model's chat template.
+The fair comparison for the format is not the weak prompt above but the best prompts for the base model. System prompt for these runs: *"Solve the math problem step by step. Be concise. On the last line, write only the final answer in the format: #### &lt;number&gt;"*. The 2-shot prompt uses training questions 0 and 1. The tuned model was regraded with the same grader as the baselines.
 
-| | base | tuned |
-|---|---|---|
-| Strict (format) | 10% | **74%** |
-| Flexible | 77% | 81% |
-| Tokens per answer (mean) | 128.3 | 126.4 |
-| Prompt time per answer | 3.08 s | 3.09 s |
-| Generation time per answer | 13.99 s | 13.78 s |
-| Generation speed | 9.17 tok/s | 9.17 tok/s |
-| Seconds per answer (end to end) | 17.4 | 17.2 |
-| Seconds per correct answer | 22.6 | 21.2 |
+| | Strict (95% CI) | Flexible (95% CI) | Tokens per answer | Prompt tokens |
+|---|---|---|---|---|
+| GRPO-tuned (regraded) | **75.7%** | **76.2%** | 129 | — |
+| Base + instruction | 67.1% (64.5–69.6) | 75.2% (72.8–77.5) | 127.8 | 108 |
+| Base + 2-shot | 71.3% (68.8–73.6) | 72.0% (69.5–74.4) | 89.4 | 282 |
 
-- **No speed gain:** on these 100 questions the base model was already about as short as the tuned one
-  (128 vs 126 tokens), so both take ~17 s per answer.
-- **Matches Kaggle:** flexible accuracy is within ±2 questions of the Kaggle run on the same 100
-  questions (base 77 vs 79, tuned 81 vs 79). The outputs are not identical (different runtime and
-  quantization), but the verdict per question agrees on 88 of 100 for both models.
-- The 81 vs 77 gap on 100 questions (11 fixed, 7 broken) is within noise.
-- Files: [`ps4/results/ps4_eval_20261103_2112_resumo.md`](ps4/results/ps4_eval_20261103_2112_resumo.md)
-  and the per-question CSV next to it.
+- **Format:** the tuned model beats both prompts: +8.6 points vs instruction (186 vs 73 discordant questions, p < 0.0001) and +4.4 vs 2-shot (158 vs 100, p = 0.0004).
+- **Accuracy:** tied with the instruction prompt (96 vs 83, p = 0.37). The 2-shot prompt shortens answers by 30% but loses 4.2 points of flexible accuracy (153 vs 98, p = 0.0006).
 
-### Token limit (simulated from the Kaggle outputs)
+### 3. PS4: GPU vs CPU (Q4_K_M, first 100 test questions)
 
-Because decoding is greedy, an answer with a lower limit is identical up to the cut. Simulating
-limits of 160 / 200 / 256 / 320 on the full test set, **320 stays the best choice**: even 256 costs
-1.4 points of flexible accuracy for the tuned model while saving only ~1.4 tokens per answer, and
-the time per *correct* answer gets worse at every lower limit. See
-[`analise/limite_tokens.md`](analise/limite_tokens.md) (in Portuguese).
+Same model file, same client, same options. Only the `llama-server` binary changes (Vulkan build with `-ngl 99` vs the original CPU build). The blocks were interleaved (GPU 0–49, CPU 0–49, GPU 50–99, CPU 50–99), each started after a cool-down.
 
-### Error analysis (tuned model, Kaggle outputs)
+| | GPU (Vulkan) | CPU (8 threads) | GPU/CPU |
+|---|---|---|---|
+| Strict | 70/100 | 74/100 | |
+| Flexible | 77/100 | 81/100 | |
+| Tokens per answer (mean) | 125.3 | 126.4 | |
+| Prompt time per answer | 0.47 s | 3.12 s | 0.15 |
+| Generation time per answer | 10.50 s | 14.15 s | 0.74 |
+| Generation speed | 11.93 tok/s | 8.93 tok/s | 1.34 |
+| **Seconds per answer** | **11.18** | **17.47** | **0.64 (1.56× faster)** |
+| Seconds per correct answer (flexible) | 14.52 | 21.57 | |
 
-Full report (in Portuguese): [`analise/relatorio.md`](analise/relatorio.md).
+- **Accuracy is statistically the same:** flexible 2 vs 6 discordant questions (p = 0.29), strict 3 vs 7 (p = 0.34), same verdict on 92/100. Only 27/100 outputs are identical, because the two backends round differently.
+- **The CPU arm is reproducible:** its 100 outputs were identical, word for word, to a CPU run three days earlier.
+- **Synthetic benchmark** (`llama-bench`, 2 rounds × 3 repetitions per arm): prompt processing 169.7 ± 0.2 vs 25.8 ± 0.1 tok/s (6.6×), generation 12.5 ± 0.0 vs 9.6 ± 0.1 tok/s (1.3×). The GPU helps the prompt much more than generation.
 
-- **Wasted tokens are already low:** nothing after the final `####`, and ~18 tokens per answer
-  (~14%) go to text without arithmetic, restated data or formatting (vs ~38 / ~26% for the base).
-- **One clear failure mode:** when the model reaches an impossible value (negative age, fractional
-  points) it writes "let's recheck" and redoes the *same* algebra until the limit. 9 answers (0.7%),
-  ~300 tokens each, 0% correct.
-- **Most errors are understanding errors:** in a random sample of 40 wrong answers, 17 misread the
-  problem, 15 had wrong reasoning, 4 arithmetic slips, 1 truncation, 1 extraction issue (right
-  answer in cents) and 2 debatable reference answers.
-- Errors are not systematic: most are misreadings or reasoning mistakes that vary from question to question. The recheck loop is better handled at decoding time (e.g. a repetition penalty) than by retraining.
+### 4. Full test set and quantization (n = 1,319)
+
+| Configuration | Flexible (95% CI) | Strict (95% CI) | Tokens | Truncated | Seconds per answer |
+|---|---|---|---|---|---|
+| Kaggle, full precision (PyTorch) | **76.3%** (73.9–78.5) | **75.8%** | 129.2 | 19 | — |
+| Q5_K_M, laptop CPU | 74.8% (72.3–77.0) | 57.6% (54.9–60.3) | 135.0 | 25 | 7.28 (laptop) |
+| Q4_K_M, laptop CPU | 72.9% (70.4–75.2) | 63.2% (60.5–65.7) | 132.2 | 17 | 6.67 (laptop) |
+| Q4_K_M, **PS4 GPU** | 72.9% (70.5–75.3) | 66.8% (64.2–69.3) | 131.2 | 24 | **11.57 (PS4)** |
+
+The laptop is an Intel i5-10300H running the same llama.cpp commit on the CPU (4 threads). It was used only to separate quantization from backend, and its times are not PS4 measurements.
+
+Paired comparisons (all n = 1,319):
+
+| Comparison | Δ flexible (95% CI) | McNemar flexible | Δ strict (95% CI) | McNemar strict |
+|---|---|---|---|---|
+| PS4 GPU Q4_K_M − Kaggle | −3.3 (−5.5 to −1.2) | 86 vs 130, p = 0.003 | −9.0 (−11.4 to −6.6) | 78 vs 197, p < 0.001 |
+| Laptop Q4_K_M − Kaggle | −3.4 (−5.6 to −1.2) | 85 vs 130, p = 0.003 | −12.7 (−15.2 to −10.1) | 79 vs 246, p < 0.001 |
+| Laptop Q4_K_M − PS4 GPU Q4_K_M | **−0.1 (−1.8 to +1.7)** | 67 vs 68, **p = 1.0** | −3.6 (−5.8 to −1.5) | 80 vs 128, p = 0.001 |
+| Q5_K_M − Kaggle | −1.5 (−3.5 to +0.5) | 79 vs 99, p = 0.15 | −18.2 (−20.9 to −15.5) | 64 vs 304, p < 0.001 |
+| Q5_K_M − Q4_K_M (laptop) | +1.9 (−0.3 to +4.1) | 120 vs 95, p = 0.10 | −5.5 (−8.4 to −2.6) | 158 vs 231, p < 0.001 |
+
+- **The PS4 GPU does not cost accuracy:** the same Q4_K_M file scores 72.9% on the PS4 GPU and on the laptop CPU. The ~3.4-point loss against Kaggle comes from Q4_K_M in llama.cpp, not from the GPU.
+- **Q5_K_M sits in between:** it is not significantly better than Q4_K_M (p = 0.10) and not significantly worse than full precision (p = 0.15). Under the decision rule written down before the run ("recovers" = |Δ| ≤ 1.5 points and p > 0.05), it misses by 0.016 points: −1.516, less than one question.
+- **The format is fragile, the answers are not:** strict accuracy moves by up to 9 points between configurations, with no order by precision (Q5_K_M 57.6% < Q4_K_M 63.2% < PS4 GPU 66.8%), while flexible accuracy stays within ~2 points.
+- **The first 100 questions overestimate:** they gave 77–81% flexible on the PS4, against 72.9% on all 1,319.
+
+## How the GPU was used without installing anything
+
+The PS4's GPU (AMD "Liverpool", GCN 2) is supported by the `amdgpu` kernel driver of the PS4 Linux kernel, but the system had no Vulkan driver. Nothing was installed system-wide and no root access was used:
+
+1. **Driver:** the RADV Vulkan driver (`libvulkan_radeon.so` and its ICD JSON) was extracted from a community-built Mesa package for the PS4 into a project folder. The package version was chosen to match the system's LLVM, and the archive was checked against the SHA-256 in the package database before extraction.
+2. **Loading:** every GPU process runs with `VK_DRIVER_FILES` pointing to a copy of the ICD JSON with an absolute `library_path`, plus `MESA_SHADER_CACHE_DIR` and `XDG_CACHE_HOME` inside the project folder.
+3. **llama.cpp:** built with `-DGGML_VULKAN=ON` against Vulkan and SPIR-V headers that were also extracted (with hash checks) into the project folder. The build ran under a temperature watchdog.
+4. **What llama.cpp sees:** `AMD Liverpool (RADV LIVERPOOL)`, unified memory (4,479 MiB: 1 GiB VRAM + GTT), warp size 64, no fp16, no integer dot product and no matrix cores, so everything runs in fp32.
+
+The scripts are in [`experiments/vulkan-check-20261105/`](experiments/vulkan-check-20261105/). This repository does not cover how to install Linux on the PS4.
+
+## Limitations
+
+- **One seed.** One training run, one seed. The accuracy results are about this run, not about GRPO in general.
+- **A heavily reused test set.** The GSM8K test set was used for every decision in this project: prompts, token limit, quantization, GPU vs CPU. Decisions tuned on it may look better here than they would on fresh data.
+- **The laptop as a third backend.** Quantization was separated from backend on an x86 laptop, not on the PS4 CPU, which only ran 100 questions. The laptop's outputs differ from both PS4 backends (16/100 identical to the PS4 CPU), so it is a third backend, not a stand-in for the PS4 CPU. The 1.56× speed-up was measured on 100 questions only.
+- **Q8_0 and F16 not run.** They only ran a 20-question test, so the ~3.4-point loss cannot yet be split between 4-bit quantization and llama.cpp vs PyTorch.
+- **One GPU hang.** In the first full run the GPU stopped producing tokens at question 197. The client waited 15 minutes, no `amdgpu` message appeared in the kernel log, and the HDMI console stopped working. After a reboot the same question took 6.7 s, and the remaining 1,122 questions finished with no hang. From then on the client restarted the server every 50 questions and used a 120 s timeout. The cause is unknown.
+- **The format is fragile to quantization.** Strict accuracy changes by up to 9 points between quantizations and backends while flexible accuracy barely moves. Constrained decoding (e.g. a llama.cpp grammar for the last line) would likely fix the format, but it was not tested.
+- **Other limits:** GSM8K only, English only, greedy decoding. The PS4 runs warm (76–80 °C under load) and temperature control between blocks is approximate.
+
+## Reproduction
+
+### Layout
+
+```
+notebooks/    Kaggle notebooks: 0.6B pilot and the 1.7B GRPO run (with outputs)
+gguf/         make_gguf.sh (conversion pipeline), MANIFEST.csv, chat template
+ps4/          PS4 inventory, CPU build and benchmark scripts, first PS4 results
+eval-ps4/     first PS4 evaluation (CPU, 100 questions, base vs tuned): run_eval.py, grading.py
+analise/      error analysis and token-limit study (Portuguese)
+experiments/
+  vulkan-check-20261105/      Vulkan checks, GPU build with watchdog, llama-bench GPU vs CPU
+  ps4-eval-gpu-20261106/      GPU vs CPU on 100 questions (client on the LAN)
+  gsm8k-full-gpu-20261108/    full GSM8K on the PS4 GPU (client on the PS4, resumable)
+  quant-acc-fedora-20261109/  Q4_K_M and Q5_K_M on a laptop CPU (Q8_0/F16: 20-question tests only)
+```
+
+Every experiment folder has a `manifest.csv` with SHA-256 hashes of the model, template, questions, grader and scripts, the per-question results (CSV) and a summary (`resultado*.md`). The summaries and code comments are in Portuguese. All runs use llama.cpp commit [`dde879bc`](https://github.com/ggml-org/llama.cpp/commit/dde879bc4f954b809892fd0d660515f42536394a) and the same `grading.py`.
+
+### Main commands
+
+**Training and conversion:** run `notebooks/grpo_qwen3_1.7b_gsm8k.ipynb` on Kaggle (T4, `HF_TOKEN` secret), then `HF=$(command -v hf) WORK=./work bash gguf/make_gguf.sh`. Compare the hashes with `gguf/MANIFEST.csv`.
+
+**Full GSM8K on the PS4 GPU** (client on the PS4, Python standard library only; it stops the chat server, pauses torrents, rests and cools down between blocks of 50, and restores everything at the end):
+
+```bash
+cd experiments/gsm8k-full-gpu-20261108
+python3 -u run_eval_full.py --ini 0 --fim 1319 --saida resultados_full.csv --chat-final cpu
+python3 analise_full.py          # writes resultado_full.md (needs the Kaggle eval_grpo.csv)
+```
+
+It is resumable: run the same command again and finished questions are skipped. Paths assume the project folder `/mnt/midia/llm-ps4` on the PS4 and the extracted driver described above.
+
+**GPU vs CPU on 100 questions** (client on another machine on the LAN):
+
+```bash
+cd experiments/ps4-eval-gpu-20261106
+PS4_HOST=<ps4-address> python3 run_eval_gpu.py
+python3 analise.py ps4_eval_gpu_<stamp>.csv
+```
+
+**Quantization on an x86 CPU** (llama.cpp `llama-server` built with the same options):
+
+```bash
+cd experiments/quant-acc-fedora-20261109
+for b in q4km q5km; do python3 -u run_quant.py --braco $b --ini 0 --fim 1319 || break; done
+python3 analise_q4km.py && python3 analise_q5km.py
+```
+
+**Synthetic benchmark:** `experiments/vulkan-check-20261105/bench_vulkan.sh` (llama-bench, GPU and CPU interleaved, `-p 512 -n 128 -r 3`).
 
 ## Hardware and software
 
 | | |
 |---|---|
-| Device | PlayStation 4, AMD Jaguar APU, 8 cores @ ~1.6 GHz, AVX + F16C, **no AVX2/FMA** |
-| Memory | 8 GB GDDR5, 1 GB reserved as VRAM → 6.8 GiB for the CPU, zram swap |
-| OS | CachyOS (Arch-based) on an external USB drive, PS4-specific kernel |
-| Inference | llama.cpp commit [`dde879bc`](https://github.com/ggml-org/llama.cpp/commit/dde879bc4f954b809892fd0d660515f42536394a), CPU only, 8 threads, `-c 4096` |
+| Device | PlayStation 4: AMD Jaguar APU, 8 cores at ~1.6 GHz (AVX, no AVX2/FMA), GCN 2 GPU with 18 compute units |
+| Memory | 8 GB GDDR5 shared; 1 GB reserved as VRAM, 6.8 GiB for the CPU |
+| OS | Arch-based Linux on an external USB drive, PS4-specific kernel with `amdgpu` |
+| Inference | llama.cpp `dde879bc`: CPU build (8 threads) and Vulkan build (RADV, `-ngl 99`), `-c 4096` |
 | Training | Kaggle, 1× Tesla T4, unsloth + TRL GRPO, LoRA r = 16, 357 steps (~6 h) |
 
-Inventory of the PS4 setup (in Portuguese): [`ps4/INVENTARIO.md`](ps4/INVENTARIO.md).
-This repository does not cover how to install Linux on the PS4.
+## Links
 
-## Repository layout
-
-```
-notebooks/   executed Kaggle notebooks: 0.6B pilot and the 1.7B GRPO run (with outputs)
-gguf/        make_gguf.sh (exact conversion pipeline), MANIFEST.csv, chat template
-ps4/         PS4 inventory, build/benchmark scripts and all PS4 results
-eval-ps4/    run_eval.py (PS4 measurement), grading.py, resumo.py and the summary
-analise/     error analysis and token-limit scripts and reports (Portuguese)
-```
-
-## How to reproduce
-
-### 1. Training (Kaggle)
-
-Open `notebooks/grpo_qwen3_1.7b_gsm8k.ipynb` on Kaggle with **GPU T4 ×2**, Internet on, and a
-secret `HF_TOKEN` (Add-ons → Secrets). The notebook evaluates the base model, trains, evaluates
-again on the full test set and uploads the merged model, LoRA adapter and per-question outputs
-(`eval/`) to Hugging Face. Change the repository name before running. The 0.6B notebook is the
-pilot that validated the pipeline.
-
-### 2. GGUF conversion (any Linux x86-64)
-
-```bash
-hf auth login                      # needs read access to the model repo
-HF=$(command -v hf) WORK=./work bash gguf/make_gguf.sh
-```
-
-The script pins llama.cpp `dde879bc` and both model revisions, converts to F16, drops the base
-checkpoint's duplicated `lm_head` (after checking it is byte-identical to the tied embeddings, so
-both GGUFs have the same 310 tensors), quantizes to Q4_K_M and Q8_0 without imatrix, extracts the
-chat template and writes `MANIFEST.csv`. Compare the SHA-256 values with [`gguf/MANIFEST.csv`](gguf/MANIFEST.csv).
-
-### 3. llama.cpp on the PS4
-
-```bash
-git clone https://github.com/ggml-org/llama.cpp && cd llama.cpp
-git checkout dde879bc4f954b809892fd0d660515f42536394a
-cmake -B build -DCMAKE_BUILD_TYPE=Release -DLLAMA_CURL=OFF
-cmake --build build -j 6 --target llama-bench llama-cli llama-server   # ~17 min on the Jaguar
-```
-
-`ps4/scripts/build.sh` and `ps4/scripts/bench1.sh` are the exact scripts used (paths under `/mnt/midia/llm-ps4`).
-
-### 4. PS4 measurement
-
-On the PS4, create an API key (`openssl rand -hex 32 > ~/.config/llm-ps4/api-key; chmod 600 …`).
-On the client, set up an `ssh ps4` alias, build `eval-ps4/questions.jsonl` from the published
-evaluation file, then run the measurement:
-
-```bash
-hf download felipedutrain/qwen3-1.7b-gsm8k-grpo eval/eval_base.csv eval/eval_grpo.csv --local-dir eval-ps4/hf
-python3 - <<'EOF'
-import csv, json
-rows = [r for r in csv.DictReader(open('eval-ps4/hf/eval/eval_base.csv')) if int(r['idx']) < 100]
-with open('eval-ps4/questions.jsonl', 'w') as f:
-    for r in rows:
-        f.write(json.dumps({'idx': int(r['idx']), 'question': r['question'], 'gold': r['gold']}) + '\n')
-EOF
-PS4_HOST=<PS4_IP> python3 eval-ps4/run_eval.py      # ~70 min
-python3 eval-ps4/resumo.py eval-ps4/ps4_eval_<stamp>.csv
-```
-
-`run_eval.py` starts `llama-server` in tmux on the PS4 (one model at a time, port 8081), rests the
-PS4 for 5 minutes, waits for the APU temperature to return to rest + 3 °C before each block (at most
-5 minutes), and records llama.cpp's own prompt/generation timings per answer.
-`grading.py` reproduces the notebook's strict/flexible grading exactly (0 disagreements on all
-2638 Kaggle outputs).
-
-### 5. Analysis
-
-Put `eval_base.csv` and `eval_grpo.csv` in `analise/eval/`, then run `limite.py` (token limits),
-`analisa.py` and `extra.py` (statistics) and `gera_relatorio.py` (report). `analisa.py` and `extra.py`
-count tokens with the tuned model's `tokenizer.json`; adjust the path at the top of each script.
-
-## What I learned
-
-- **Estimates are not measurements.** The Kaggle numbers suggested ~2.4 s saved per answer on the PS4; measuring found 0.24 s, because on those questions the base model already answered briefly.
-- **Same pipeline, or it is not a comparison.** The base checkpoint stores a duplicated `lm_head`; converted as-is, its Q4_K_M GGUF was 16% larger (18% for F16 and Q8_0), which alone would likely have made it slower on a memory-bound CPU.
-- **Chat templates change behavior.** Just switching to the tuned model's template raised the base model's format compliance from 3% to 10%.
-- **Greedy decoding makes some experiments free.** Token limits can be simulated from existing outputs without running the model again.
-- **On the Jaguar, generation is memory-bound.** Going from 4 to 8 threads made prompt processing 1.8× faster but generation only 1.4× faster (Qwen3-1.7B Q4_K_M; 1.6× for Qwen3-0.6B).
-- **A format reward works fast; accuracy is harder.** In one run (one seed, ~1,400 training prompts), GRPO fixed the format but did not change accuracy.
-
-## Limitations
-
-- One training run with one seed. The flexible accuracy difference on Kaggle is not significant.
-- The PS4 measurement covers only 100 questions; differences of a few questions are noise.
-- On the PS4 both models used the tuned model's chat template (to keep the prompt identical);
-  this helped the base model's format (strict 3% on Kaggle → 10% on the PS4).
-- The PS4 runs a Q4_K_M quantization in llama.cpp, while Kaggle evaluated the full-precision model
-  in PyTorch, so outputs differ token by token.
-- Temperature control is approximate: the PS4 heats up to ~76 °C within a block, and one block
-  started 0.75 °C above its target. Generation speed was the same in every block (9.16–9.19 tok/s).
-- The error classification of the 40 sampled answers is manual and partly subjective.
-- GSM8K only, English only, greedy decoding, CPU only (no GPU/Vulkan offload was tested).
+- Model card, merged weights, LoRA adapter, GGUF files and per-question outputs: [felipedutrain/qwen3-1.7b-gsm8k-grpo](https://huggingface.co/felipedutrain/qwen3-1.7b-gsm8k-grpo) (the link works once the model is public).
+- llama.cpp: [ggml-org/llama.cpp](https://github.com/ggml-org/llama.cpp)
 
 ## License
 
 Code and documentation in this repository: [MIT](LICENSE), © 2026 Felipe Dutrain de Sales.
 
 Third-party material keeps its own license:
-- **Qwen3** model weights (and any derivative weights, such as the GGUF files and the tuned model)
-  are under the **Apache License 2.0**.
-- The **GSM8K** dataset (questions and reference answers that appear in the evaluation outputs) is
-  under the **MIT License**.
+- **Qwen3** model weights (and any derivative weights, such as the GGUF files and the tuned model) are under the **Apache License 2.0**.
+- The **GSM8K** dataset (questions and reference answers that appear in the evaluation outputs and in `questions*.jsonl`) is under the **MIT License**.
