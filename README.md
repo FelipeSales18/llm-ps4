@@ -155,7 +155,7 @@ The scripts are in [`experiments/vulkan-check-20261105/`](experiments/vulkan-che
 - **One seed.** One training run, one seed. The accuracy results are about this run, not about GRPO in general.
 - **A heavily reused test set.** The GSM8K test set was used for every decision in this project: prompts, token limit, quantization, GPU vs CPU. Decisions tuned on it may look better here than they would on fresh data.
 - **The laptop as a third backend.** Quantization was separated from backend on an x86 laptop, not on the PS4 CPU, which only ran 100 questions. The laptop's outputs differ from both PS4 backends (16/100 identical to the PS4 CPU), so it is a third backend, not a stand-in for the PS4 CPU. The 1.56× speed-up was measured on 100 questions only.
-- **Q8_0 and F16 not run.** They only ran a 20-question test, so the ~3.4-point loss cannot yet be split between 4-bit quantization and llama.cpp vs PyTorch.
+- **F16 not run** on the full test set (20-question test only). **Q8_0 was run later on the PS4 GPU** (added 2026-11-15): 76.1% flexible (1,004 of 1,319) and 65.9% strict, +3.2 points of flexible accuracy over Q4_K_M (129 vs 87 discordant questions, p = 0.005) and within two questions of full precision (1,006), at 13.1 s per answer against 11.6 s. The ~3.4-point loss therefore comes from 4-bit quantization, not from llama.cpp vs PyTorch. The Q8_0 file was generated from the bf16 merge; its per-question results are not in this repository yet.
 - **One GPU hang.** In the first full run the GPU stopped producing tokens at question 197. The client waited 15 minutes, no `amdgpu` message appeared in the kernel log, and the HDMI console stopped working. After a reboot the same question took 6.7 s, and the remaining 1,122 questions finished with no hang. From then on the client restarted the server every 50 questions and used a 120 s timeout. The cause is unknown.
 - **The format is fragile to quantization.** Strict accuracy changes by up to 9 points between quantizations and backends while flexible accuracy barely moves. Constrained decoding (e.g. a llama.cpp grammar for the last line) would likely fix the format, but it was not tested.
 - **Other limits:** GSM8K only, English only, greedy decoding. The PS4 runs warm (76–80 °C under load) and temperature control between blocks is approximate.
@@ -175,7 +175,7 @@ experiments/
   vulkan-check-20261105/      Vulkan checks, GPU build with watchdog, llama-bench GPU vs CPU
   ps4-eval-gpu-20261106/      GPU vs CPU on 100 questions (client on the LAN)
   gsm8k-full-gpu-20261108/    full GSM8K on the PS4 GPU (client on the PS4, resumable)
-  quant-acc-fedora-20261109/  Q4_K_M and Q5_K_M on a laptop CPU (Q8_0/F16: 20-question tests only)
+  quant-acc-fedora-20261109/  Q4_K_M and Q5_K_M on a laptop CPU (Q8_0/F16 here: 20-question tests only; Q8_0 was later run in full on the PS4 GPU)
 ```
 
 Every experiment folder has a `manifest.csv` with SHA-256 hashes of the model, template, questions, grader and scripts, the per-question results (CSV) and a summary (`resultado*.md`). The summaries and code comments are in Portuguese. All runs use llama.cpp commit [`dde879bc`](https://github.com/ggml-org/llama.cpp/commit/dde879bc4f954b809892fd0d660515f42536394a) and the same `grading.py`.
