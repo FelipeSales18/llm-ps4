@@ -1,0 +1,3 @@
+{"nome": "ref_anterior",
+ "_descricao": "Emula a configuração anterior do chat no PS4 (chat-gpu/comando.txt): modelo ajustado GRPO Q4_K_M, sem prompt de sistema, amostragem padrão do servidor, raciocínio no padrão do template (ligado), limite fixo de 320 tokens (-n 320), documentos colados pelo usuário na mensagem.",
+ "sistema": null, "amostragem": {}, "raciocinio": null, "max_tokens": 320, "documentos": "colar", "injeta_data": false}

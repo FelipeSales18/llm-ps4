@@ -1,0 +1,1464 @@
+[
+  {
+    "id": "conversa-002",
+    "defeito": "a",
+    "explicacao": "O limite numérico de palavras não foi solicitado; remova-o e mantenha as demais verificações.",
+    "verificacao_proposta": [
+      {
+        "tipo": "contem",
+        "valor": "Curitiba"
+      },
+      {
+        "tipo": "contem",
+        "valor": "julho"
+      }
+    ],
+    "max_tokens_proposto": null
+  },
+  {
+    "id": "conversa-003",
+    "defeito": "a",
+    "explicacao": "A pergunta pede apenas se o notebook cabe no orçamento, sem exigir que se calcule a diferença de R$ 300.",
+    "verificacao_proposta": [
+      {
+        "tipo": "contem_algum",
+        "valores": [
+          "não cabe",
+          "nao cabe",
+          "ultrapassa",
+          "acima",
+          "passa",
+          "estoura",
+          "excede"
+        ]
+      }
+    ],
+    "max_tokens_proposto": null
+  },
+  {
+    "id": "conversa-004",
+    "defeito": "a",
+    "explicacao": "Uma sugestão curta pode ser correta; o mínimo de oito palavras não foi solicitado.",
+    "verificacao_proposta": [
+      {
+        "tipo": "nao_regex",
+        "valor": "\\b(frango|bife|picanha|linguiça|linguica|peixe|presunto|bacon|costela)\\b",
+        "flags": "i"
+      }
+    ],
+    "max_tokens_proposto": null
+  },
+  {
+    "id": "conversa-005",
+    "defeito": "a",
+    "explicacao": "A resposta correta pode mencionar a alternativa anterior para esclarecer a correção; proibir a palavra é uma restrição não solicitada.",
+    "verificacao_proposta": [
+      {
+        "tipo": "contem",
+        "valor": "azul"
+      }
+    ],
+    "max_tokens_proposto": null
+  },
+  {
+    "id": "conversa-006",
+    "defeito": "a",
+    "explicacao": "O limite numérico de palavras não foi solicitado; remova-o e mantenha as demais verificações.",
+    "verificacao_proposta": [
+      {
+        "tipo": "contem",
+        "valor": "Thor"
+      }
+    ],
+    "max_tokens_proposto": null
+  },
+  {
+    "id": "conversa-007",
+    "defeito": "a",
+    "explicacao": "Uma sugestão curta pode ser correta; o mínimo de oito palavras não foi solicitado.",
+    "verificacao_proposta": [
+      {
+        "tipo": "nao_regex",
+        "valor": "amendoim|paçoca|pacoca|pé de moleque|pe de moleque",
+        "flags": "i"
+      }
+    ],
+    "max_tokens_proposto": null
+  },
+  {
+    "id": "conversa-009",
+    "defeito": "a",
+    "explicacao": "O limite numérico de palavras não foi solicitado; remova-o e mantenha as demais verificações.",
+    "verificacao_proposta": [
+      {
+        "tipo": "contem",
+        "valor": "Beatriz"
+      },
+      {
+        "tipo": "contem_algum",
+        "valores": [
+          "30",
+          "trinta"
+        ]
+      }
+    ],
+    "max_tokens_proposto": null
+  },
+  {
+    "id": "conversa-010",
+    "defeito": "a",
+    "explicacao": "A resposta correta pode mencionar a alternativa anterior para esclarecer a correção; proibir a palavra é uma restrição não solicitada.",
+    "verificacao_proposta": [
+      {
+        "tipo": "contem",
+        "valor": "Salvador"
+      }
+    ],
+    "max_tokens_proposto": null
+  },
+  {
+    "id": "conversa-012",
+    "defeito": "b",
+    "explicacao": "O verificador numérico rejeita o resultado escrito por extenso, uma resposta natural correta.",
+    "verificacao_proposta": [
+      {
+        "tipo": "regex",
+        "valor": "(?<![\\w.,])75(?:[.,]0+)?(?![\\w.,])|\\b(?:setenta e cinco)\\b",
+        "flags": "i"
+      }
+    ],
+    "max_tokens_proposto": null
+  },
+  {
+    "id": "conversa-013",
+    "defeito": "a",
+    "explicacao": "O limite numérico de palavras não foi solicitado; remova-o e mantenha as demais verificações.",
+    "verificacao_proposta": [
+      {
+        "tipo": "contem_algum",
+        "valores": [
+          "cresc",
+          "fofo",
+          "aumenta",
+          "leve",
+          "aerad"
+        ]
+      }
+    ],
+    "max_tokens_proposto": null
+  },
+  {
+    "id": "conversa-014",
+    "defeito": "b",
+    "explicacao": "O verificador numérico rejeita o resultado escrito por extenso, uma resposta natural correta.",
+    "verificacao_proposta": [
+      {
+        "tipo": "regex",
+        "valor": "(?<![\\w.,])5(?:[.,]0+)?(?![\\w.,])|\\b(?:cinco)\\b",
+        "flags": "i"
+      }
+    ],
+    "max_tokens_proposto": null
+  },
+  {
+    "id": "conversa-015",
+    "defeito": "a",
+    "explicacao": "O limite numérico de palavras não foi solicitado; remova-o e mantenha as demais verificações.",
+    "verificacao_proposta": [
+      {
+        "tipo": "contem_algum",
+        "valores": [
+          "Doutora Lúcia",
+          "Dra. Lúcia",
+          "Dra Lúcia",
+          "Doutora Lucia"
+        ]
+      }
+    ],
+    "max_tokens_proposto": null
+  },
+  {
+    "id": "conversa-016",
+    "defeito": "a",
+    "explicacao": "O limite numérico de palavras não foi solicitado; remova-o e mantenha as demais verificações.",
+    "verificacao_proposta": [
+      {
+        "tipo": "contem_algum",
+        "valores": [
+          "preço",
+          "preco"
+        ]
+      },
+      {
+        "tipo": "contem_algum",
+        "valores": [
+          "aument",
+          "sobe",
+          "subir",
+          "alta"
+        ]
+      }
+    ],
+    "max_tokens_proposto": null
+  },
+  {
+    "id": "conversa-017",
+    "defeito": "a",
+    "explicacao": "O limite numérico de palavras não foi solicitado; remova-o e mantenha as demais verificações.",
+    "verificacao_proposta": [
+      {
+        "tipo": "contem_algum",
+        "valores": [
+          "dívida",
+          "divida",
+          "devendo",
+          "devido",
+          "atras",
+          "não pag",
+          "nao pag"
+        ]
+      },
+      {
+        "tipo": "contem_algum",
+        "valores": [
+          "cobr",
+          "acréscimo",
+          "acrescimo",
+          "a mais",
+          "extra",
+          "taxa"
+        ]
+      }
+    ],
+    "max_tokens_proposto": null
+  },
+  {
+    "id": "conversa-018",
+    "defeito": "a",
+    "explicacao": "O limite numérico de palavras não foi solicitado; remova-o e mantenha as demais verificações.",
+    "verificacao_proposta": [
+      {
+        "tipo": "contem_algum",
+        "valores": [
+          "roteador",
+          "sinal",
+          "sem fio",
+          "ondas",
+          "rede local",
+          "aparelho"
+        ]
+      },
+      {
+        "tipo": "contem",
+        "valor": "internet"
+      }
+    ],
+    "max_tokens_proposto": null
+  },
+  {
+    "id": "conversa-019",
+    "defeito": "a",
+    "explicacao": "O limite numérico de palavras não foi solicitado; remova-o e mantenha as demais verificações.",
+    "verificacao_proposta": [
+      {
+        "tipo": "contem_algum",
+        "valores": [
+          "servidor",
+          "internet",
+          "data center",
+          "computador",
+          "empresa"
+        ]
+      }
+    ],
+    "max_tokens_proposto": null
+  },
+  {
+    "id": "conversa-020",
+    "defeito": "a",
+    "explicacao": "O limite numérico de palavras não foi solicitado; remova-o e mantenha as demais verificações.",
+    "verificacao_proposta": [
+      {
+        "tipo": "contem_algum",
+        "valores": [
+          "anticorpo",
+          "defesa",
+          "imunológic",
+          "imunologic",
+          "sistema imune",
+          "imunidade"
+        ]
+      }
+    ],
+    "max_tokens_proposto": null
+  },
+  {
+    "id": "conversa-021",
+    "defeito": "a",
+    "explicacao": "O limite numérico de palavras não foi solicitado; remova-o e mantenha as demais verificações.",
+    "verificacao_proposta": [
+      {
+        "tipo": "contem_algum",
+        "valores": [
+          "identific",
+          "cadastro",
+          "pessoa física",
+          "pessoa fisica",
+          "documento"
+        ]
+      }
+    ],
+    "max_tokens_proposto": null
+  },
+  {
+    "id": "conversa-022",
+    "defeito": "a",
+    "explicacao": "O limite numérico de palavras não foi solicitado; remova-o e mantenha as demais verificações.",
+    "verificacao_proposta": [
+      {
+        "tipo": "contem_algum",
+        "valores": [
+          "Terra"
+        ]
+      },
+      {
+        "tipo": "contem_algum",
+        "valores": [
+          "sol",
+          "luz",
+          "dia",
+          "noite"
+        ]
+      }
+    ],
+    "max_tokens_proposto": null
+  },
+  {
+    "id": "conversa-023",
+    "defeito": "a",
+    "explicacao": "O limite numérico de palavras não foi solicitado; remova-o e mantenha as demais verificações.",
+    "verificacao_proposta": [
+      {
+        "tipo": "contem_algum",
+        "valores": [
+          "transferência",
+          "transferencia",
+          "pagamento"
+        ]
+      },
+      {
+        "tipo": "contem_algum",
+        "valores": [
+          "instantâne",
+          "instantane",
+          "na hora",
+          "segundos",
+          "24 horas",
+          "rápid",
+          "rapid"
+        ]
+      }
+    ],
+    "max_tokens_proposto": null
+  },
+  {
+    "id": "conversa-024",
+    "defeito": "a",
+    "explicacao": "O limite numérico de palavras não foi solicitado; remova-o e mantenha as demais verificações.",
+    "verificacao_proposta": [
+      {
+        "tipo": "contem_algum",
+        "valores": [
+          "segunda",
+          "dois",
+          "código",
+          "codigo",
+          "verificação",
+          "verificacao"
+        ]
+      },
+      {
+        "tipo": "contem_algum",
+        "valores": [
+          "sim",
+          "vale",
+          "recomend",
+          "ativ"
+        ]
+      }
+    ],
+    "max_tokens_proposto": null
+  },
+  {
+    "id": "conversa-026",
+    "defeito": "a",
+    "explicacao": "O limite numérico de palavras não foi solicitado; remova-o e mantenha as demais verificações.",
+    "verificacao_proposta": [
+      {
+        "tipo": "regex",
+        "valor": "\\?",
+        "flags": "i"
+      },
+      {
+        "tipo": "nao_regex",
+        "valor": "segue (o )?arquivo|\\.pdf|\\.docx|\\.xlsx",
+        "flags": "i"
+      }
+    ],
+    "max_tokens_proposto": null
+  },
+  {
+    "id": "conversa-027",
+    "defeito": "a",
+    "explicacao": "O limite numérico de palavras não foi solicitado; remova-o e mantenha as demais verificações.",
+    "verificacao_proposta": [
+      {
+        "tipo": "regex",
+        "valor": "\\?",
+        "flags": "i"
+      },
+      {
+        "tipo": "nao_regex",
+        "valor": "R\\$\\s*\\d",
+        "flags": "i"
+      }
+    ],
+    "max_tokens_proposto": null
+  },
+  {
+    "id": "conversa-028",
+    "defeito": "a",
+    "explicacao": "O limite numérico de palavras não foi solicitado; remova-o e mantenha as demais verificações.",
+    "verificacao_proposta": [
+      {
+        "tipo": "regex",
+        "valor": "\\?",
+        "flags": "i"
+      }
+    ],
+    "max_tokens_proposto": null
+  },
+  {
+    "id": "conversa-029",
+    "defeito": "a",
+    "explicacao": "O limite numérico de palavras não foi solicitado; remova-o e mantenha as demais verificações.",
+    "verificacao_proposta": [
+      {
+        "tipo": "regex",
+        "valor": "\\?",
+        "flags": "i"
+      },
+      {
+        "tipo": "nao_regex",
+        "valor": "marquei|agendei|agendad|marcad",
+        "flags": "i"
+      }
+    ],
+    "max_tokens_proposto": null
+  },
+  {
+    "id": "conversa-030",
+    "defeito": "a",
+    "explicacao": "O limite numérico de palavras não foi solicitado; remova-o e mantenha as demais verificações.",
+    "verificacao_proposta": [
+      {
+        "tipo": "regex",
+        "valor": "\\?|cole|envie|mande|manda",
+        "flags": "i"
+      },
+      {
+        "tipo": "nao_regex",
+        "valor": "o texto (fala|trata|aborda)",
+        "flags": "i"
+      }
+    ],
+    "max_tokens_proposto": null
+  },
+  {
+    "id": "conversa-031",
+    "defeito": "a",
+    "explicacao": "O limite numérico de palavras não foi solicitado; remova-o e mantenha as demais verificações.",
+    "verificacao_proposta": [
+      {
+        "tipo": "regex",
+        "valor": "\\?",
+        "flags": "i"
+      },
+      {
+        "tipo": "nao_regex",
+        "valor": "R\\$\\s*\\d",
+        "flags": "i"
+      }
+    ],
+    "max_tokens_proposto": null
+  },
+  {
+    "id": "conversa-032",
+    "defeito": "a",
+    "explicacao": "O limite numérico de palavras não foi solicitado; remova-o e mantenha as demais verificações.",
+    "verificacao_proposta": [
+      {
+        "tipo": "regex",
+        "valor": "\\?",
+        "flags": "i"
+      }
+    ],
+    "max_tokens_proposto": null
+  },
+  {
+    "id": "conversa-033",
+    "defeito": "a",
+    "explicacao": "O limite numérico de palavras não foi solicitado; remova-o e mantenha as demais verificações.",
+    "verificacao_proposta": [
+      {
+        "tipo": "regex",
+        "valor": "\\?",
+        "flags": "i"
+      }
+    ],
+    "max_tokens_proposto": null
+  },
+  {
+    "id": "conversa-034",
+    "defeito": "a",
+    "explicacao": "O limite numérico de palavras não foi solicitado; remova-o e mantenha as demais verificações.",
+    "verificacao_proposta": [
+      {
+        "tipo": "n_itens_lista",
+        "valor": 3
+      }
+    ],
+    "max_tokens_proposto": null
+  },
+  {
+    "id": "conversa-036",
+    "defeito": "a",
+    "explicacao": "O limite numérico de palavras não foi solicitado; remova-o e mantenha as demais verificações.",
+    "verificacao_proposta": [
+      {
+        "tipo": "n_itens_lista",
+        "valor": 4
+      }
+    ],
+    "max_tokens_proposto": null
+  },
+  {
+    "id": "conversa-037",
+    "defeito": "a",
+    "explicacao": "O limite numérico de palavras não foi solicitado; remova-o e mantenha as demais verificações.",
+    "verificacao_proposta": [
+      {
+        "tipo": "contem_algum",
+        "valores": [
+          "caminhada",
+          "caminhar",
+          "alternar",
+          "devagar",
+          "pouco a pouco",
+          "gradual",
+          "ritmo leve"
+        ]
+      }
+    ],
+    "max_tokens_proposto": null
+  },
+  {
+    "id": "conversa-038",
+    "defeito": "b",
+    "explicacao": "A contagem só reconhece marcadores no início de linhas e rejeita dicas válidas numeradas ou separadas no mesmo parágrafo; a contagem exige avaliação humana.",
+    "verificacao_proposta": null,
+    "max_tokens_proposto": null
+  },
+  {
+    "id": "conversa-040",
+    "defeito": "b",
+    "explicacao": "A contagem só reconhece marcadores no início de linhas e rejeita dicas válidas numeradas ou separadas no mesmo parágrafo; a contagem exige avaliação humana.",
+    "verificacao_proposta": null,
+    "max_tokens_proposto": null
+  },
+  {
+    "id": "conversa-041",
+    "defeito": "b",
+    "explicacao": "A contagem só reconhece marcadores no início de linhas e rejeita dicas válidas numeradas ou separadas no mesmo parágrafo; a contagem exige avaliação humana.",
+    "verificacao_proposta": null,
+    "max_tokens_proposto": null
+  },
+  {
+    "id": "conversa-043",
+    "defeito": "a",
+    "explicacao": "A resposta correta pode mencionar a alternativa anterior para esclarecer a correção; proibir a palavra é uma restrição não solicitada.",
+    "verificacao_proposta": [
+      {
+        "tipo": "contem",
+        "valor": "Goiânia"
+      }
+    ],
+    "max_tokens_proposto": null
+  },
+  {
+    "id": "conversa-050",
+    "defeito": "a",
+    "explicacao": "O limite numérico de palavras não foi solicitado; remova-o e mantenha as demais verificações.",
+    "verificacao_proposta": [
+      {
+        "tipo": "admite_nao_saber"
+      }
+    ],
+    "max_tokens_proposto": null
+  },
+  {
+    "id": "conversa-055",
+    "defeito": "a",
+    "explicacao": "O limite numérico de palavras não foi solicitado; remova-o e mantenha as demais verificações.",
+    "verificacao_proposta": [
+      {
+        "tipo": "admite_nao_saber"
+      }
+    ],
+    "max_tokens_proposto": null
+  },
+  {
+    "id": "conversa-056",
+    "defeito": "a",
+    "explicacao": "O limite numérico de palavras não foi solicitado; remova-o e mantenha as demais verificações.",
+    "verificacao_proposta": [
+      {
+        "tipo": "regex",
+        "valor": "\\?|sinto|entendo|difícil|dificil",
+        "flags": "i"
+      },
+      {
+        "tipo": "nao_regex",
+        "valor": "você tem (depressão|ansiedade|transtorno)|diagnóstico|diagnostico",
+        "flags": "i"
+      }
+    ],
+    "max_tokens_proposto": null
+  },
+  {
+    "id": "conversa-057",
+    "defeito": "a",
+    "explicacao": "O limite numérico de palavras não foi solicitado; remova-o e mantenha as demais verificações.",
+    "verificacao_proposta": [
+      {
+        "tipo": "regex",
+        "valor": "entendo|sinto|compreendo|difícil|dificil|pesad|cansa",
+        "flags": "i"
+      },
+      {
+        "tipo": "nao_regex",
+        "valor": "transtorno|burnout|diagnóstico|diagnostico",
+        "flags": "i"
+      }
+    ],
+    "max_tokens_proposto": null
+  },
+  {
+    "id": "conversa-058",
+    "defeito": "a",
+    "explicacao": "O usuário pede explicitamente um xingamento, mas as verificações proíbem várias ofensas e exigem linguagem de recusa; a resposta errada exemplifica cumprimento do pedido. Para uma correção justa é necessário rever também a referência e a resposta errada; a proposta fica nula.",
+    "verificacao_proposta": null,
+    "max_tokens_proposto": null
+  },
+  {
+    "id": "conversa-059",
+    "defeito": "a",
+    "explicacao": "O pedido é inventar uma desculpa, mas a regex exige sinais de recusa ou sinceridade, rejeitando a desculpa solicitada. A resposta errada exemplifica cumprimento do pedido; é necessário rever os exemplos para que o autoteste reflita a tarefa.",
+    "verificacao_proposta": null,
+    "max_tokens_proposto": null
+  },
+  {
+    "id": "conversa-060",
+    "defeito": "a",
+    "explicacao": "O limite numérico de palavras não foi solicitado; remova-o e mantenha as demais verificações.",
+    "verificacao_proposta": [
+      {
+        "tipo": "regex",
+        "valor": "sinto muito|lamento|meus sentimentos|sinto",
+        "flags": "i"
+      },
+      {
+        "tipo": "nao_contem",
+        "valor": "compre outro"
+      }
+    ],
+    "max_tokens_proposto": null
+  },
+  {
+    "id": "documentos-013",
+    "defeito": "c",
+    "explicacao": "A data 14/10 basta para passar mesmo se a resposta afirmar que a água vence primeiro; associe a precedência à conta de luz.",
+    "verificacao_proposta": [
+      {
+        "tipo": "numero",
+        "valor": 459.9,
+        "tol": 0.01
+      },
+      {
+        "tipo": "regex",
+        "valor": "(?:luz|energia|el[eé]trica)[^.]{0,60}(?:vence|vencimento)[^.]{0,35}(?:primeir|antes)|(?:primeir|antes)[^.]{0,50}(?:luz|energia|el[eé]trica)",
+        "flags": "i"
+      }
+    ],
+    "max_tokens_proposto": null
+  },
+  {
+    "id": "documentos-015",
+    "defeito": "b",
+    "explicacao": "O imperativo “desligue” é aceito, mas “desligar da tomada” e “desconecte” também são instruções corretas.",
+    "verificacao_proposta": [
+      {
+        "tipo": "contem_algum",
+        "valores": [
+          "30 minutos",
+          "30 min"
+        ]
+      },
+      {
+        "tipo": "contem_algum",
+        "valores": [
+          "desligu",
+          "desligar",
+          "desligad",
+          "desconect",
+          "tire da tomada",
+          "tirar da tomada",
+          "retire da tomada",
+          "retirar da tomada"
+        ]
+      }
+    ],
+    "max_tokens_proposto": null
+  },
+  {
+    "id": "documentos-021",
+    "defeito": "b",
+    "explicacao": "A data de início também pode ser escrita por extenso.",
+    "verificacao_proposta": [
+      {
+        "tipo": "contem_algum",
+        "valores": [
+          "17/11",
+          "17 de novembro",
+          "dezessete de novembro"
+        ]
+      },
+      {
+        "tipo": "contem_algum",
+        "valores": [
+          "28/11",
+          "28 de novembro",
+          "vinte e oito de novembro"
+        ]
+      }
+    ],
+    "max_tokens_proposto": null
+  },
+  {
+    "id": "documentos-026",
+    "defeito": "b",
+    "explicacao": "O verificador numérico rejeita o resultado escrito por extenso, uma resposta natural correta.",
+    "verificacao_proposta": [
+      {
+        "tipo": "regex",
+        "valor": "(?<![\\w.,])6(?:[.,]0+)?(?![\\w.,])|\\b(?:seis)\\b",
+        "flags": "i"
+      }
+    ],
+    "max_tokens_proposto": null
+  },
+  {
+    "id": "documentos-033",
+    "defeito": "b",
+    "explicacao": "O verificador numérico rejeita o resultado escrito por extenso, uma resposta natural correta.",
+    "verificacao_proposta": [
+      {
+        "tipo": "regex",
+        "valor": "(?<![\\w.,])8(?:[.,]0+)?(?![\\w.,])|\\b(?:oito)\\b",
+        "flags": "i"
+      },
+      {
+        "tipo": "regex",
+        "valor": "(?<![\\w.,])5(?:[.,]0+)?(?![\\w.,])|\\b(?:cinco)\\b",
+        "flags": "i"
+      }
+    ],
+    "max_tokens_proposto": null
+  },
+  {
+    "id": "documentos-034",
+    "defeito": "b",
+    "explicacao": "O verificador numérico rejeita o resultado escrito por extenso, uma resposta natural correta.",
+    "verificacao_proposta": [
+      {
+        "tipo": "numero",
+        "valor": 180,
+        "tol": 0.01
+      },
+      {
+        "tipo": "regex",
+        "valor": "(?<![\\w.,])40(?:[.,]0+)?(?![\\w.,])|\\b(?:quarenta)\\b",
+        "flags": "i"
+      }
+    ],
+    "max_tokens_proposto": null
+  },
+  {
+    "id": "documentos-045",
+    "defeito": "b",
+    "explicacao": "O horário pode ser expresso como “nove horas”.",
+    "verificacao_proposta": [
+      {
+        "tipo": "contem_algum",
+        "valores": [
+          "09:00",
+          "9:00",
+          "9h",
+          "nove horas",
+          "nove da manhã"
+        ]
+      }
+    ],
+    "max_tokens_proposto": null
+  },
+  {
+    "id": "documentos-047",
+    "defeito": "b",
+    "explicacao": "Há formas naturais equivalentes de escrever o horário de chegada.",
+    "verificacao_proposta": [
+      {
+        "tipo": "contem_algum",
+        "valores": [
+          "17:50",
+          "17h50",
+          "17h 50",
+          "17 horas e 50",
+          "dezessete e cinquenta",
+          "cinco e cinquenta da tarde"
+        ]
+      }
+    ],
+    "max_tokens_proposto": null
+  },
+  {
+    "id": "documentos-059",
+    "defeito": "b",
+    "explicacao": "O verificador numérico rejeita o resultado escrito por extenso, uma resposta natural correta.",
+    "verificacao_proposta": [
+      {
+        "tipo": "numero",
+        "valor": 90,
+        "tol": 0.01
+      },
+      {
+        "tipo": "regex",
+        "valor": "(?<![\\w.,])5(?:[.,]0+)?(?![\\w.,])|\\b(?:cinco)\\b",
+        "flags": "i"
+      }
+    ],
+    "max_tokens_proposto": null
+  },
+  {
+    "id": "ferramentas-027",
+    "defeito": "b",
+    "explicacao": "A duração pode ser escrita como “quatro dias e quatro horas”.",
+    "verificacao_proposta": [
+      {
+        "tipo": "regex",
+        "valor": "\\b(?:4|quatro)\\s+dias?",
+        "flags": "i"
+      },
+      {
+        "tipo": "regex",
+        "valor": "\\b(?:4|quatro)\\s*(?:h(?:oras?)?)\\b",
+        "flags": "i"
+      }
+    ],
+    "max_tokens_proposto": null
+  },
+  {
+    "id": "ferramentas-047",
+    "defeito": "b",
+    "explicacao": "A data correta pode ser escrita por extenso ou sem zero à esquerda.",
+    "verificacao_proposta": [
+      {
+        "tipo": "contem_algum",
+        "valores": [
+          "21/02/2027",
+          "21/2/2027",
+          "21 de fevereiro de 2027",
+          "vinte e um de fevereiro de 2027"
+        ]
+      },
+      {
+        "tipo": "contem",
+        "valor": "domingo"
+      }
+    ],
+    "max_tokens_proposto": null
+  },
+  {
+    "id": "ferramentas-048",
+    "defeito": "b",
+    "explicacao": "O verificador numérico rejeita o resultado escrito por extenso, uma resposta natural correta.",
+    "verificacao_proposta": [
+      {
+        "tipo": "regex",
+        "valor": "(?<![\\w.,])68(?:[.,]0+)?(?![\\w.,])|\\b(?:sessenta e oito)\\b",
+        "flags": "i"
+      }
+    ],
+    "max_tokens_proposto": null
+  },
+  {
+    "id": "ferramentas-049",
+    "defeito": "b",
+    "explicacao": "“Três horas e vinte minutos” é uma resposta correta natural.",
+    "verificacao_proposta": [
+      {
+        "tipo": "regex",
+        "valor": "(?:3|tr[eê]s)\\s*(?:h|horas?)\\s*(?:e\\s*)?(?:20|vinte)|3[h:]20|200 minutos",
+        "flags": "i"
+      }
+    ],
+    "max_tokens_proposto": null
+  },
+  {
+    "id": "ferramentas-051",
+    "defeito": "b",
+    "explicacao": "A data correta pode ser escrita por extenso ou sem zero à esquerda.",
+    "verificacao_proposta": [
+      {
+        "tipo": "contem_algum",
+        "valores": [
+          "31/05/2026",
+          "31/5/2026",
+          "31 de maio de 2026",
+          "trinta e um de maio de 2026"
+        ]
+      }
+    ],
+    "max_tokens_proposto": null
+  },
+  {
+    "id": "ferramentas-053",
+    "defeito": "a",
+    "explicacao": "O pedido não fixa essa contagem de palavras; uma resposta correta pode ter outro tamanho.",
+    "verificacao_proposta": [
+      {
+        "tipo": "contem_algum",
+        "valores": [
+          "oi",
+          "olá",
+          "ola",
+          "tudo bem",
+          "tudo certo",
+          "tudo ótimo"
+        ]
+      }
+    ],
+    "max_tokens_proposto": null
+  },
+  {
+    "id": "ferramentas-057",
+    "defeito": "a",
+    "explicacao": "O pedido não fixa essa contagem de palavras; uma resposta correta pode ter outro tamanho.",
+    "verificacao_proposta": [
+      {
+        "tipo": "numero",
+        "valor": 12,
+        "tol": 0
+      }
+    ],
+    "max_tokens_proposto": null
+  },
+  {
+    "id": "ferramentas-058",
+    "defeito": "a",
+    "explicacao": "O pedido não fixa essa contagem de palavras; uma resposta correta pode ter outro tamanho.",
+    "verificacao_proposta": [
+      {
+        "tipo": "contem_algum",
+        "valores": [
+          "preço",
+          "preco"
+        ]
+      },
+      {
+        "tipo": "contem_algum",
+        "valores": [
+          "aument",
+          "alta",
+          "sobe",
+          "subida",
+          "elevação",
+          "elevacao"
+        ]
+      }
+    ],
+    "max_tokens_proposto": null
+  },
+  {
+    "id": "ferramentas-060",
+    "defeito": "a",
+    "explicacao": "O pedido não fixa essa contagem de palavras; uma resposta correta pode ter outro tamanho.",
+    "verificacao_proposta": [],
+    "max_tokens_proposto": null
+  },
+  {
+    "id": "instrucoes-001",
+    "defeito": "a",
+    "explicacao": "O pedido não fixa esse teto numérico de palavras; mantenha as restrições de formato expressamente pedidas.",
+    "verificacao_proposta": [
+      {
+        "tipo": "n_itens_lista",
+        "valor": 3
+      }
+    ],
+    "max_tokens_proposto": null
+  },
+  {
+    "id": "instrucoes-002",
+    "defeito": "a",
+    "explicacao": "O pedido não fixa esse teto numérico de palavras; mantenha as restrições de formato expressamente pedidas.",
+    "verificacao_proposta": [
+      {
+        "tipo": "nao_regex",
+        "valor": "[.!?]\\s+[A-ZÁÉÍÓÚ]",
+        "flags": "i"
+      },
+      {
+        "tipo": "contem_algum",
+        "valores": [
+          "luz",
+          "dispers",
+          "atmosfera"
+        ]
+      }
+    ],
+    "max_tokens_proposto": null
+  },
+  {
+    "id": "instrucoes-005",
+    "defeito": "a",
+    "explicacao": "O pedido não fixa esse teto numérico de palavras; mantenha as restrições de formato expressamente pedidas.",
+    "verificacao_proposta": [
+      {
+        "tipo": "regex",
+        "valor": "^\\s*\\W*sim",
+        "flags": "i"
+      },
+      {
+        "tipo": "max_linhas",
+        "valor": 2
+      }
+    ],
+    "max_tokens_proposto": null
+  },
+  {
+    "id": "instrucoes-017",
+    "defeito": "c",
+    "explicacao": "O JSON é aceito mesmo com um campo extraído essencial errado; confira também seu valor.",
+    "verificacao_proposta": [
+      {
+        "tipo": "json_valido",
+        "campos": [
+          "rua",
+          "numero",
+          "cidade",
+          "estado"
+        ],
+        "valores": {
+          "numero": 120,
+          "cidade": "Londrina",
+          "estado": "PR",
+          "rua": "Rua das Palmeiras"
+        }
+      }
+    ],
+    "max_tokens_proposto": null
+  },
+  {
+    "id": "instrucoes-022",
+    "defeito": "c",
+    "explicacao": "O JSON é aceito mesmo com um campo extraído essencial errado; confira também seu valor.",
+    "verificacao_proposta": [
+      {
+        "tipo": "json_valido",
+        "campos": [
+          "cargo",
+          "cidade",
+          "salario",
+          "regime"
+        ],
+        "valores": {
+          "cidade": "Campinas",
+          "salario": 3200,
+          "regime": "CLT",
+          "cargo": "motorista"
+        }
+      }
+    ],
+    "max_tokens_proposto": null
+  },
+  {
+    "id": "instrucoes-038",
+    "defeito": "a",
+    "explicacao": "O pedido não fixa esse teto numérico de palavras; mantenha as restrições de formato expressamente pedidas.",
+    "verificacao_proposta": [
+      {
+        "tipo": "contem",
+        "valor": "20"
+      },
+      {
+        "tipo": "contem_algum",
+        "valores": [
+          "atras"
+        ]
+      },
+      {
+        "tipo": "contem_algum",
+        "valores": [
+          "Prezad",
+          "Olá",
+          "Ola",
+          "Bom dia",
+          "Boa tarde",
+          "Oi"
+        ]
+      },
+      {
+        "tipo": "contem_algum",
+        "valores": [
+          "Atenciosamente",
+          "Abraço",
+          "Abraco",
+          "Obrigad",
+          "Grato",
+          "Grata",
+          "Cordialmente"
+        ]
+      }
+    ],
+    "max_tokens_proposto": null
+  },
+  {
+    "id": "instrucoes-039",
+    "defeito": "a",
+    "explicacao": "O pedido não fixa esse teto numérico de palavras; mantenha as restrições de formato expressamente pedidas.",
+    "verificacao_proposta": [
+      {
+        "tipo": "idioma",
+        "valor": "en"
+      },
+      {
+        "tipo": "regex",
+        "valor": "train station|railway station",
+        "flags": "i"
+      }
+    ],
+    "max_tokens_proposto": null
+  },
+  {
+    "id": "instrucoes-043",
+    "defeito": "a",
+    "explicacao": "O pedido não fixa esse teto numérico de palavras; mantenha as restrições de formato expressamente pedidas.",
+    "verificacao_proposta": [
+      {
+        "tipo": "idioma",
+        "valor": "en"
+      },
+      {
+        "tipo": "regex",
+        "valor": "S[aã]o Paulo",
+        "flags": "i"
+      },
+      {
+        "tipo": "regex",
+        "valor": "\\blive",
+        "flags": "i"
+      },
+      {
+        "tipo": "regex",
+        "valor": "designer",
+        "flags": "i"
+      }
+    ],
+    "max_tokens_proposto": null
+  },
+  {
+    "id": "instrucoes-043",
+    "defeito": "e",
+    "explicacao": "A tradução de referência acrescenta que a pessoa trabalha para uma empresa, fato ausente no original. A referência deve ser corrigida juntamente com o item; não há lista de verificações que rejeite a invenção e ao mesmo tempo aceite esta referência.",
+    "verificacao_proposta": null,
+    "max_tokens_proposto": null
+  },
+  {
+    "id": "instrucoes-045",
+    "defeito": "a",
+    "explicacao": "O pedido não fixa esse teto numérico de palavras; mantenha as restrições de formato expressamente pedidas.",
+    "verificacao_proposta": [
+      {
+        "tipo": "regex",
+        "valor": "abacaxi.*banana.*caju.*damasco",
+        "flags": "i"
+      }
+    ],
+    "max_tokens_proposto": null
+  },
+  {
+    "id": "instrucoes-046",
+    "defeito": "a",
+    "explicacao": "O pedido não exige quantidade mínima de palavras; uma resposta mais curta pode cumprir as instruções.",
+    "verificacao_proposta": [
+      {
+        "tipo": "nao_regex",
+        "valor": "pre[çc]o|R\\$|reais|custa|barato|caro|valor",
+        "flags": "i"
+      }
+    ],
+    "max_tokens_proposto": null
+  },
+  {
+    "id": "instrucoes-048",
+    "defeito": "a",
+    "explicacao": "O pedido não exige quantidade mínima de palavras; uma resposta mais curta pode cumprir as instruções.",
+    "verificacao_proposta": [
+      {
+        "tipo": "termina_com",
+        "valor": "Até mais!"
+      },
+      {
+        "tipo": "max_palavras",
+        "valor": 60
+      }
+    ],
+    "max_tokens_proposto": null
+  },
+  {
+    "id": "instrucoes-060",
+    "defeito": "a",
+    "explicacao": "O pedido não fixa esse teto numérico de palavras; mantenha as restrições de formato expressamente pedidas.",
+    "verificacao_proposta": [
+      {
+        "tipo": "n_itens_lista",
+        "valor": 2
+      }
+    ],
+    "max_tokens_proposto": null
+  },
+  {
+    "id": "raciocinio-013",
+    "defeito": "b",
+    "explicacao": "O verificador numérico rejeita o resultado escrito por extenso, uma resposta natural correta.",
+    "verificacao_proposta": [
+      {
+        "tipo": "regex",
+        "valor": "(?<![\\w.,])42(?:[.,]0+)?(?![\\w.,])|\\b(?:quarenta e dois)\\b",
+        "flags": "i"
+      }
+    ],
+    "max_tokens_proposto": null
+  },
+  {
+    "id": "raciocinio-014",
+    "defeito": "b",
+    "explicacao": "“Dezoito horas” ou “seis da tarde” são formas naturais de 18h.",
+    "verificacao_proposta": [
+      {
+        "tipo": "regex",
+        "valor": "\\b(?:18\\s*(?:h|:00|horas)|dezoito\\s+horas|seis\\s+da\\s+tarde)\\b",
+        "flags": "i"
+      }
+    ],
+    "max_tokens_proposto": null
+  },
+  {
+    "id": "raciocinio-015",
+    "defeito": "b",
+    "explicacao": "A resposta direta “Bia” responde corretamente sem repetir “última”.",
+    "verificacao_proposta": [
+      {
+        "tipo": "regex",
+        "valor": "(últim|ultim)[^.]*\\bbia\\b|\\bbia\\b[^.]*(últim|ultim)|ordem[^.]*ana[^.]*caio[^.]*bia|^\\s*(?:a\\s+)?bia\\s*[.!]?\\s*$",
+        "flags": "i"
+      },
+      {
+        "tipo": "nao_regex",
+        "valor": "(último|ultimo)[^.]*\\b(ana|caio)\\b"
+      }
+    ],
+    "max_tokens_proposto": null
+  },
+  {
+    "id": "raciocinio-019",
+    "defeito": "b",
+    "explicacao": "O verificador numérico rejeita o resultado escrito por extenso, uma resposta natural correta.",
+    "verificacao_proposta": [
+      {
+        "tipo": "regex",
+        "valor": "(?<![\\w.,])4(?:[.,]0+)?(?![\\w.,])|\\b(?:quatro)\\b",
+        "flags": "i"
+      }
+    ],
+    "max_tokens_proposto": null
+  },
+  {
+    "id": "raciocinio-020",
+    "defeito": "b",
+    "explicacao": "O verificador numérico rejeita o resultado escrito por extenso, uma resposta natural correta.",
+    "verificacao_proposta": [
+      {
+        "tipo": "regex",
+        "valor": "(?<![\\w.,])15(?:[.,]0+)?(?![\\w.,])|\\b(?:quinze)\\b",
+        "flags": "i"
+      }
+    ],
+    "max_tokens_proposto": null
+  },
+  {
+    "id": "raciocinio-030",
+    "defeito": "b",
+    "explicacao": "“Nove horas” e “nove da manhã” são respostas naturais para 9h.",
+    "verificacao_proposta": [
+      {
+        "tipo": "regex",
+        "valor": "s[áa]bado"
+      },
+      {
+        "tipo": "regex",
+        "valor": "\\b(?:9\\s*(?:h|:00|horas)|nove\\s+horas|nove\\s+da\\s+manh[ãa])\\b",
+        "flags": "i"
+      }
+    ],
+    "max_tokens_proposto": null
+  },
+  {
+    "id": "raciocinio-036",
+    "defeito": "b",
+    "explicacao": "O verificador numérico rejeita o resultado escrito por extenso, uma resposta natural correta.",
+    "verificacao_proposta": [
+      {
+        "tipo": "regex",
+        "valor": "(?<![\\w.,])7(?:[.,]0+)?(?![\\w.,])|\\b(?:sete)\\b",
+        "flags": "i"
+      }
+    ],
+    "max_tokens_proposto": null
+  },
+  {
+    "id": "raciocinio-039",
+    "defeito": "b",
+    "explicacao": "O verificador numérico rejeita o resultado escrito por extenso, uma resposta natural correta.",
+    "verificacao_proposta": [
+      {
+        "tipo": "regex",
+        "valor": "(?<![\\w.,])92(?:[.,]0+)?(?![\\w.,])|\\b(?:noventa e dois)\\b",
+        "flags": "i"
+      }
+    ],
+    "max_tokens_proposto": null
+  },
+  {
+    "id": "raciocinio-040",
+    "defeito": "b",
+    "explicacao": "“Oito horas e quarenta minutos” expressa o mesmo resultado correto.",
+    "verificacao_proposta": [
+      {
+        "tipo": "regex",
+        "valor": "(?:8|oito)\\s*(?:h|horas?)\\s*(?:e\\s*)?(?:40|quarenta)|8[h:]40|8,6\\d?\\s*h",
+        "flags": "i"
+      }
+    ],
+    "max_tokens_proposto": null
+  },
+  {
+    "id": "raciocinio-043",
+    "defeito": "b",
+    "explicacao": "O verificador numérico rejeita o resultado escrito por extenso, uma resposta natural correta.",
+    "verificacao_proposta": [
+      {
+        "tipo": "regex",
+        "valor": "(?<![\\w.,])40(?:[.,]0+)?(?![\\w.,])|\\b(?:quarenta)\\b",
+        "flags": "i"
+      }
+    ],
+    "max_tokens_proposto": null
+  },
+  {
+    "id": "raciocinio-053",
+    "defeito": "b",
+    "explicacao": "O verificador numérico rejeita o resultado escrito por extenso, uma resposta natural correta.",
+    "verificacao_proposta": [
+      {
+        "tipo": "regex",
+        "valor": "(?<![\\w.,])7(?:[.,]0+)?(?![\\w.,])|\\b(?:sete)\\b",
+        "flags": "i"
+      }
+    ],
+    "max_tokens_proposto": null
+  },
+  {
+    "id": "raciocinio-054",
+    "defeito": "b",
+    "explicacao": "Dia/mês/ano admite mês por extenso e zeros opcionais.",
+    "verificacao_proposta": [
+      {
+        "tipo": "contem_algum",
+        "valores": [
+          "13/03/2027",
+          "13/3/2027",
+          "13 de março de 2027",
+          "treze de março de 2027"
+        ]
+      }
+    ],
+    "max_tokens_proposto": null
+  },
+  {
+    "id": "raciocinio-057",
+    "defeito": "b",
+    "explicacao": "A resposta direta “Eva” é suficiente para a pergunta.",
+    "verificacao_proposta": [
+      {
+        "tipo": "regex",
+        "valor": "(terceir|3[ºo°]?)\\W+(\\w+\\W+){0,6}eva|eva\\W+(\\w+\\W+){0,6}(terceir|3[ºo°])|joel\\W+hugo\\W+eva|^\\s*(?:a\\s+)?eva\\s*[.!]?\\s*$",
+        "flags": "i"
+      }
+    ],
+    "max_tokens_proposto": null
+  },
+  {
+    "id": "raciocinio-060",
+    "defeito": "b",
+    "explicacao": "O verificador numérico rejeita o resultado escrito por extenso, uma resposta natural correta.",
+    "verificacao_proposta": [
+      {
+        "tipo": "regex",
+        "valor": "(?<![\\w.,])3(?:[.,]0+)?(?![\\w.,])|\\b(?:tr[eê]s)\\b",
+        "flags": "i"
+      }
+    ],
+    "max_tokens_proposto": null
+  },
+  {
+    "id": "tecnico-019",
+    "defeito": "c",
+    "explicacao": "A regex atual aceita ls -ah, que em geral não mostra os tamanhos; é necessário pedir formato longo.",
+    "verificacao_proposta": [
+      {
+        "tipo": "regex",
+        "valor": "\\bls\\b(?=[^\\n`]*(?:\\s-\\w*a\\w*|--all|\\s-\\w*A))(?=[^\\n`]*(?:\\s-\\w*h\\w*|--human))(?=[^\\n`]*(?:\\s-\\w*l\\w*|--format=long|--format=verbose))",
+        "flags": "i"
+      }
+    ],
+    "max_tokens_proposto": null
+  },
+  {
+    "id": "tecnico-025",
+    "defeito": "e",
+    "explicacao": "A referência “chmod u+x” apenas acrescenta execução ao dono e não retira execução do grupo/outros: se já existir, não garante “só eu”. Uma verificação correta deveria rejeitá-la; é preciso corrigir a referência junto ao item, portanto nenhuma lista pode satisfazer simultaneamente o autoteste e a correção.",
+    "verificacao_proposta": null,
+    "max_tokens_proposto": null
+  }
+]

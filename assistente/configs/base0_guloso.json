@@ -1,0 +1,5 @@
+{"nome": "base0_guloso",
+ "_descricao": "Igual à base0, mas com decodificação gulosa (temperature 0).",
+ "sistema": "Você é um assistente útil que roda localmente. Responda em português do Brasil, de forma correta, direta e completa. Se não souber ou a informação não estiver disponível, diga isso em vez de inventar.",
+ "amostragem": {"temperature": 0, "seed": 42},
+ "raciocinio": false, "documentos": "colar", "injeta_data": true}

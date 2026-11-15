@@ -1,0 +1,19 @@
+{
+ "nome": "c2_ferr_dica",
+ "_descricao": "c2_ferr + uma frase mandando usar a calculadora",
+ "sistema": "Você é um assistente útil que roda localmente. Responda em português do Brasil, de forma correta, direta e completa. Se não souber ou a informação não estiver disponível, diga isso em vez de inventar. Para contas que não sejam triviais, use a ferramenta calculadora em vez de calcular de cabeça.",
+ "amostragem": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "min_p": 0,
+  "seed": 42
+ },
+ "raciocinio": false,
+ "documentos": "colar",
+ "injeta_data": true,
+ "ferramentas": [
+  "calculadora"
+ ],
+ "injeta_estado": "regras"
+}

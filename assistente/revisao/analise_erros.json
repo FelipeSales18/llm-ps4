@@ -1,0 +1,388 @@
+{
+  "fontes_lidas": [
+    "revisao/dev_qwen3_17b_orig.jsonl",
+    "revisao/dev_qwen35_4b.jsonl",
+    "configs/base0.json",
+    "runtime/assistente.py",
+    "aval/ESPECIFICACAO.md"
+  ],
+  "escopo": "Somente desenvolvimento. Nenhum arquivo de itens, divisão ou avaliador foi lido. Nenhuma nova inferência foi executada.",
+  "limites": "Os JSONL não contêm os textos dos documentos nem o prompt completo efetivamente enviado. Diagnósticos documentais usam pergunta, verificações e respostas; não equivalem a auditoria do documento original. As causas são interpretação manual, não metadados observados.",
+  "metodo": "Uma causa principal por item reprovado para permitir somar 53. Cortes, invenções e contribuições da configuração podem coexistir. A classe de avaliação reúne suspeitas, sem reclassificar automaticamente os itens como corretos.",
+  "classificacao_principal": {
+    "conta_ou_calendario": {
+      "n": 13,
+      "ids": [
+        "ferramentas-004",
+        "ferramentas-007",
+        "ferramentas-015",
+        "ferramentas-017",
+        "ferramentas-046",
+        "ferramentas-047",
+        "ferramentas-051",
+        "raciocinio-021",
+        "raciocinio-024",
+        "raciocinio-029",
+        "raciocinio-030",
+        "raciocinio-038",
+        "documentos-053"
+      ],
+      "exemplos": [
+        "ferramentas-007: divisão com resultado errado.",
+        "raciocinio-029: soma de dias e formato de data errados."
+      ]
+    },
+    "restricao_formato_ou_transformacao": {
+      "n": 6,
+      "ids": [
+        "instrucoes-012",
+        "instrucoes-017",
+        "instrucoes-024",
+        "instrucoes-045",
+        "instrucoes-054",
+        "instrucoes-057"
+      ],
+      "exemplos": [
+        "instrucoes-017: numero é string, apesar de pedir número.",
+        "instrucoes-054: 38 palavras para limite explícito de 20."
+      ]
+    },
+    "afirmacao_sem_base_ou_fato_inventado": {
+      "n": 3,
+      "ids": [
+        "conversa-047",
+        "documentos-009",
+        "documentos-025"
+      ],
+      "exemplos": [
+        "conversa-047: capital inventada.",
+        "documentos-009: assume upload simétrico; atribuição baseada nas verificações, sem texto documental disponível."
+      ]
+    },
+    "leitura_intencao_ou_dado_ignorado": {
+      "n": 4,
+      "ids": [
+        "conversa-040",
+        "documentos-023",
+        "raciocinio-007",
+        "raciocinio-037"
+      ],
+      "exemplos": [
+        "raciocinio-007: multiplica por 10, ignorando rendimento original de 4 porções.",
+        "raciocinio-037: ignora os 8 litros que devem restar na reserva."
+      ]
+    },
+    "conhecimento_logica_codigo_ou_classificacao": {
+      "n": 12,
+      "ids": [
+        "tecnico-003",
+        "tecnico-005",
+        "tecnico-004",
+        "tecnico-012",
+        "tecnico-011",
+        "tecnico-021",
+        "tecnico-023",
+        "tecnico-030",
+        "tecnico-036",
+        "instrucoes-025",
+        "instrucoes-026",
+        "instrucoes-028"
+      ],
+      "exemplos": [
+        "tecnico-005: usa o segundo menor distinto.",
+        "instrucoes-026: classifica processador como esporte."
+      ]
+    },
+    "estado_indisponivel_por_configuracao": {
+      "n": 7,
+      "ids": [
+        "ferramentas-020",
+        "ferramentas-021",
+        "ferramentas-022",
+        "ferramentas-024",
+        "ferramentas-027",
+        "ferramentas-032",
+        "ferramentas-033"
+      ],
+      "exemplos": [
+        "ferramentas-020: temperatura não foi fornecida ao modelo.",
+        "ferramentas-024: percentual de disco depende de estado não injetado."
+      ]
+    },
+    "avaliacao_suspeita_como_causa_principal": {
+      "n": 8,
+      "ids": [
+        "conversa-035",
+        "conversa-024",
+        "conversa-056",
+        "conversa-057",
+        "documentos-015",
+        "documentos-021",
+        "instrucoes-032",
+        "tecnico-047"
+      ],
+      "exemplos": [
+        "documentos-015: desligar rejeitado por exigir desligu.",
+        "documentos-021: datas por extenso equivalentes rejeitadas."
+      ]
+    }
+  },
+  "atribuicao_principal": {
+    "modelo": 38,
+    "configuracao_estado_ausente": 7,
+    "avaliacao_suspeita": 8,
+    "nota": "Separação interpretativa: instruções e ferramentas podem mitigar falhas atribuídas ao modelo. As 8 suspeitas não são 8 acertos recuperados."
+  },
+  "cortes_sobrepostos": {
+    "ids_reprovados": [
+      "conversa-024",
+      "conversa-057",
+      "documentos-053",
+      "instrucoes-057",
+      "tecnico-004",
+      "tecnico-023",
+      "tecnico-047"
+    ],
+    "exemplos": [
+      "tecnico-004: exemplos repetidos consumiram o orçamento sem entregar função.",
+      "instrucoes-057: subtópicos consumiram o orçamento antes do quarto tópico."
+    ],
+    "nota": "7 reprovações com corte, não 7 reprovações comprovadamente causadas só pelo corte. Outros 4 itens cortados passam. Nenhuma tarefa do 1.7B demonstra, pelos dados disponíveis, que uma solução concisa exija mais tokens que o limite."
+  },
+  "suspeitas_avaliacao": [
+    {
+      "ids": [
+        "conversa-035"
+      ],
+      "tipo": "vocabulario_restrito",
+      "justificativa": "O único motivo registrado é a ausência de palavras de uma lista; a pergunta não exige essas palavras. Isso não certifica a qualidade clínica da resposta."
+    },
+    {
+      "ids": [
+        "conversa-024",
+        "conversa-056",
+        "conversa-057"
+      ],
+      "tipo": "limite_de_palavras_oculto",
+      "justificativa": "Tetos de 150, 70 e 70 palavras não constam das perguntas nem do sistema base0. As únicas falhas do 1.7B são esses tetos. Há verbosidade real e dois cortes, portanto não são respostas certificadas como corretas."
+    },
+    {
+      "ids": [
+        "documentos-015"
+      ],
+      "tipo": "variacao_morfologica",
+      "justificativa": "A resposta recomenda desligar e aguardar 30 minutos, mas o verificador só aceita desligu, tire da tomada ou tirar da tomada."
+    },
+    {
+      "ids": [
+        "documentos-021"
+      ],
+      "tipo": "data_por_extenso",
+      "justificativa": "17 de novembro a 28 de novembro corresponde aos dias e meses exigidos; a pergunta não pede formato numérico."
+    },
+    {
+      "ids": [
+        "instrucoes-032"
+      ],
+      "tipo": "citacao_do_original",
+      "justificativa": "A simplificação usa linguagem mais simples, mas citar a frase original ativa nao_contem. Não há proibição explícita de citar o original."
+    },
+    {
+      "ids": [
+        "tecnico-047"
+      ],
+      "tipo": "sinonimo_com_erro_conceitual_concorrente",
+      "justificativa": "Unificação/integra aparece como descrição do merge, mas falta na lista de alternativas. A resposta também confunde a forma do histórico; é suspeita mista, não falso negativo confirmado."
+    },
+    {
+      "ids": [
+        "tecnico-036"
+      ],
+      "tipo": "vocabulario_rigido_com_erro_real",
+      "justificativa": "Totalmente não é aceito como sinônimo da abrangência da string. Entretanto a resposta afirma incorretamente que 32/03 é rejeitado. Manter a atribuição principal ao modelo."
+    },
+    {
+      "ids": [
+        "instrucoes-020"
+      ],
+      "modelo_afetado": "Qwen3.5-4B",
+      "tipo": "caixa_em_valor_json",
+      "justificativa": "Prata e prata expressam a mesma cor; a pergunta não pede preservar caixa. O verificador compara o valor literalmente."
+    },
+    {
+      "ids": [
+        "instrucoes-021"
+      ],
+      "modelo_afetado": "Qwen3.5-4B",
+      "tipo": "estrutura_e_formato_de_data_implicitos",
+      "justificativa": "A pergunta pede só JSON, sem explicitar objeto versus lista nem formato de data. Há rigidez estrutural e de formato; porém a resposta também adiciona ano não presente no texto de origem, logo não é falso negativo confirmado."
+    },
+    {
+      "ids": [
+        "conversa-031",
+        "conversa-016",
+        "conversa-018",
+        "conversa-034",
+        "conversa-059",
+        "ferramentas-057"
+      ],
+      "modelo_afetado": "Qwen3.5-4B",
+      "tipo": "limites_de_palavras_ocultos_em_regressoes",
+      "justificativa": "As reprovações registradas decorrem somente de limites de palavras não pedidos nas perguntas. A verbosidade e os cortes são problemas reais, e algumas respostas contêm erros de conteúdo; o teto oculto não prova esses erros."
+    }
+  ],
+  "falsos_positivos_exemplos": [
+    {
+      "ids": [
+        "raciocinio-053"
+      ],
+      "modelos": [
+        "Qwen3-1.7B",
+        "Qwen3.5-4B"
+      ],
+      "evidencia": "Ambos marcados como corretos; concluem 52 e 6 semanas, respectivamente, quando o intervalo de 49 dias dá 7 semanas. O 4B menciona o divisor 7; não foi inspecionado o código do verificador."
+    },
+    {
+      "ids": [
+        "documentos-040"
+      ],
+      "modelos": [
+        "Qwen3-1.7B"
+      ],
+      "evidencia": "Marcado correto apesar de concluir Sim e sugerir troca/reembolso, contradizendo a própria regra de não trocar sem defeito."
+    },
+    {
+      "ids": [
+        "raciocinio-007"
+      ],
+      "modelos": [
+        "Qwen3.5-4B"
+      ],
+      "evidencia": "Marcado correto apesar de começar com 1350 g; também inclui o cálculo correto de 1125 g."
+    },
+    {
+      "ids": [
+        "instrucoes-002"
+      ],
+      "modelos": [
+        "Qwen3-1.7B"
+      ],
+      "evidencia": "Explicação incorreta sobre o céu azul passa por conter palavras esperadas."
+    }
+  ],
+  "fatos_configuracao": {
+    "base0": "Raciocínio desligado; data injetada; documentos colados; sem ferramentas ou injeção de estado explícitas; temperatura 0.7, seed 42; sem max_tokens global.",
+    "runtime": "Padrões são ferramentas=[], injeta_estado=nunca; o limite vem do item quando não sobrescrito. Fixtures não são automaticamente visíveis: só entram via montagem de contexto ou ferramenta.",
+    "implicacao": "Os 7 itens de estado fracassam nos dois modelos; recusas por falta de estado são adequadas à informação recebida. ferramentas-033 ainda inventa que a exigência do jogo é a RAM disponível."
+  },
+  "comparacao": {
+    "qwen3_17b": {
+      "n": 120,
+      "acertos_registrados": 67,
+      "falhas_registradas": 53,
+      "cortes_totais": 11,
+      "cortes_nas_falhas": 7,
+      "tokens_resposta_total": 14287,
+      "tempo_total_s": 1988.5592300891876,
+      "mediana_t_total_s": 12.39107346534729
+    },
+    "qwen35_4b": {
+      "n": 120,
+      "acertos_registrados": 86,
+      "falhas_registradas": 34,
+      "cortes_totais": 46,
+      "cortes_nas_falhas": 18,
+      "tokens_resposta_total": 19785,
+      "tempo_total_s": 7864.700175285339,
+      "mediana_t_total_s": 63.59834325313568
+    },
+    "ganhos_ids": [
+      "conversa-035",
+      "conversa-047",
+      "conversa-040",
+      "documentos-009",
+      "documentos-015",
+      "documentos-025",
+      "documentos-023",
+      "ferramentas-004",
+      "ferramentas-007",
+      "ferramentas-015",
+      "ferramentas-017",
+      "ferramentas-046",
+      "instrucoes-012",
+      "instrucoes-017",
+      "instrucoes-025",
+      "instrucoes-026",
+      "instrucoes-024",
+      "instrucoes-045",
+      "instrucoes-032",
+      "instrucoes-054",
+      "instrucoes-057",
+      "raciocinio-007",
+      "raciocinio-021",
+      "raciocinio-037",
+      "tecnico-005",
+      "tecnico-004",
+      "tecnico-012",
+      "tecnico-021",
+      "tecnico-030",
+      "tecnico-036",
+      "tecnico-047"
+    ],
+    "regressoes_ids": [
+      "conversa-031",
+      "conversa-016",
+      "conversa-018",
+      "conversa-034",
+      "conversa-059",
+      "ferramentas-006",
+      "ferramentas-050",
+      "ferramentas-057",
+      "instrucoes-020",
+      "instrucoes-021",
+      "tecnico-018",
+      "tecnico-039"
+    ],
+    "por_categoria": {
+      "conversa": {
+        "n": 20,
+        "qwen3_17b_acertos": 14,
+        "qwen35_4b_acertos": 12
+      },
+      "documentos": {
+        "n": 20,
+        "qwen3_17b_acertos": 14,
+        "qwen35_4b_acertos": 18
+      },
+      "ferramentas": {
+        "n": 20,
+        "qwen3_17b_acertos": 6,
+        "qwen35_4b_acertos": 8
+      },
+      "instrucoes": {
+        "n": 20,
+        "qwen3_17b_acertos": 10,
+        "qwen35_4b_acertos": 17
+      },
+      "raciocinio": {
+        "n": 20,
+        "qwen3_17b_acertos": 13,
+        "qwen35_4b_acertos": 16
+      },
+      "tecnico": {
+        "n": 20,
+        "qwen3_17b_acertos": 10,
+        "qwen35_4b_acertos": 15
+      }
+    },
+    "limites": "Mesmos ids e conteúdos de entrada/verificações/limites confirmados. Taxas brutas refletem verificadores imperfeitos; tempos registrados não identificam o hardware e não certificam desempenho no PS4. Uma execução por modelo não isola efeito da amostragem."
+  },
+  "roteamento_proposto": [
+    "Estado real da máquina: coletar estado_sistema ou injetar estado por regras; porcentagens/conversões seguem para calculadora. Sem acesso, informar a limitação.",
+    "Agora/hoje: obter relógio e fuso uma vez, por ferramenta ou injeção. Aritmética de datas e dias da semana exige função determinística de calendário; fornecer só uma data não elimina esses erros.",
+    "Contas exatas, dinheiro, muitas parcelas, raízes, percentuais e conversões: calculadora com expressão e unidades. Conferir a formulação; a calculadora não recupera condição ignorada.",
+    "Pergunta dependente de documentos: usar texto já disponível; documentos grandes ou fora do contexto requerem busca_documentos. Perguntas de exceção e comparação podem exigir mais de um trecho. Recuperação não garante leitura correta.",
+    "Conversa e fatos triviais: responder diretamente. Prompts não substituem acesso a estado/relógio/documentos ausentes; nem toda falha aritmética ou documental exige ferramenta em princípio."
+  ],
+  "opiniao": "Priorizar 1.7B com concisão e ferramentas determinísticas; avaliar 4B sob demanda para código e restrições complexas. Os ganhos brutos não justificam automaticamente pagar aproximadamente 3 vezes a latência em toda pergunta. Prompts candidatos são hipóteses ainda não testadas."
+}
