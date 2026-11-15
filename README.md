@@ -5,6 +5,7 @@ I fine-tuned Qwen3-1.7B with GRPO (LoRA) on GSM8K to answer in a fixed, machine-
 **Summary**
 - **GRPO taught the format without costing accuracy.** On the full GSM8K test set (n = 1,319, full precision), the tuned model ends in the requested `#### <number>` format 75.8% of the time, against 67.1% and 71.3% for the base model with the best prompts tested (instruction, 2-shot; McNemar p < 0.001 for both), while flexible accuracy stays the same (76.3% vs 76.6% for the base, p = 0.81).
 - **The 4-bit model runs 1.56× faster on the PS4 GPU than on the PS4 CPU:** 11.2 s vs 17.5 s per answer on the same 100 questions, with no significant accuracy difference (flexible 77 vs 81, p = 0.29). On all 1,319 questions the GPU scores exactly like the same Q4_K_M file on an x86 CPU (72.9% vs 72.9%, p = 1.0).
+- **As a general chat assistant, the configuration mattered more than the tuning** (added 2026-11-15). On a 120-item Portuguese assistant evaluation (development split), the same tuned Q4_K_M file goes from 27.5% to 59.2% just by turning thinking off and adding a short system prompt, and it ties with the untuned Qwen3-1.7B (58.3%). See [Local assistant](#local-assistant-on-the-ps4-added-2026-11-15).
 - **4-bit quantization costs about 3.4 points** of flexible accuracy against the full-precision model (Q4_K_M: −3.3 on the PS4 GPU and −3.4 on a laptop CPU, both p = 0.003, n = 1,319), and it hurts the format more than the answers.
 
 Model card: [felipedutrain/qwen3-1.7b-gsm8k-grpo](https://huggingface.co/felipedutrain/qwen3-1.7b-gsm8k-grpo) (the link works once the model is public).
@@ -85,6 +86,59 @@ Paired comparisons (all n = 1,319):
 - **The format is fragile, the answers are not:** strict accuracy moves by up to 9 points between configurations, with no order by precision (Q5_K_M 57.6% < Q4_K_M 63.2% < PS4 GPU 66.8%), while flexible accuracy stays within ~2 points.
 - **The first 100 questions overestimate:** they gave 77–81% flexible on the PS4, against 72.9% on all 1,319.
 
+## Local assistant on the PS4 (added 2026-11-15)
+
+After the GSM8K work, the goal changed to a useful general-purpose chat assistant running locally on the PS4, in Portuguese. Everything is in [`assistente/`](assistente/) (code, comments and diary in Portuguese).
+
+**The evaluation.** 360 items in Portuguese, 6 categories × 60 (conversation, following instructions, questions over documents, reasoning, technical, tool-like questions such as exact arithmetic and dates), split once into 120 development / 120 selection / 120 final test. Items were written by an AI model and audited by a second one; answers are graded by rules in `assistente/aval/verifica.py`, not by a judge model. The numbers below are from the **development split, on a laptop CPU** (i5-10300H), unless stated otherwise. The final test split has never been run.
+
+**Same model file, two configurations** (tuned model, Q4_K_M, n = 120):
+
+| | Previous chat setup | Neutral configuration |
+|---|---|---|
+| Thinking | on | off |
+| System prompt | none | short, in Portuguese, with date and time |
+| Token limit | 320 | 400 |
+| **Accuracy** | **27.5%** (33/120) | **59.2%** (71/120) |
+| Empty answers | 67 | 0 |
+| Truncated answers | 90 | 11 |
+| Median time per answer | 28.3 s | 14.0 s |
+| Generation speed | 11.5 tok/s | 10.5 tok/s |
+
+Accuracy by category (20 items each):
+
+| Category | Previous chat setup | Neutral configuration |
+|---|---|---|
+| Conversation | 55% | 75% |
+| Documents | 45% | 75% |
+| Instructions | 45% | 55% |
+| Reasoning | 0% | 60% |
+| Technical | 5% | 65% |
+| Tool-like questions | 15% | 25% |
+
+Paired difference: +31.7 points (95% CI +20.8 to +42.5, 47 gained vs 9 lost, p < 0.001). With thinking on and 320 tokens, the model often spends the whole budget thinking and returns nothing. Answers are faster because fewer tokens are generated, not because generation is faster.
+
+**What else was measured (development split, neutral configuration unless noted):**
+
+| Model (all Q4_K_M) | Accuracy |
+|---|---|
+| Qwen3-1.7B, untuned | 58.3% |
+| This project's GRPO-tuned Qwen3-1.7B | 59.2% |
+| Qwen3.5-2B | 54.2% |
+| MiniCPM5-2B | 60.0% |
+| Granite 4.2 3B | 67.5% |
+| Gemma 4 E2B | 68.3% |
+| Qwen3.5-4B | 77.5% (about 4× slower on the laptop; not measured on the PS4) |
+
+- **The GRPO tuning does not help general chat.** It ties with the untuned model here; its gain is the GSM8K answer format.
+- **Instructions asking for brevity hurt** (−11 to −12 points on the 1.7B).
+- **Thinking on did not help** even with a larger budget: 57.5%, 17 empty answers, 3.6× the time.
+- **Model-called tools were rejected.** A calculator plus system-state configuration gained +7.5 points on development (p = 0.11) but lost on the selection split, used once: 65.0% → 55.8% (Δ −9.2, 95% CI −17.5 to −0.8, p = 0.06). The neutral configuration is the confirmed one.
+
+**On the PS4.** The neutral configuration is what now runs on the console: [`assistente/chat-neutro/`](assistente/chat-neutro/) has the server command, a chat template that adds the default system prompt and the current date when the client sends no system message, and a launcher (`assistente.sh`, installed as `assistente`) that starts the server if needed and opens a terminal chat (`assistente/runtime/conversar.py`, standard library only). The original chat command and template were kept untouched.
+
+**Limits of this part.** Development-split numbers on a laptop, one run per configuration (run-to-run noise is about 3–4 points); the "previous chat setup" was emulated on the laptop with the same settings, not measured on the console; on the PS4 the new configuration only had a smoke test and hands-on use; the evaluation items were written by AI and reflect one definition of a good assistant. On 2026-11-13 the PS4 GPU hung three times during long evaluation runs (`amdgpu ring comp timeout`), cause unknown.
+
 ## How the GPU was used without installing anything
 
 The PS4's GPU (AMD "Liverpool", GCN 2) is supported by the `amdgpu` kernel driver of the PS4 Linux kernel, but the system had no Vulkan driver. Nothing was installed system-wide and no root access was used:
@@ -116,6 +170,7 @@ gguf/         make_gguf.sh (conversion pipeline), MANIFEST.csv, chat template
 ps4/          PS4 inventory, CPU build and benchmark scripts, first PS4 results
 eval-ps4/     first PS4 evaluation (CPU, 100 questions, base vs tuned): run_eval.py, grading.py
 analise/      error analysis and token-limit study (Portuguese)
+assistente/   local assistant: runtime, configurations, Portuguese evaluation (items, grader, results), PS4 chat setup, diary
 experiments/
   vulkan-check-20261105/      Vulkan checks, GPU build with watchdog, llama-bench GPU vs CPU
   ps4-eval-gpu-20261106/      GPU vs CPU on 100 questions (client on the LAN)

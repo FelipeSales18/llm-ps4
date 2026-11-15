@@ -1,0 +1,16 @@
+{
+ "nome": "c2_rac",
+ "_descricao": "base0 com raciocínio LIGADO e amostragem oficial do modo com raciocínio (+700 tokens para pensar)",
+ "sistema": "Você é um assistente útil que roda localmente. Responda em português do Brasil, de forma correta, direta e completa. Se não souber ou a informação não estiver disponível, diga isso em vez de inventar.",
+ "amostragem": {
+  "temperature": 0.6,
+  "top_p": 0.95,
+  "top_k": 20,
+  "min_p": 0,
+  "seed": 42
+ },
+ "raciocinio": true,
+ "documentos": "colar",
+ "injeta_data": true,
+ "max_tokens_extra_raciocinio": 700
+}

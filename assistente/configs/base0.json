@@ -1,0 +1,5 @@
+{"nome": "base0",
+ "_descricao": "Configuração neutra para comparar MODELOS: instrução curta em português, amostragem sugerida pelo Qwen para o modo sem raciocínio, raciocínio desligado, data/hora informada, documentos colados no contexto, limite de tokens do item.",
+ "sistema": "Você é um assistente útil que roda localmente. Responda em português do Brasil, de forma correta, direta e completa. Se não souber ou a informação não estiver disponível, diga isso em vez de inventar.",
+ "amostragem": {"temperature": 0.7, "top_p": 0.8, "top_k": 20, "min_p": 0, "seed": 42},
+ "raciocinio": false, "documentos": "colar", "injeta_data": true}

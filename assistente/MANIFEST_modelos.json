@@ -1,0 +1,47 @@
+{
+ "qwen3.5-2b-q4km": {
+  "repo": "unsloth/Qwen3.5-2B-GGUF",
+  "arquivo": "Qwen3.5-2B-Q4_K_M.gguf",
+  "revisao": "f6d5376be1edb4d416d56da11e5397a961aca8ae",
+  "caminho": "qwen3.5-2b-q4km/Qwen3.5-2B-Q4_K_M.gguf",
+  "bytes": 1280835840,
+  "sha256": "aaf42c8b7c3cab2bf3d69c355048d4a0ee9973d48f16c731c0520ee914699223",
+  "baixado": "2026-11-13 08:20:36"
+ },
+ "qwen3.5-4b-q4km": {
+  "repo": "unsloth/Qwen3.5-4B-GGUF",
+  "arquivo": "Qwen3.5-4B-Q4_K_M.gguf",
+  "revisao": "e87f176479d0855a907a41277aca2f8ee7a09523",
+  "caminho": "qwen3.5-4b-q4km/Qwen3.5-4B-Q4_K_M.gguf",
+  "bytes": 2740937888,
+  "sha256": "00fe7986ff5f6b463e62455821146049db6f9313603938a70800d1fb69ef11a4",
+  "baixado": "2026-11-13 08:27:33"
+ },
+ "minicpm5-2b-q4km": {
+  "repo": "openbmb/MiniCPM5-2B-GGUF",
+  "arquivo": "MiniCPM5-2B-Q4_K_M.gguf",
+  "revisao": "8ad02b786ab81e33d465e1c80562640c55ab2877",
+  "caminho": "minicpm5-2b-q4km/MiniCPM5-2B-Q4_K_M.gguf",
+  "bytes": 1561318368,
+  "sha256": "ec2d5801640099e97d8d7e8003ad4d81f336e757811f03a26173dddf386602fd",
+  "baixado": "2026-11-13 08:33:38"
+ },
+ "granite-4.2-3b-q4km": {
+  "repo": "ibm-granite/granite-4.2-3b-GGUF",
+  "arquivo": "granite-4.2-3b-Q4_K_M.gguf",
+  "revisao": "c40945d71cd90f249a56985e8155551a9188dc30",
+  "caminho": "granite-4.2-3b-q4km/granite-4.2-3b-Q4_K_M.gguf",
+  "bytes": 2244011552,
+  "sha256": "e0406663965846ae22a403456eb826ccce5f450840491f71952f18a7cb78e7d5",
+  "baixado": "2026-11-13 08:40:35"
+ },
+ "gemma-4-e2b-q4km": {
+  "repo": "unsloth/gemma-4-E2B-it-GGUF",
+  "arquivo": "gemma-4-E2B-it-Q4_K_M.gguf",
+  "revisao": "0314792d7f1f7e229411f620751375812bb9faf2",
+  "caminho": "gemma-4-e2b-q4km/gemma-4-E2B-it-Q4_K_M.gguf",
+  "bytes": 3106738272,
+  "sha256": "740185b21d22ceb83a11c3aa62ad5842ef32c70f6096d756bbee85a1e4ec34b8",
+  "baixado": "2026-11-13 08:48:42"
+ }
+}
