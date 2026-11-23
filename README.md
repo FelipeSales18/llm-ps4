@@ -8,7 +8,7 @@ I fine-tuned Qwen3-1.7B with GRPO (LoRA) on GSM8K to answer in a fixed, machine-
 - **As a general chat assistant, the configuration mattered more than the tuning** (added 2026-11-15). On a 120-item Portuguese assistant evaluation (development split), the same tuned Q4_K_M file goes from 27.5% to 59.2% just by turning thinking off and adding a short system prompt, and it ties with the untuned Qwen3-1.7B (58.3%). See [Local assistant](#local-assistant-on-the-ps4-added-2026-11-15).
 - **4-bit quantization costs about 3.4 points** of flexible accuracy against the full-precision model (Q4_K_M: −3.3 on the PS4 GPU and −3.4 on a laptop CPU, both p = 0.003, n = 1,319), and it hurts the format more than the answers.
 
-Model card: [felipedutrain/qwen3-1.7b-gsm8k-grpo](https://huggingface.co/felipedutrain/qwen3-1.7b-gsm8k-grpo) (the link works once the model is public).
+Model card: [felipedutrain/qwen3-1.7b-gsm8k-grpo](https://huggingface.co/felipedutrain/qwen3-1.7b-gsm8k-grpo).
 
 ## Results
 
@@ -224,7 +224,7 @@ python3 analise_q4km.py && python3 analise_q5km.py
 
 ## Links
 
-- Model card, merged weights, LoRA adapter, GGUF files and per-question outputs: [felipedutrain/qwen3-1.7b-gsm8k-grpo](https://huggingface.co/felipedutrain/qwen3-1.7b-gsm8k-grpo) (the link works once the model is public).
+- Model card, merged weights, LoRA adapter, GGUF files and per-question outputs: [felipedutrain/qwen3-1.7b-gsm8k-grpo](https://huggingface.co/felipedutrain/qwen3-1.7b-gsm8k-grpo).
 - llama.cpp: [ggml-org/llama.cpp](https://github.com/ggml-org/llama.cpp)
 
 ## License
